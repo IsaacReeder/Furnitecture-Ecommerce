@@ -11,19 +11,21 @@ class Brews extends React.Component {
   state = {
     brews: [],
     brand: "",
-    cartItems: []
+    cartItems: [],
   };
 
   async componentDidMount() {
+    console.log("in the func");
     try {
+      console.log("in the try");
       const response = await strapi.request("POST", "/graphql", {
         data: {
           query: `query {
           brand(id: "${this.props.match.params.brandId}") {
-            _id
+            id
             name
             brews {
-              _id
+              id
               name
               description
               image {
@@ -32,28 +34,29 @@ class Brews extends React.Component {
               price
             }
           }
-        }`
-        }
+        }`,
+        },
       });
+      console.log("after the const response");
       this.setState({
         brews: response.data.brand.brews,
         brand: response.data.brand.name,
-        cartItems: getCart()
+        cartItems: getCart(),
       });
     } catch (err) {
       console.error(err);
     }
   }
 
-  addToCart = brew => {
+  addToCart = (brew) => {
     const alreadyInCart = this.state.cartItems.findIndex(
-      item => item._id === brew._id
+      (item) => item.id === brew.id
     );
 
     if (alreadyInCart === -1) {
       const updatedItems = this.state.cartItems.concat({
         ...brew,
-        quantity: 1
+        quantity: 1,
       });
       this.setState({ cartItems: updatedItems }, () => setCart(updatedItems));
     } else {
@@ -63,9 +66,9 @@ class Brews extends React.Component {
     }
   };
 
-  deleteItemFromCart = itemToDeleteId => {
+  deleteItemFromCart = (itemToDeleteId) => {
     const filteredItems = this.state.cartItems.filter(
-      item => item._id !== itemToDeleteId
+      (item) => item.id !== itemToDeleteId
     );
     this.setState({ cartItems: filteredItems }, () => setCart(filteredItems));
   };
@@ -81,8 +84,8 @@ class Brews extends React.Component {
         alignItems="start"
         dangerouslySetInlineStyle={{
           __style: {
-            flexWrap: "wrap-reverse"
-          }
+            flexWrap: "wrap-reverse",
+          },
         }}
       >
         {/* Brews Section */}
@@ -95,8 +98,8 @@ class Brews extends React.Component {
           <Box
             dangerouslySetInlineStyle={{
               __style: {
-                backgroundColor: "#bdcdd9"
-              }
+                backgroundColor: "#bdcdd9",
+              },
             }}
             wrap
             shape="rounded"
@@ -104,8 +107,8 @@ class Brews extends React.Component {
             justifyContent="center"
             padding={4}
           >
-            {brews.map(brew => (
-              <Box paddingY={4} margin={2} width={210} key={brew._id}>
+            {brews.map((brew) => (
+              <Box paddingY={4} margin={2} width={210} key={brew.id}>
                 <Card
                   image={
                     <Box height={250} width={200}>
@@ -166,8 +169,8 @@ class Brews extends React.Component {
               </Text>
 
               {/* Cart Items */}
-              {cartItems.map(item => (
-                <Box key={item._id} display="flex" alignItems="center">
+              {cartItems.map((item) => (
+                <Box key={item.id} display="flex" alignItems="center">
                   <Text>
                     {item.name} x {item.quantity} - $
                     {(item.quantity * item.price).toFixed(2)}
@@ -177,7 +180,7 @@ class Brews extends React.Component {
                     icon="cancel"
                     size="sm"
                     iconColor="red"
-                    onClick={() => this.deleteItemFromCart(item._id)}
+                    onClick={() => this.deleteItemFromCart(item.id)}
                   />
                 </Box>
               ))}

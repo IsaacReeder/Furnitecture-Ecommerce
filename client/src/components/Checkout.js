@@ -20,7 +20,7 @@ class _CheckoutForm extends React.Component {
     toast: false,
     toastMessage: "",
     orderProcessing: false,
-    modal: false
+    modal: false,
   };
 
   componentDidMount() {
@@ -32,7 +32,7 @@ class _CheckoutForm extends React.Component {
     this.setState({ [event.target.name]: value });
   };
 
-  handleConfirmOrder = async event => {
+  handleConfirmOrder = async (event) => {
     event.preventDefault();
 
     if (this.isFormEmpty(this.state)) {
@@ -59,7 +59,7 @@ class _CheckoutForm extends React.Component {
         city,
         postalCode,
         address,
-        token
+        token,
       });
       this.setState({ orderProcessing: false, modal: false });
       clearCart();
@@ -122,8 +122,8 @@ class _CheckoutForm extends React.Component {
                   {cartItems.length} Items for Checkout
                 </Text>
                 <Box padding={2}>
-                  {cartItems.map(item => (
-                    <Box key={item._id} padding={1}>
+                  {cartItems.map((item) => (
+                    <Box key={item.id} padding={1}>
                       <Text color="midnight">
                         {item.name} x {item.quantity} - $
                         {item.quantity * item.price}
@@ -138,7 +138,7 @@ class _CheckoutForm extends React.Component {
                 style={{
                   display: "inlineBlock",
                   textAlign: "center",
-                  maxWidth: 450
+                  maxWidth: 450,
                 }}
                 onSubmit={this.handleConfirmOrder}
               >
@@ -177,7 +177,7 @@ class _CheckoutForm extends React.Component {
                 {/* Credit Card Element */}
                 <CardElement
                   id="stripe__input"
-                  onReady={input => input.focus()}
+                  onReady={(input) => input.focus()}
                 />
                 <button id="stripe__button" type="submit">
                   Submit
@@ -215,7 +215,7 @@ const ConfirmationModal = ({
   orderProcessing,
   cartItems,
   closeModal,
-  handleSubmitOrder
+  handleSubmitOrder,
 }) => (
   <Modal
     accessibilityCloseLabel="close"
@@ -261,8 +261,8 @@ const ConfirmationModal = ({
         padding={2}
         color="lightWash"
       >
-        {cartItems.map(item => (
-          <Box key={item._id} padding={1}>
+        {cartItems.map((item) => (
+          <Box key={item.id} padding={1}>
             <Text size="lg" color="red">
               {item.name} x {item.quantity} - ${item.quantity * item.price}
             </Text>

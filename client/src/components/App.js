@@ -21,7 +21,7 @@ class App extends Component {
         data: {
           query: `query {
             brands {
-              _id
+              id
               name
               description
               image {
@@ -31,7 +31,7 @@ class App extends Component {
           }`,
         },
       });
-      // console.log(response);
+      console.log(response);
       this.setState({ brands: response.data.brands, loadingBrands: false });
     } catch (err) {
       console.error(err);
@@ -96,7 +96,7 @@ class App extends Component {
           justifyContent="around"
         >
           {this.filteredBrands(this.state).map((brand) => (
-            <Box paddingY={4} margin={2} width={200} key={brand._id}>
+            <Box paddingY={4} margin={2} width={200} key={brand.id}>
               <Card
                 image={
                   <Box height={200} width={200}>
@@ -121,7 +121,7 @@ class App extends Component {
                   </Text>
                   <Text>{brand.description}</Text>
                   <Text bold size="xl">
-                    <Link to={`/${brand._id}`}>See Brews</Link>
+                    <Link to={`/${brand.id}`}>See Brews</Link>
                   </Text>
                 </Box>
               </Card>

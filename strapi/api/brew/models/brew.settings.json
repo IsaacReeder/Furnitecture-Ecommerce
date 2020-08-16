@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "brews",
+  "info": {
+    "name": "Brew"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "brands": {
+      "collection": "brand",
+      "via": "brew"
+    }
+  }
+}

@@ -13,7 +13,7 @@ class Signup extends React.Component {
     password: "",
     toast: false,
     toastMessage: "",
-    loading: false
+    loading: false,
   };
 
   handleChange = ({ event, value }) => {
@@ -21,7 +21,7 @@ class Signup extends React.Component {
     this.setState({ [event.target.name]: value });
   };
 
-  handleSubmit = async event => {
+  handleSubmit = async (event) => {
     event.preventDefault();
     const { username, email, password } = this.state;
 
@@ -43,13 +43,13 @@ class Signup extends React.Component {
     }
   };
 
-  redirectUser = path => this.props.history.push(path);
+  redirectUser = (path) => this.props.history.push(path);
 
   isFormEmpty = ({ username, email, password }) => {
     return !username || !email || !password;
   };
 
-  showToast = toastMessage => {
+  showToast = (toastMessage) => {
     this.setState({ toast: true, toastMessage });
     setTimeout(() => this.setState({ toast: false, toastMessage: "" }), 5000);
   };
@@ -62,8 +62,8 @@ class Signup extends React.Component {
         <Box
           dangerouslySetInlineStyle={{
             __style: {
-              backgroundColor: "#ebe2da"
-            }
+              backgroundColor: "#ebe2da",
+            },
           }}
           margin={4}
           padding={4}
@@ -76,7 +76,7 @@ class Signup extends React.Component {
             style={{
               display: "inlineBlock",
               textAlign: "center",
-              maxWidth: 450
+              maxWidth: 450,
             }}
             onSubmit={this.handleSubmit}
           >
