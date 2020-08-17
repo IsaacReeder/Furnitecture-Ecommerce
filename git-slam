@@ -1,0 +1,12 @@
+#!/bin/bash
+
+git add . 
+
+echo "Enter commit message."
+
+read cMessage 
+
+ git commit -m "$cMessage"
+
+echo git push
+
