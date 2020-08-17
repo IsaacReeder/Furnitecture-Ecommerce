@@ -1,10 +1,22 @@
-.navbar-wrapper {
-    display: flex;
-}
-
 .navbar {
+    display: flex;
     flex-basis: 100%;
     min-height: 20%;
     background-color: aliceblue;
     border: 1px solid #DDD;
+    justify-content: flex-end;
+}
+
+.app-title {
+    /* flex: 2;
+    order: 2; */
+    /* margin-left: 45%; */
+    margin-left: 26%;
+}
+
+.user-time {
+    /* flex: 3;
+    order: 3; */
+    margin-left: 26%;
+    margin-right: 10%;
 }
