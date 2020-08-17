@@ -8,5 +8,5 @@ read cMessage
 
  git commit -m "$cMessage"
 
-echo git push
+git push
 
