@@ -8,6 +8,8 @@ import {
   Redirect,
 } from "react-router-dom";
 
+import LandingPage from "./components/landingPage";
+
 function App() {
   return (
     <Router>

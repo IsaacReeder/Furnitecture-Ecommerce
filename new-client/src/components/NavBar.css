@@ -1,0 +1,10 @@
+.navbar-wrapper {
+    display: flex;
+}
+
+.navbar {
+    flex-basis: 100%;
+    min-height: 20%;
+    background-color: aliceblue;
+    border: 1px solid #DDD;
+}
