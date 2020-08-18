@@ -1,14 +1,13 @@
 import React, { useState, Component } from "react";
 import "./SecondaryContainer.css";
 import SideDrawer from "./SideDrawer/SideDrawer";
-import drawerButton from "./SideDrawer/DrawerButton";
 import Backdrop from "./Backdrop/Backdrop";
-import Projects from "./Projects/Projects";
+import MagicButton from "./SideDrawer/MagicButton";
 
 class SecondaryContainer extends Component {
-  //   state = {
-  //     sideDrawerOpen: false,
-  //   };
+  state = {
+    sideDrawerOpen: false,
+  };
   drawerToggleClickHandler = () => {
     this.setState((prevState) => {
       return { sideDrawerOpen: !prevState.sideDrawerOpen };
@@ -20,16 +19,21 @@ class SecondaryContainer extends Component {
   //     });
   //   };
   render() {
+    let backdrop;
+
+    if (this.state.sideDrawerOpen) {
+      backdrop = <Backdrop click={this.backdropClickHandler} />;
+    }
     return (
       <div classname="titles">
         <h1 className="title-box">Types of products</h1>
         <h1 className="title-box">Current projects</h1>
         <h1 className="title-box">Members area</h1>
-
+        <MagicButton drawerClickHandler={this.drawerToggleClickHandler} />
         <div className="drawer-container">
-          <SideDrawer />
+          <SideDrawer show={this.state.sideDrawerOpen} />
+          {backdrop}
         </div>
-        {/* show={this.state.sideDrawerOpen} */}
       </div>
     );
   }
