@@ -25,7 +25,10 @@ class SecondaryContainer extends Component {
         <h1 className="title-box">Types of products</h1>
         <h1 className="title-box">Current projects</h1>
         <h1 className="title-box">Members area</h1>
-        <SideDrawer />
+
+        <div className="drawer-container">
+          <SideDrawer />
+        </div>
         {/* show={this.state.sideDrawerOpen} */}
       </div>
     );

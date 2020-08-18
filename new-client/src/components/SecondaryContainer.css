@@ -9,3 +9,8 @@
     margin: 50%;
     width: 300px;
 }
+
+.drawer-container {
+    position: absolute;
+    z-index: 200;
+}

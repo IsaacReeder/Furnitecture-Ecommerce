@@ -5,6 +5,8 @@
     background-color: aliceblue;
     border: 1px solid #DDD;
     justify-content: flex-end;
+    position: relative;
+    z-index: 5000;
 }
 
 .app-title {

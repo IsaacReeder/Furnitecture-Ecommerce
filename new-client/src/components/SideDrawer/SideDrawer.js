@@ -11,10 +11,10 @@ const sideDrawer = (props) => {
     <nav className="side-drawer open">
       <ul>
         <li>
-          <a href="/">Products</a>
+          <h1>'ello mate</h1>
         </li>
         <li>
-          <a href="/">Users</a>
+          <h1>cheers</h1>
         </li>
       </ul>
     </nav>
