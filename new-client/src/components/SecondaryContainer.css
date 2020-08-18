@@ -1,4 +1,11 @@
-.sec-container {
-    flex: 1;
-    height: 900px;
+.titles {
+    display: flex;
+    /* flex: 1; */
+    height: 100%;
+}
+
+.title-box {
+    justify-content: space-around;
+    margin: 50%;
+    width: 300px;
 }

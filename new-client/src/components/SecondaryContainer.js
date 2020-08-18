@@ -1,11 +1,12 @@
 import React from "react";
+import "./SecondaryContainer.css";
 
 const SecondaryContainer = () => {
   return (
     <div classname="titles">
-      <div className="title-box">Types of products</div>
-      <div className="title-box">Current projects</div>
-      <div className="title-box">Members area</div>
+      <h1 className="title-box">Types of products</h1>
+      <h1 className="title-box">Current projects</h1>
+      <h1 className="title-box">Members area</h1>
     </div>
   );
 };
