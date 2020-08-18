@@ -1,31 +1,35 @@
-import React, { useState } from "react";
+import React, { useState, Component } from "react";
 import "./SecondaryContainer.css";
-import SideDrawer from "./SideDrawer";
+import SideDrawer from "./SideDrawer/SideDrawer";
+import drawerButton from "./SideDrawer/DrawerButton";
+import Backdrop from "./Backdrop/Backdrop";
+import Projects from "./Projects/Projects";
 
-const SecondaryContainer = () => {
-  const [sideDrawerOpen, setSideDrawer] = useState(false);
-  return (
-    <div classname="titles">
-      <h1 className="title-box">Types of products</h1>
-      <h1 className="title-box">Current projects</h1>
-      <h1 className="title-box">Members area</h1>
-      <SideDrawer
-        click={this.backdropClickHandler}
-        show={this.state.sideDrawerOpen}
-      />
-    </div>
-  );
-};
+class SecondaryContainer extends Component {
+  //   state = {
+  //     sideDrawerOpen: false,
+  //   };
+  drawerToggleClickHandler = () => {
+    this.setState((prevState) => {
+      return { sideDrawerOpen: !prevState.sideDrawerOpen };
+    });
+  };
+  //   backdropClickHandler = () => {
+  //     this.setState({
+  //       sideDrawerOpen: false,
+  //     });
+  //   };
+  render() {
+    return (
+      <div classname="titles">
+        <h1 className="title-box">Types of products</h1>
+        <h1 className="title-box">Current projects</h1>
+        <h1 className="title-box">Members area</h1>
+        <SideDrawer />
+        {/* show={this.state.sideDrawerOpen} */}
+      </div>
+    );
+  }
+}
 
-drawerToggleClickHandler = () => {
-  this.setSideDrawer((prevState) => {
-    return { sideDrawerOpen: !prevState.setSideDrawer };
-  });
-};
-
-backdropClickHandler = () => {
-  this.setState({
-    sideDrawerOpen: false,
-  });
-};
 export default SecondaryContainer;
