@@ -1,0 +1,34 @@
+.Landing-Container {
+    display: flex;
+    justify-content: left;
+    min-height: 91.5vh;
+    align-self: stretch;
+    margin: 0
+}
+
+.left-side-container {
+    flex-direction: column;
+    justify-content: flex-start
+}
+
+.blurb {
+    height: 50%;
+}
+
+html, body {
+    min-height: 100%;
+}
+
+body {
+    height: 100vh;
+}
+
+.right-side-container {
+    display: flex;
+    flex: 3;
+    height: 100%;
+    flex-basis: 100%;
+    background-color: aqua;
+    border-color: black;
+    align-self: stretch;
+}
