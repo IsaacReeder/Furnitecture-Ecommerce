@@ -1,10 +1,10 @@
 import React from "react";
-import drawerToggleButton from "./DrawerToggleButton";
+import DrawerToggleButton from "./DrawerToggleButton";
 
 const MagicButton = (props) => {
   return (
     <div>
-      <drawerToggleButton click={props.drawerClickHandler} />
+      <DrawerToggleButton click={props.drawerClickHandler} />
     </div>
   );
 };

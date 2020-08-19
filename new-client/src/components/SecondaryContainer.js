@@ -13,11 +13,11 @@ class SecondaryContainer extends Component {
       return { sideDrawerOpen: !prevState.sideDrawerOpen };
     });
   };
-  //   backdropClickHandler = () => {
-  //     this.setState({
-  //       sideDrawerOpen: false,
-  //     });
-  //   };
+  backdropClickHandler = () => {
+    this.setState({
+      sideDrawerOpen: false,
+    });
+  };
   render() {
     let backdrop;
 
@@ -27,9 +27,9 @@ class SecondaryContainer extends Component {
     return (
       <div classname="titles">
         <h1 className="title-box">Types of products</h1>
+        <MagicButton drawerClickHandler={this.drawerToggleClickHandler} />
         <h1 className="title-box">Current projects</h1>
         <h1 className="title-box">Members area</h1>
-        <MagicButton drawerClickHandler={this.drawerToggleClickHandler} />
         <div className="drawer-container">
           <SideDrawer show={this.state.sideDrawerOpen} />
           {backdrop}
