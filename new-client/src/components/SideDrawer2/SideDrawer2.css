@@ -4,9 +4,10 @@
     box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
     position: fixed;
     top: 0;
+    margin-top: 4.3%;
     right: 0;
     width: 70%;
-    max-width: 45%;
+    max-width: 55%;
     z-index: 200;
     transform: translateX(80%);
     transition: transform .5s ease-out;

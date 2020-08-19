@@ -7,7 +7,7 @@ import "./SideDrawer2.css";
 const SideDrawer2 = (props) => {
   let drawerClasses = "side-drawer2";
   if (props.show) {
-    drawerClasses = "side-drawer open";
+    drawerClasses = "side-drawer2 open side-drawer open";
   }
 
   return (

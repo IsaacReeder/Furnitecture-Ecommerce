@@ -18,7 +18,10 @@ class SecondaryContainer extends Component {
   };
   drawerToggleClickHandler2 = () => {
     this.setState((prevState) => {
-      return { sideDrawerOpen2: !prevState.sideDrawerOpen2 };
+      return {
+        sideDrawerOpen2: !prevState.sideDrawerOpen2,
+        sideDrawerOpen: !prevState.sideDrawerOpen,
+      };
     });
   };
   backdropClickHandler = () => {
