@@ -1,13 +1,15 @@
 import React from "react";
 import DrawerToggleButton from "./DrawerToggleButton";
+import MagicButton from "./MagicButton";
 
 import "./SideDrawer.css";
 
-const sideDrawer = (props) => {
+const SideDrawer = (props) => {
   let drawerClasses = "side-drawer";
   if (props.show) {
     drawerClasses = "side-drawer open";
   }
+
   return (
     <nav className={drawerClasses}>
       <ul>
@@ -18,9 +20,10 @@ const sideDrawer = (props) => {
           <h1>cheers</h1>
         </li>
       </ul>
+      {/* <MagicButton drawerClickHandler={this.drawerToggleClickHandler} /> */}
       <DrawerToggleButton click={props.drawerClickHandler} />
     </nav>
   );
 };
 
-export default sideDrawer;
+export default SideDrawer;
