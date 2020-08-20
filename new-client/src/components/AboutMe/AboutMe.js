@@ -20,9 +20,33 @@ const AboutMe = () => {
       <div className="right-am-container">
         <div className="button-box"></div>
         <div className="book-box">
-          <div className="book-1">asdf</div>
-          <div className="book-2"></div>
-          <div className="book-3"></div>
+          <div className="book-1">
+            <a
+              href="https://www.isaacreeder.com"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <h1 className="book-1-title">IsaacReeder.com</h1>
+            </a>
+          </div>
+          <div className="book-2">
+            <a
+              href="https://www.isaacreeder.com"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <h1 className="book-2-title">Pictures</h1>
+            </a>
+          </div>
+          <div className="book-3">
+            <a
+              href="https://github.com/IsaacReeder"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <h1 className="book-3-title">GitHub Repository</h1>
+            </a>
+          </div>
           <div className="vase"></div>
           <div className="book-4"></div>
           <div className="book-5"></div>
