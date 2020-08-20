@@ -1,25 +1,25 @@
 .navbar {
-    display: flex;
-    flex-basis: 100%;
-    min-height: 20%;
-    background-color: aliceblue;
-    border: 1px solid #DDD;
-    justify-content: flex-end;
-    position: relative;
-    z-index: 5000;
-    border-color: black;
+  display: flex;
+  min-width: 100%;
+  min-height: 10%;
+  background-color: aliceblue;
+  border: 1px solid #ddd;
+  justify-content: flex-end;
+  position: fixed;
+  z-index: 5000;
+  border-color: black;
 }
 
 .app-title {
-    /* flex: 2;
+  /* flex: 2;
     order: 2; */
-    /* margin-left: 45%; */
-    margin-left: 26%;
+  /* margin-left: 45%; */
+  margin-left: 26%;
 }
 
 .user-time {
-    /* flex: 3;
+  /* flex: 3;
     order: 3; */
-    margin-left: 26%;
-    margin-right: 10%;
+  margin-left: 26%;
+  margin-right: 10%;
 }

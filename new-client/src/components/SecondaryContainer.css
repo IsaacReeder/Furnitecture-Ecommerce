@@ -1,21 +1,21 @@
 .titles {
-    display: flex;
-    /* flex: 1; */
-    height: 100%;
+  display: flex;
+  /* flex: 1; */
+  height: 100%;
 }
 
 .title-box {
-    justify-content: space-around;
-    margin: 50%;
-    width: 300px;
+  justify-content: space-around;
+  margin: 50%;
+  width: 300px;
 }
 
 .drawer-container {
-    position: absolute;
-    z-index: 200;
+  position: absolute;
+  z-index: 200;
 }
 
 .drawer-container2 {
-    position: absolute;
-    z-index: 300;
+  position: absolute;
+  z-index: 300;
 }

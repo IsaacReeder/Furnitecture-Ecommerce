@@ -1,0 +1,32 @@
+.about-me-container {
+  display: flex;
+  background-color: black;
+  /* height: 100vh; */
+  flex-basis: 100%;
+}
+
+.left-am-container {
+  flex: 1;
+  display: flex;
+  background-color: aliceblue;
+  height: 100vh;
+  /* flex-basis: 35%; */
+}
+.right-am-container {
+  flex: 2;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: blanchedalmond;
+}
+.button-box {
+  flex: 1;
+  background-color: brown;
+  flex-basis: 100%;
+  height: 50%;
+}
+.book-box {
+  background-color: red;
+  flex: 2;
+  flex-basis: 100%;
+  height: 50%;
+}

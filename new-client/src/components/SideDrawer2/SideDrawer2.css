@@ -1,43 +1,44 @@
 .side-drawer2 {
-    height: 100%;
-    background: grey;
-    box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
-    position: fixed;
-    top: 0;
-    margin-top: 4.3%;
-    right: 0;
-    width: 70%;
-    max-width: 55%;
-    z-index: 200;
-    transform: translateX(80%);
-    transition: transform .5s ease-out;
-    overflow: scroll
+  height: 100%;
+  background: grey;
+  box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  margin-top: 4.3%;
+  right: 0;
+  width: 70%;
+  max-width: 60%;
+  z-index: 200;
+  transform: translateX(80%);
+  transition: transform 0.5s ease-out;
+  overflow: scroll;
 }
 
 .side-drawer2.open {
-    transform: translateX(0);
+  transform: translateX(0);
 }
 
 .side-drawer2 ul {
-    height: 100%;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  height: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .side-drawer2 li {
-    margin: 0.5rem 0;
+  margin: 0.5rem 0;
 }
 
 .side-drawer2 a {
-    color: #521751;
-    text-decoration: none;
-    font-size: 1.2rem;
+  color: #521751;
+  text-decoration: none;
+  font-size: 1.2rem;
 }
 
-.side-drawer a:hover, .side-drawer a:active {
-    color: #fa923f;
+.side-drawer a:hover,
+.side-drawer a:active {
+  color: #fa923f;
 }
 
 /* @media (min-width: 769px) {
@@ -47,7 +48,7 @@
 } */
 
 .toggle-button {
-    height: 10px;
-    width: 10px;
-    background-color: #fa923f;
+  height: 10px;
+  width: 10px;
+  background-color: #fa923f;
 }

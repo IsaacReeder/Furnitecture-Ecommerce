@@ -1,35 +1,40 @@
 .Landing-Container {
-    display: flex;
-    justify-content: left;
-    min-height: 91.5vh;
-    align-self: stretch;
-    margin: 0
+  display: flex;
+  justify-content: left;
+  min-height: 91.5vh;
+  align-self: stretch;
+  margin: 0;
 }
 
 .left-side-container {
-    flex-direction: column;
-    justify-content: flex-start;
-    max-width: 20%;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 20%;
+  border-color: black;
+  position: sticky;
+  margin-top: 10%;
 }
 
 .blurb {
-    height: 50%;
+  height: 50%;
 }
 
-html, body {
-    min-height: 100%;
+html,
+body {
+  min-height: 100%;
 }
 
 body {
-    height: 100vh;
+  height: 100vh;
 }
 
 .right-side-container {
-    display: flex;
-    flex: 3;
-    height: 100%;
-    flex-basis: 100%;
-    background-color: aqua;
-    border-color: black;
-    align-self: stretch;
+  display: flex;
+  flex: 3;
+  height: 100%;
+  flex-basis: 100%;
+  background-color: aqua;
+  border-color: black;
+  align-self: stretch;
+  position: sticky;
 }
