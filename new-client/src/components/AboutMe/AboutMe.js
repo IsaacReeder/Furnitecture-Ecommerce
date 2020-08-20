@@ -20,12 +20,12 @@ const AboutMe = () => {
       <div className="right-am-container">
         <div className="button-box"></div>
         <div className="book-box">
-          <div className="book-1"></div>
+          <div className="book-1">asdf</div>
           <div className="book-2"></div>
           <div className="book-3"></div>
           <div className="vase"></div>
-          <div className="book-2"></div>
-          <div className="book-2"></div>
+          <div className="book-4"></div>
+          <div className="book-5"></div>
         </div>
       </div>
     </div>
