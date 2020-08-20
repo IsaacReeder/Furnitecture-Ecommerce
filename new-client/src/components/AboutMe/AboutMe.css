@@ -10,7 +10,24 @@
   display: flex;
   background-color: aliceblue;
   height: 100vh;
+  flex-wrap: wrap;
   /* flex-basis: 35%; */
+}
+
+.am-title {
+  flex: 1;
+  background-color: yellow;
+  flex-basis: 100%;
+  height: 15%;
+  padding: 10%;
+  padding-left: 20%;
+}
+.whoami {
+  flex: 2;
+  background-color: yellowgreen;
+  flex-basis: 100%;
+  height: 25%;
+  padding: 20%;
 }
 .right-am-container {
   flex: 2;
@@ -20,13 +37,47 @@
 }
 .button-box {
   flex: 1;
+  display: flex;
   background-color: brown;
   flex-basis: 100%;
-  height: 50%;
+  height: 20%;
 }
 .book-box {
   background-color: red;
+  display: flex;
   flex: 2;
+  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
   flex-basis: 100%;
+  height: 60%;
+  margin-right: 15%;
+  margin-left: 15%;
+  padding-bottom: 5%;
+}
+.book-1 {
+  /* flex: 1; */
+  height: 70%;
+  background-color: black;
+  flex-basis: 10%;
+  bottom: 0;
+  margin-right: -10%;
+}
+.book-2 {
+  /* flex: 2; */
   height: 50%;
+  background-color: rgb(49, 40, 40);
+  flex-basis: 10%;
+}
+.book-3 {
+  /* flex: 3; */
+  height: 50%;
+  background-color: rgb(122, 66, 66);
+  flex-basis: 10%;
+}
+.vase {
+  /* flex: 3; */
+  height: 50%;
+  background-color: rgb(161, 12, 12);
+  flex-basis: 10%;
 }

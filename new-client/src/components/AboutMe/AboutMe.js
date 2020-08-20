@@ -5,8 +5,17 @@ const AboutMe = () => {
   return (
     <div className="about-me-container">
       <div className="left-am-container">
-        <div className="am-title"></div>
-        <div className="whoami"></div>
+        <div className="am-title">
+          <h1>About Me</h1>
+        </div>
+        <h2 className="whoami">
+          whoami really Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+          enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+          ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur.
+        </h2>
       </div>
       <div className="right-am-container">
         <div className="button-box"></div>
@@ -14,7 +23,7 @@ const AboutMe = () => {
           <div className="book-1"></div>
           <div className="book-2"></div>
           <div className="book-3"></div>
-          <div className="hover-vase"></div>
+          <div className="vase"></div>
         </div>
       </div>
     </div>
