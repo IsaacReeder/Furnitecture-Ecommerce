@@ -48,8 +48,24 @@ const AboutMe = () => {
             </a>
           </div>
           <div className="vase"></div>
-          <div className="book-4"></div>
-          <div className="book-5"></div>
+          <div className="book-4">
+            <a
+              href="https://www.linkedin.com/in/isaac-reeder/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <h1 className="book-3-title">LinkedIn</h1>
+            </a>
+          </div>
+          {/* <div className="book-5">
+            <a
+              href="https://www.linkedin.com/in/isaac-reeder/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <h1 className="book-3-title">LinkedIn</h1>
+            </a>
+          </div> */}
         </div>
       </div>
     </div>
