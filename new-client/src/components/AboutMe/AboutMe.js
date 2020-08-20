@@ -24,6 +24,8 @@ const AboutMe = () => {
           <div className="book-2"></div>
           <div className="book-3"></div>
           <div className="vase"></div>
+          <div className="book-2"></div>
+          <div className="book-2"></div>
         </div>
       </div>
     </div>
