@@ -33,7 +33,8 @@ const AboutMe = () => {
         </div>
         <div className="book-box">
           <div className="book-1">
-            <div className="line-separator">My portfolio</div>
+            <div className="line-separator"></div>
+            <h4 className="site-title">My Portfolio</h4>
             <div className="line-separator-2"></div>
             <a
               href="https://www.isaacreeder.com"
