@@ -26,11 +26,15 @@ const AboutMe = () => {
             </Link>
           </div>
           <div className="possible-shopping-cart">
-            <img src="asdf"></img>
+            <Link to="/" className="btn btn-primary">
+              <h2 style={{ color: "white" }}>Home</h2>
+            </Link>
           </div>
         </div>
         <div className="book-box">
           <div className="book-1">
+            <div className="line-separator">My portfolio</div>
+            <div className="line-separator-2"></div>
             <a
               href="https://www.isaacreeder.com"
               rel="noopener noreferrer"
