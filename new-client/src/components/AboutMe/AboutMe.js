@@ -1,5 +1,6 @@
 import React from "react";
 import "./AboutMe.css";
+import { Link } from "react-router-dom";
 
 const AboutMe = () => {
   return (
@@ -18,7 +19,16 @@ const AboutMe = () => {
         </h2>
       </div>
       <div className="right-am-container">
-        <div className="button-box"></div>
+        <div className="button-box">
+          <div className="link-box-1">
+            <Link to="/" className="btn btn-primary">
+              <h2 style={{ color: "white" }}>Home</h2>
+            </Link>
+          </div>
+          <div className="possible-shopping-cart">
+            <img src="asdf"></img>
+          </div>
+        </div>
         <div className="book-box">
           <div className="book-1">
             <a
@@ -57,7 +67,7 @@ const AboutMe = () => {
               <h1 className="book-3-title">LinkedIn</h1>
             </a>
           </div>
-          {/* <div className="book-5">
+          <div className="book-5">
             <a
               href="https://www.linkedin.com/in/isaac-reeder/"
               rel="noopener noreferrer"
@@ -65,7 +75,7 @@ const AboutMe = () => {
             >
               <h1 className="book-3-title">LinkedIn</h1>
             </a>
-          </div> */}
+          </div>
         </div>
       </div>
     </div>

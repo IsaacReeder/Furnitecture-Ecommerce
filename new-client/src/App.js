@@ -10,9 +10,9 @@ function App() {
     <Router>
       <Switch>
         <Route path="/" exact>
-          <LandingPage></LandingPage>
+          <LandingPage />
         </Route>
-        <Route path="/aboutme" exact>
+        <Route path="/about" exact>
           <AboutMe />
         </Route>
       </Switch>
