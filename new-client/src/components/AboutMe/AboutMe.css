@@ -108,7 +108,7 @@
   text-decoration: none;
   writing-mode: vertical-rl;
   text-orientation: mixed;
-  margin-top: -200%;
+  /* margin-top: -200%; */
 }
 
 .book-2 {
@@ -204,14 +204,19 @@ a {
   min-width: 85%;
   writing-mode: sideways-rl;
   text-orientation: mixed;
+  background-color: aqua;
+  /* height: 5px; */
 }
 .line-separator-2 {
   border-top: 1px solid white;
   min-width: 85%;
   margin-right: 1%;
-  margin-top: -325%;
+  margin-top: -150%;
 }
 .site-title {
-  margin-top: -150%;
+  margin-top: -50%;
   margin-left: 3%;
+}
+a {
+  height: 50%;
 }
