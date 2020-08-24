@@ -9,7 +9,7 @@ const strapi = new Strapi(apiUrl);
 
 class Brews extends React.Component {
   state = {
-    brews: [],
+    items: [],
     brand: "",
     cartItems: [],
   };
@@ -21,7 +21,7 @@ class Brews extends React.Component {
           brand(id: "${this.props.match.params.brandId}") {
             id
             name
-            brews {
+            items {
               id
               name
               description
@@ -35,7 +35,7 @@ class Brews extends React.Component {
         },
       });
       this.setState({
-        brews: response.data.brand.brews,
+        items: response.data.brand.items,
         brand: response.data.brand.name,
         cartItems: getCart(),
       });
@@ -44,14 +44,14 @@ class Brews extends React.Component {
     }
   }
 
-  addToCart = (brew) => {
+  addToCart = (item) => {
     const alreadyInCart = this.state.cartItems.findIndex(
-      (item) => item.id === brew.id
+      (item) => item.id === item.id
     );
 
     if (alreadyInCart === -1) {
       const updatedItems = this.state.cartItems.concat({
-        ...brew,
+        ...item,
         quantity: 1,
       });
       this.setState({ cartItems: updatedItems }, () => setCart(updatedItems));
@@ -70,7 +70,7 @@ class Brews extends React.Component {
   };
 
   render() {
-    const { brand, brews, cartItems } = this.state;
+    const { brand, items, cartItems } = this.state;
     return (
       <Box
         marginTop={4}
@@ -102,8 +102,8 @@ class Brews extends React.Component {
             justifyContent="center"
             padding={4}
           >
-            {brews.map((brew) => (
-              <Box paddingY={4} margin={2} width={210} key={brew.id}>
+            {items.map((item) => (
+              <Box paddingY={4} margin={2} width={210} key={item.id}>
                 <Card
                   image={
                     <Box height={250} width={200}>
@@ -112,7 +112,7 @@ class Brews extends React.Component {
                         alt="Brand"
                         naturalHeight={1}
                         naturalWidth={1}
-                        src={`${apiUrl}${brew.image[0].url}`}
+                        src={`${apiUrl}${item.image[0].url}`}
                       />
                     </Box>
                   }
@@ -125,15 +125,15 @@ class Brews extends React.Component {
                   >
                     <Box marginBottom={2}>
                       <Text bold size="xl">
-                        {brew.name}
+                        {item.name}
                       </Text>
                     </Box>
-                    <Text>{brew.description}</Text>
-                    <Text color="orchid">${brew.price}</Text>
+                    <Text>{item.description}</Text>
+                    <Text color="orchid">${item.price}</Text>
                     <Box marginTop={2}>
                       <Text bold size="xl">
                         <Button
-                          onClick={() => this.addToCart(brew)}
+                          onClick={() => this.addToCart(item)}
                           color="blue"
                           text="Add to Cart"
                         />

@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "brands",
+  "collectionName": "items",
   "info": {
-    "name": "brand"
+    "name": "items"
   },
   "options": {
     "increments": true,
@@ -19,20 +19,19 @@
       "collection": "file",
       "via": "related",
       "allowedTypes": [
-        "files",
         "images",
+        "files",
         "videos"
       ],
       "plugin": "upload",
       "required": false
     },
-    "brews": {
-      "collection": "brew",
-      "via": "brand"
+    "brand": {
+      "model": "brand",
+      "via": "items"
     },
-    "items": {
-      "via": "brand",
-      "collection": "items"
+    "price": {
+      "type": "decimal"
     }
   }
 }
