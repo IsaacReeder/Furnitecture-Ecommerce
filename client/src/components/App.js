@@ -80,7 +80,7 @@ class App extends Component {
         <Box display="flex" justifyContent="center" marginBottom={2}>
           {/* Brands Header */}
           <Heading color="midnight" size="md">
-            Brands
+            Kind
           </Heading>
         </Box>
         {/* Brands */}

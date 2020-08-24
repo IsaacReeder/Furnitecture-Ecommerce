@@ -13,18 +13,18 @@ class Brews extends React.Component {
     brand: "",
     cartItems: [],
   };
-
   async componentDidMount() {
+    console.log(this.state.brews);
     console.log("in the func");
     try {
-      console.log("in the try");
+      console.log("in the try " + this.props.match.params.brandId);
       const response = await strapi.request("POST", "/graphql", {
         data: {
           query: `query {
           brand(id: "${this.props.match.params.brandId}") {
             id
             name
-            brews {
+            brew {
               id
               name
               description
@@ -37,9 +37,10 @@ class Brews extends React.Component {
         }`,
         },
       });
-      console.log("after the const response");
+      console.log(this.state.brews);
+      // console.log("after the const response " + response);
       this.setState({
-        brews: response.data.brand.brews,
+        brews: response.data.brand.brew,
         brand: response.data.brand.name,
         cartItems: getCart(),
       });
@@ -74,8 +75,9 @@ class Brews extends React.Component {
   };
 
   render() {
+    console.log(this.state);
     const { brand, brews, cartItems } = this.state;
-
+    console.log("the brews are" + brews);
     return (
       <Box
         marginTop={4}
@@ -117,7 +119,7 @@ class Brews extends React.Component {
                         alt="Brand"
                         naturalHeight={1}
                         naturalWidth={1}
-                        src={`${apiUrl}${brew.image.url}`}
+                        src={`${apiUrl}${brew.image[0].url}`}
                       />
                     </Box>
                   }
