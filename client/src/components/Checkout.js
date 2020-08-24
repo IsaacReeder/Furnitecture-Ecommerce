@@ -55,7 +55,7 @@ class _CheckoutForm extends React.Component {
       token = response.token.id;
       await strapi.createEntry("orders", {
         amount,
-        brews: cartItems,
+        items: cartItems,
         city,
         postalCode,
         address,

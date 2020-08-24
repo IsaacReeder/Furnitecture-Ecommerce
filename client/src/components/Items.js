@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const apiUrl = process.env.API_URL || "http://localhost:1337";
 const strapi = new Strapi(apiUrl);
 
-class Brews extends React.Component {
+class Items extends React.Component {
   state = {
     items: [],
     brand: "",
@@ -45,9 +45,7 @@ class Brews extends React.Component {
   }
 
   addToCart = (item) => {
-    const alreadyInCart = this.state.cartItems.findIndex(
-      (item) => item.id === item.id
-    );
+    const alreadyInCart = this.state.cartItems.findIndex((item) => item.id);
 
     if (alreadyInCart === -1) {
       const updatedItems = this.state.cartItems.concat({
@@ -204,4 +202,4 @@ class Brews extends React.Component {
   }
 }
 
-export default Brews;
+export default Items;

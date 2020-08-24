@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Text, Heading, Image, Button } from "gestalt";
+import { Box, Text, Heading, Button } from "gestalt";
 import { getToken, clearToken, clearCart } from "../utils";
 import { NavLink, withRouter } from "react-router-dom";
 
