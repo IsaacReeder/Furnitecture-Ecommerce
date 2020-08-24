@@ -29,9 +29,9 @@
     "price": {
       "type": "decimal"
     },
-    "brands": {
-      "collection": "brand",
-      "via": "brew"
+    "brand": {
+      "via": "brews",
+      "model": "brand"
     }
   }
 }

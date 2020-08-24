@@ -26,9 +26,9 @@
       "plugin": "upload",
       "required": false
     },
-    "brew": {
-      "via": "brands",
-      "model": "brew"
+    "brews": {
+      "collection": "brew",
+      "via": "brand"
     }
   }
 }
