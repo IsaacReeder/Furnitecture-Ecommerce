@@ -14,10 +14,7 @@ class Brews extends React.Component {
     cartItems: [],
   };
   async componentDidMount() {
-    // console.log(this.state.brews);
-    console.log("in the func");
     try {
-      // console.log("in the try " + this.props.match.params.brandId);
       const response = await strapi.request("POST", "/graphql", {
         data: {
           query: `query {
@@ -37,9 +34,6 @@ class Brews extends React.Component {
         }`,
         },
       });
-      console.table("Response looks like: " + response.data.brand.brews);
-      // console.log("Brews array looks like: " + this.state.brews);
-      // console.log("after the const response " + response);
       this.setState({
         brews: response.data.brand.brews,
         brand: response.data.brand.name,
@@ -76,9 +70,7 @@ class Brews extends React.Component {
   };
 
   render() {
-    console.log(this.state.brews);
     const { brand, brews, cartItems } = this.state;
-    // console.log("the brews are " + brews.id);
     return (
       <Box
         marginTop={4}
