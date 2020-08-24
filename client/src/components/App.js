@@ -80,10 +80,11 @@ class App extends Component {
         <Box display="flex" justifyContent="center" marginBottom={2}>
           {/* Brands Header */}
           <Heading color="midnight" size="md">
-            Brew Brands
+            Brands
           </Heading>
         </Box>
         {/* Brands */}
+
         <Box
           dangerouslySetInlineStyle={{
             __style: {
@@ -96,6 +97,7 @@ class App extends Component {
           justifyContent="around"
         >
           {this.filteredBrands(this.state).map((brand) => (
+            // console.log(`${apiUrl}${brand.image[0].url}`, this.state),
             <Box paddingY={4} margin={2} width={200} key={brand.id}>
               <Card
                 image={
@@ -105,7 +107,7 @@ class App extends Component {
                       alt="Brand"
                       naturalHeight={1}
                       naturalWidth={1}
-                      src={`${apiUrl}${brand.image.url}`}
+                      src={`${apiUrl}${brand.image[0].url}`}
                     />
                   </Box>
                 }
