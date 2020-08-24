@@ -89,7 +89,7 @@ class Signup extends React.Component {
             >
               <Heading color="midnight">Let's Get Started</Heading>
               <Text italic color="orchid">
-                Sign up to order some brews!
+                Sign up to view my collection!
               </Text>
             </Box>
             {/* Username Input */}

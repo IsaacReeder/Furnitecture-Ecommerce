@@ -123,7 +123,7 @@ class App extends Component {
                   </Text>
                   <Text>{brand.description}</Text>
                   <Text bold size="xl">
-                    <Link to={`/${brand.id}`}>See Brews</Link>
+                    <Link to={`/${brand.id}`}>See Items</Link>
                   </Text>
                 </Box>
               </Card>

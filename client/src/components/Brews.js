@@ -83,13 +83,13 @@ class Brews extends React.Component {
           },
         }}
       >
-        {/* Brews Section */}
+        {/* Items Section */}
         <Box display="flex" direction="column" alignItems="center">
-          {/* Brews Heading */}
+          {/* Items Heading */}
           <Box margin={2}>
             <Heading color="orchid">{brand}</Heading>
           </Box>
-          {/* Brews */}
+          {/* Items */}
           <Box
             dangerouslySetInlineStyle={{
               __style: {

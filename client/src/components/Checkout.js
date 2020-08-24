@@ -191,7 +191,7 @@ class _CheckoutForm extends React.Component {
                 Your Cart is Empty
               </Heading>
               <Text align="center" italic color="green">
-                Add some brews!
+                Add some items!
               </Text>
             </Box>
           )}
