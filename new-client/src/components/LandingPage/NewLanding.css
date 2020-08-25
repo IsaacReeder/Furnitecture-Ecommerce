@@ -11,6 +11,8 @@
   left: 0;
   width: 100%;
   height: 56px;
+  border-bottom: 3px solid black;
+  z-index: 250;
 }
 .left-side {
   display: flex;
@@ -24,11 +26,14 @@
 }
 .right-side {
   position: fixed;
+  display: flex;
   margin-top: 56px;
   right: 0;
   width: 80%;
   background-color: yellow;
   height: 100vh;
+  border-top: 3px solid black;
+  border-left: 3px solid black;
 }
 .paragraph {
   height: 40%;
@@ -39,4 +44,14 @@
   height: 50%;
   padding: 10%;
   background-color: blueviolet;
+  border-top: 3px solid black;
+}
+
+.hover-title {
+  margin-top: 10%;
+  margin-left: 10%;
+  height: 5%;
+  cursor: pointer;
+}
+.drawery {
 }
