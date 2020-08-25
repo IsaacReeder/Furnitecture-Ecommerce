@@ -32,9 +32,11 @@
 }
 .paragraph {
   height: 40%;
+  padding: 10%;
   background-color: blue;
 }
 .imgg {
   height: 50%;
+  padding: 10%;
   background-color: blueviolet;
 }
