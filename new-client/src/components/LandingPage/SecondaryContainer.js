@@ -1,4 +1,4 @@
-import React, { useState, Component } from "react";
+import React, { Component } from "react";
 import "./SecondaryContainer.css";
 import SideDrawer from "./SideDrawer/SideDrawer";
 import SideDrawer2 from "./SideDrawer2/SideDrawer2";

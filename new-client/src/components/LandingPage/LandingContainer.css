@@ -17,6 +17,11 @@
 
 .blurb {
   height: 50%;
+  border: 3px solid black;
+}
+.image-presenter {
+  height: 50%;
+  border: 3px solid black;
 }
 
 html,
@@ -35,6 +40,6 @@ body {
   flex-basis: 100%;
   background-color: aqua;
   border-color: black;
-  align-self: stretch;
-  position: sticky;
+  /* align-self: stretch; */
+  /* position: sticky; */
 }

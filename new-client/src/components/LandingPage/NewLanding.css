@@ -1,0 +1,40 @@
+.new-landing-container {
+  display: flex;
+  /* position: relative; */
+  /* height: 200vh; */
+}
+.navie {
+  flex-basis: 100%;
+  background-color: aqua;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 56px;
+}
+.left-side {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  margin-top: 56px;
+  left: 0;
+  width: 20%;
+  background-color: blanchedalmond;
+  height: 100vh;
+}
+.right-side {
+  position: fixed;
+  margin-top: 56px;
+  right: 0;
+  width: 80%;
+  background-color: yellow;
+  height: 100vh;
+}
+.paragraph {
+  height: 40%;
+  background-color: blue;
+}
+.imgg {
+  height: 50%;
+  background-color: blueviolet;
+}

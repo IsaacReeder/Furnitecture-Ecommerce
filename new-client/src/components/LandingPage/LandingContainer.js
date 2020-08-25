@@ -12,8 +12,9 @@ const LandingContainer = () => {
         <div className="blurb">
           <Blurb />
         </div>
-
-        <ImagePresenter />
+        <div className="image-presenter">
+          <ImagePresenter />
+        </div>
       </div>
       <div className="right-side-container">
         <SecondaryContainer />

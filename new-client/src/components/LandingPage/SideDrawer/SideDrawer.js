@@ -1,6 +1,5 @@
 import React from "react";
 import DrawerToggleButton from "./DrawerToggleButton";
-import MagicButton from "./MagicButton";
 
 import "./SideDrawer.css";
 
