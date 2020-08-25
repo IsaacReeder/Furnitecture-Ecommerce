@@ -38,6 +38,7 @@
 .paragraph {
   height: 40%;
   padding: 10%;
+  padding-top: 55%;
   background-color: blue;
 }
 .imgg {
@@ -52,6 +53,46 @@
   margin-left: 10%;
   height: 5%;
   cursor: pointer;
+  font-size: 100px;
 }
-.drawery {
+
+.toolbar-navigation {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  padding: 0 1rem;
+}
+.toolbar-logo {
+  margin-left: 1rem;
+}
+
+.toolbar-logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+/* / */
+.spacer {
+  flex: 1;
+}
+
+.toolbar-navigation-items ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.toolbar-navigation-items li {
+  padding: 0 0.5rem;
+}
+
+.toolbar-navigation-items a {
+  color: white;
+  text-decoration: none;
+}
+
+.toolbar-navigation-items a:hover,
+.toolbar-navigation-items a:active {
+  color: #fa923f;
 }

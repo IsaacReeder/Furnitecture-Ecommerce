@@ -1,4 +1,4 @@
-.toggle-button {
+/* .toggle-button {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -9,9 +9,9 @@
     cursor: pointer;
     padding: 0;
     box-sizing: border-box;
-}
+} */
 
-.toggle-button:focus {
+/* .toggle-button:focus {
     outline: none;
 }
 
@@ -19,4 +19,4 @@
     width: 30px;
     height: 2px;
     background: black;
-}
+} */
