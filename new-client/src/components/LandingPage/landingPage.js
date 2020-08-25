@@ -8,20 +8,18 @@ class NewLanding extends Component {
   state = {
     time: new Date(),
     sideDrawerOpen: false,
-    imageSrc:
-      "https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/other/beach_safety_covid_19_other/1800x1200_beach_safety_covid_19_other.jpg",
+    imageSrc: "",
   };
   handleMouseEnter = () => {
     console.log("Mouse enter");
     this.setState({
       imageSrc:
-        "https://atlantis.nyc3.digitaloceanspaces.com/media/legacy/atlantis/Things_To_Do/Water_Park/Beaches/Hero/Experiences_Beach.jpg",
+        "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fassets.entrepreneur.com%2Farticle%2Fh1%2Fpublish-a-book-and-prosper-as-a-small-biz-owner.jpg&f=1&nofb=1",
     });
   };
   handleMouseExit = () => {
     this.setState({
-      imageSrc:
-        "https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/other/beach_safety_covid_19_other/1800x1200_beach_safety_covid_19_other.jpg",
+      imageSrc: "",
     });
   };
   drawerToggleClickHandler = () => {
@@ -55,12 +53,12 @@ class NewLanding extends Component {
               <ul>
                 <li>
                   <h1>
-                    {h % 12}:{m < 10 ? "0" + m : m}:{s < 10 ? "0" + s : s}{" "}
+                    {h % 12}:{m < 10 ? "0" + m : m}:{s < 10 ? "0" + s : s}
                     {h < 12 ? "am" : "pm"}
                   </h1>
                 </li>
                 <li>
-                  <a href="/">Users</a>
+                  <h1>Cart</h1>
                 </li>
               </ul>
             </div>

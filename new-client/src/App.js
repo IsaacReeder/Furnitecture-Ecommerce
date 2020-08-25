@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import AboutMe from "./components/LandingPage/AboutMe/AboutMe";
 import LandingPage from "./components/LandingPage/LandingPage";
+import Signup from "./components/Auth/Signup";
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
         </Route>
         <Route path="/about" exact>
           <AboutMe />
+        </Route>
+        <Route path="/signup" exact>
+          <Signup />
         </Route>
       </Switch>
     </Router>

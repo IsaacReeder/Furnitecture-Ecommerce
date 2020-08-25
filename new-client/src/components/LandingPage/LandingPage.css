@@ -3,6 +3,7 @@
   /* position: relative; */
   /* height: 200vh; */
 }
+
 .navie {
   flex-basis: 100%;
   background-color: aqua;
@@ -14,6 +15,7 @@
   border-bottom: 3px solid black;
   z-index: 250;
 }
+
 .left-side {
   display: flex;
   flex-direction: column;
@@ -24,6 +26,7 @@
   background-color: blanchedalmond;
   height: 100vh;
 }
+
 .right-side {
   position: fixed;
   display: flex;
@@ -35,17 +38,20 @@
   border-top: 3px solid black;
   border-left: 3px solid black;
 }
+
 .paragraph {
   height: 40%;
   padding: 10%;
   padding-top: 55%;
   background-color: blue;
 }
+
 .imgg {
   height: 50%;
   padding: 10%;
   background-color: blueviolet;
   border-top: 3px solid black;
+  object-fit: cover;
 }
 
 .hover-title {
@@ -62,8 +68,9 @@
   align-items: center;
   padding: 0 1rem;
 }
+
 .toolbar-logo {
-  margin-left: 1rem;
+  margin-left: 2rem;
 }
 
 .toolbar-logo a {
@@ -71,7 +78,9 @@
   text-decoration: none;
   font-size: 1.5rem;
 }
+
 /* / */
+
 .spacer {
   flex: 1;
 }
@@ -92,7 +101,6 @@
   text-decoration: none;
 }
 
-.toolbar-navigation-items a:hover,
-.toolbar-navigation-items a:active {
+.toolbar-navigation-items a:hover, .toolbar-navigation-items a:active {
   color: #fa923f;
 }

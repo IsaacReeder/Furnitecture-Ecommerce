@@ -19,8 +19,6 @@ const SideDrawer = (props) => {
           <h1>cheers</h1>
         </li>
       </ul>
-      {/* <MagicButton drawerClickHandler={this.drawerToggleClickHandler} /> */}
-      <DrawerToggleButton click={props.drawerClickHandler} />
     </nav>
   );
 };
