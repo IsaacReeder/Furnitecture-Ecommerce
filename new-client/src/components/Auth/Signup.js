@@ -35,19 +35,19 @@ class Signup extends Component {
         <ul className="options">
           <li
             className={option === 1 ? "active" : ""}
-            onClick={this.setOption(1)}
+            onClick={() => this.setOption(1)}
           >
             Sign in
           </li>
           <li
             className={option === 2 ? "active" : ""}
-            onClick={this.setOption(2)}
+            onClick={() => this.setOption(2)}
           >
             Sign up
           </li>
           <li
             className={option === 3 ? "active" : ""}
-            onClick={this.setOption(3)}
+            onClick={() => this.setOption(3)}
           >
             Forgot
           </li>
