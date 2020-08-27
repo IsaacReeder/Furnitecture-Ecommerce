@@ -5,7 +5,10 @@ import "./Form.css";
 const apiUrl = process.env.API_URL || "http://localhost:1337";
 const strapi = new Strapi(apiUrl);
 
-class Form extends Component({ option }) {
+class Form extends Component {
+  // constructor(props) {
+  //   super(props);
+  // }
   state = {
     username: "",
     email: "",
@@ -55,7 +58,8 @@ class Form extends Component({ option }) {
 
   render() {
     // const { toastMessage, toast, loading } = this.state;
-    const [option, setOption] = React.useState(1);
+    // const [option, setOption] = React.useState(1);
+    const option = this.state.option;
     return (
       <form className="account-form" onSubmit={this.handleSubmit}>
         <div

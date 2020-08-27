@@ -3,9 +3,21 @@ import React, { Component } from "react";
 import Form from "./Form/Form";
 
 class Signup extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      option: 1,
+    };
+  }
+  setOption(num) {
+    console.log(num);
+    this.setState((option) => {
+      option = num;
+    });
+  }
   render() {
-    const [option, setOption] = React.useState(1);
-
+    // const [option, setOption] = React.useState(1);
+    const option = this.state.option;
     return (
       <div className="container">
         <header>
@@ -23,32 +35,24 @@ class Signup extends Component {
         <ul className="options">
           <li
             className={option === 1 ? "active" : ""}
-            onClick={() => setOption(1)}
+            onClick={this.setOption(1)}
           >
             Sign in
           </li>
           <li
             className={option === 2 ? "active" : ""}
-            onClick={() => setOption(2)}
+            onClick={this.setOption(2)}
           >
             Sign up
           </li>
           <li
             className={option === 3 ? "active" : ""}
-            onClick={() => setOption(3)}
+            onClick={this.setOption(3)}
           >
             Forgot
           </li>
         </ul>
-        <Form option={option} />
-        <footer>
-          <a
-            href="https://dribbble.com/shots/5041581-Zenbu-Sign-in-up-forgot-page"
-            target="_blank"
-          >
-            Original design with animations by Zenbu
-          </a>
-        </footer>
+        <Form option={this.state.option} />
       </div>
     );
   }
