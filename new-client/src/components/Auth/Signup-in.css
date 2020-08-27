@@ -1,0 +1,33 @@
+.container {
+  text-align: center;
+  color: rgb(209, 94, 94);
+  margin-top: 100px;
+}
+.header-headings {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+.header-headings.sign-in {
+  transform: translateY(0);
+}
+.header-headings.sign-up {
+  transform: translateY(-25px);
+}
+.header-headings.forgot {
+  transform: translateY(-50px);
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  width: 350px;
+}
+.options:hover {
+  opacity: 1;
+}
+.options:active {
+  opacity: 1;
+}

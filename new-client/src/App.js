@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import AboutMe from "./components/LandingPage/AboutMe/AboutMe";
 import LandingPage from "./components/LandingPage/LandingPage";
-import Signup from "./components/Auth/Signup";
+import Signup from "./components/Auth/Signup-in";
 
 function App() {
   return (
