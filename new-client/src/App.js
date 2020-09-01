@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import AboutMe from "./components/LandingPage/AboutMe/AboutMe";
 import LandingPage from "./components/LandingPage/LandingPage";
 import Signup from "./components/Auth/Signup-in";
+import ProductTypes from "./components/Products/product-types";
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
         </Route>
         <Route path="/signup" exact>
           <Signup />
+        </Route>
+        <Route path="/kind" exact>
+          <ProductTypes />
         </Route>
       </Switch>
     </Router>

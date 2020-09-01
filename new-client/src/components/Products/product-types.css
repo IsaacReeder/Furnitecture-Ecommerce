@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: 100vh;
+  /* padding: 5%; */
+}
+
+.item {
+  width: 22%;
+  padding-bottom: ; /* Same as width, sets height */
+  margin: 6%; /* (100-32*3)/2 */
+  margin-top: 4%;
+  position: relative;
+  background-color: black;
+}
+
+.giffy {
+  position: absolute;
+  margin-top: 25%;
+  /* margin-left: 2%; */
+}
+
+.sign-out-container {
+  display: flex;
+  flex-wrap: wrap;
+  height: 25%;
+  width: 2%;
+  margin-left: 5%;
+  margin-top: 05%;
+  position: absolute;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.sign-out {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  /* display: inline-block; */
+  border: 1px solid black;
+}
+
+.sign-out:hover {
+  background-color: black;
+  transition: ease 0.5s;
+}
+
+.vertical-sign-out {
+  position: absolute;
+
+  /* writing-mode: vertical-rl;
+  text-orientation: mixed; */
+}
