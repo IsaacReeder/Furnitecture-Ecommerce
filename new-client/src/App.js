@@ -6,6 +6,7 @@ import AboutMe from "./components/LandingPage/AboutMe/AboutMe";
 import LandingPage from "./components/LandingPage/LandingPage";
 import Signup from "./components/Auth/Signup-in";
 import ProductTypes from "./components/Products/product-types";
+import Products from "./components/Products/products";
 
 function App() {
   return (
@@ -22,6 +23,9 @@ function App() {
         </Route>
         <Route path="/kind" exact>
           <ProductTypes />
+        </Route>
+        <Route path="/products" exact>
+          <Products />
         </Route>
       </Switch>
     </Router>

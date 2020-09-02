@@ -1,6 +1,7 @@
 import React from "react";
 import "./product-types.css";
 import { Component } from "react";
+import { Link } from "react-router-dom";
 
 import Strapi from "strapi-sdk-javascript/build/main";
 const apiUrl = process.env.API_URL || "http://localhost:1337";
@@ -54,17 +55,6 @@ class productTypes extends Component {
     return (
       <div>
         <React.Fragment>
-          {/* <div className="sign-out-container">
-          <h2 className="verticle-sign-out">Sign-Out</h2>
-          <div className="sign-out"></div>
-        </div>
-        <div className="container">
-          <div className="giffy">Furniture</div>
-          <div className="item"></div>
-          <div className="item"></div>
-          <div className="item"></div>
-          <div className="item"></div>
-        </div> */}
           <div className="sign-out-container">
             <div className="sign-out"></div>
             <h1 className="verticle-sign-out">Sign-Out</h1>
@@ -82,13 +72,12 @@ class productTypes extends Component {
                       key={brand.id}
                       src={`${apiUrl}${brand.image[0].url}`}
                     ></img>
-                    {/* <a to={`/${brand.id}`}>TO</a> */}
+                    <Link to={`/${brand.id}`}>See Items</Link>
                   </div>
                 )
               )
             )}
           </div>
-          {/* <Spinner show={loadingBrands} accessibilityLabel="Loading Spinner" /> */}
         </React.Fragment>
       </div>
     );
