@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@1&family=MuseoModerno:wght@600&display=swap");
 
 .new-landing-container {
   display: flex;
@@ -18,6 +19,10 @@
   border-bottom: 3px solid black;
   z-index: 250;
 }
+.main-title-nav {
+  font-family: "MuseoModerno", cursive;
+  font-size: 60px;
+}
 
 .left-side {
   display: flex;
@@ -26,7 +31,7 @@
   margin-top: 56px;
   left: 0;
   width: 20%;
-  background-color: blanchedalmond;
+  background-color: rgb(252, 240, 224);
   height: 100vh;
 }
 
@@ -59,12 +64,12 @@
 }
 
 .hover-title {
-  margin-top: 10%;
+  margin-top: 5%;
   margin-left: 10%;
   height: 25%;
-  width: 20%;
+  width: 5%;
   cursor: pointer;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 .hover-or {
   margin-top: 10%;

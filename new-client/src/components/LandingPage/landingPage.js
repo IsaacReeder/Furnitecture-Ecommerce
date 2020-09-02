@@ -28,6 +28,11 @@ class NewLanding extends Component {
       return { sideDrawerOpen: !prevState.sideDrawerOpen };
     });
   };
+  drawerToggleClickHandler2 = () => {
+    this.setState((prevState) => {
+      return { sideDrawerOpen: !prevState.sideDrawerOpen };
+    });
+  };
   componentDidMount() {
     setInterval(this.update, 1000);
   }
@@ -47,12 +52,13 @@ class NewLanding extends Component {
         <header className="navie">
           <nav className="toolbar-navigation">
             <div className="toolbar-logo">
-              <h1>Furnitecture</h1>
+              <h2 className="main-title-nav">Furnitecture</h2>
             </div>
             <div className="spacer" />
             <div className="toolbar-navigation-items">
               <ul>
                 <li>
+                  {/* Put other time zones in addition */}
                   <h1>
                     {h % 12}:{m < 10 ? "0" + m : m}:{s < 10 ? "0" + s : s}
                     {h < 12 ? "am" : "pm"}
@@ -85,7 +91,7 @@ class NewLanding extends Component {
               drawerClickHandler={this.drawerToggleClickHandler}
             />
           </div>
-          <h3 className="hover-or">or</h3>
+          <h3 className="hover-or">&nbsp;&nbsp;&nbsp;or</h3>
           <div className="hover-title">
             <MagicButton2
               onMouseEnter={this.handleMouseEnter}
