@@ -20,3 +20,9 @@
     height: 2px;
     background: black;
 } */
+.toggle-button {
+  font-size: 100px;
+  font-family: "DM Serif Text", serif;
+  font-weight: bold;
+  border: 1px solid black;
+}

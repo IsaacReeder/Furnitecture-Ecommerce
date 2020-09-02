@@ -3,9 +3,9 @@ import React from "react";
 import "./DrawerToggleButton.css";
 
 const DrawerToggleButton = (props) => (
-  <button className="toggle-button" onClick={props.click}>
-    <h1>Furnitecture</h1>
-  </button>
+  <div className="toggle-button" onClick={props.click}>
+    Sign in
+  </div>
 );
 
 export default DrawerToggleButton;

@@ -4,9 +4,9 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import AboutMe from "./components/LandingPage/AboutMe/AboutMe";
 import LandingPage from "./components/LandingPage/LandingPage";
-import Signup from "./components/Auth/Signup-in";
 import ProductTypes from "./components/Products/product-types";
 import Products from "./components/Products/products";
+import Signup from "./components/Auth/Signup-in";
 
 function App() {
   return (
@@ -24,9 +24,10 @@ function App() {
         <Route path="/kind" exact>
           <ProductTypes />
         </Route>
-        <Route path="/products" exact>
+        <Route component={Products} path="/:brandId" />
+        {/* <Route path="/products" exact>
           <Products />
-        </Route>
+        </Route> */}
       </Switch>
     </Router>
   );

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import SideDrawer from "./SideDrawer/SideDrawer";
 import MagicButton from "./SideDrawer/MagicButton";
+import MagicButton2 from "./SideDrawer2/MagicButton2";
 
 import "./LandingPage.css";
 
@@ -57,9 +58,9 @@ class NewLanding extends Component {
                     {h < 12 ? "am" : "pm"}
                   </h1>
                 </li>
-                <li>
+                {/* <li>
                   <h1>Cart</h1>
-                </li>
+                </li> */}
               </ul>
             </div>
           </nav>
@@ -67,9 +68,9 @@ class NewLanding extends Component {
         <div className="left-side">
           <div className="paragraph">
             <h3>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              A web application inspired by passion for Art & Code as a means to
+              display and distribute created or sourced items including: my
+              illustrations, mid century furniture, and sculptures.
             </h3>
           </div>
           <div className="imgg">
@@ -77,14 +78,28 @@ class NewLanding extends Component {
           </div>
         </div>
         <div className="right-side">
-          <MagicButton drawerClickHandler={this.drawerToggleClickHandler} />
-          <div
+          <div className="hover-title">
+            <MagicButton
+              onMouseEnter={this.handleMouseEnter}
+              onMouseLeave={this.handleMouseExit}
+              drawerClickHandler={this.drawerToggleClickHandler}
+            />
+          </div>
+          <h3 className="hover-or">or</h3>
+          <div className="hover-title">
+            <MagicButton2
+              onMouseEnter={this.handleMouseEnter}
+              onMouseLeave={this.handleMouseExit}
+              drawerClickHandler={this.drawerToggleClickHandler}
+            />
+          </div>
+          {/* <div
             className="hover-title"
             onMouseEnter={this.handleMouseEnter}
             onMouseLeave={this.handleMouseExit}
           >
-            E-commerce application
-          </div>
+            Sign up
+          </div> */}
           <div className="drawery">
             <SideDrawer show={this.state.sideDrawerOpen} />
           </div>

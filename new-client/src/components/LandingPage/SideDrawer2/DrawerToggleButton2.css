@@ -1,4 +1,4 @@
-.toggle-button {
+/* .toggle-button {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -19,4 +19,10 @@
     width: 30px;
     height: 2px;
     background: black;
+} */
+.toggle-button2 {
+  font-size: 100px;
+  font-family: "DM Serif Text", serif;
+  font-weight: bold;
+  border: 1px solid black;
 }
