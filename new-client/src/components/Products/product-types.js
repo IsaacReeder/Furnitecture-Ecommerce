@@ -53,24 +53,44 @@ class productTypes extends Component {
     const { searchTerm, loadingBrands } = this.state;
     return (
       <div>
-        <div className="sign-out-container">
+        <React.Fragment>
+          {/* <div className="sign-out-container">
           <h2 className="verticle-sign-out">Sign-Out</h2>
           <div className="sign-out"></div>
         </div>
         <div className="container">
           <div className="giffy">Furniture</div>
-          <div className="item" key={brand.id}>
-            this.filteredBrands(this.state).map((brand) => (
-            <img src={`${apiUrl}${brand.image[0].url}`}></img>
-            <h2>{brand.name}</h2>
-            <h2>{brand.description}</h2>
-            <a to={`/${brand.id}`}>See Items</a>
-          </div>
-          {/* <div className="item"></div>
           <div className="item"></div>
-          <div className="item"></div> */}
-        </div>
-        )
+          <div className="item"></div>
+          <div className="item"></div>
+          <div className="item"></div>
+        </div> */}
+          {this.filteredBrands(this.state).map(
+            (brand) => (
+              console.log(`${apiUrl}${brand.image[0].url}`, this.state),
+              (
+                // <Box paddingY={4} margin={2} width={200} key={brand.id}>
+                // <img src={`${apiUrl}${brand.image[0].url}`}></img>
+                // {brand.name}
+                // <Text>{brand.description}</Text>
+                // <Link to={`/${brand.id}`}>See Items</Link>
+                <div className="container" key={brand.id}>
+                  {/* <div className="item"> */}
+                  <img
+                    className="item"
+                    src={`${apiUrl}${brand.image[0].url}`}
+                  ></img>
+                  <h1>
+                    {brand.name}, {brand.description}
+                  </h1>
+                  <a to={`/${brand.id}`}>TO</a>
+                </div>
+              )
+              // </div>
+            )
+          )}
+          {/* <Spinner show={loadingBrands} accessibilityLabel="Loading Spinner" /> */}
+        </React.Fragment>
       </div>
     );
   }
