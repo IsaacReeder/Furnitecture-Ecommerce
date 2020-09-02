@@ -65,30 +65,29 @@ class productTypes extends Component {
           <div className="item"></div>
           <div className="item"></div>
         </div> */}
-          {this.filteredBrands(this.state).map(
-            (brand) => (
-              console.log(`${apiUrl}${brand.image[0].url}`, this.state),
-              (
-                // <Box paddingY={4} margin={2} width={200} key={brand.id}>
-                // <img src={`${apiUrl}${brand.image[0].url}`}></img>
-                // {brand.name}
-                // <Text>{brand.description}</Text>
-                // <Link to={`/${brand.id}`}>See Items</Link>
-                <div className="container" key={brand.id}>
-                  {/* <div className="item"> */}
-                  <img
-                    className="item"
-                    src={`${apiUrl}${brand.image[0].url}`}
-                  ></img>
-                  <h1>
-                    {brand.name}, {brand.description}
-                  </h1>
-                  <a to={`/${brand.id}`}>TO</a>
-                </div>
+          <div className="sign-out-container">
+            <div className="sign-out"></div>
+            <h1 className="verticle-sign-out">Sign-Out</h1>
+          </div>
+          <div className="container">
+            {this.filteredBrands(this.state).map(
+              (brand) => (
+                console.log(`${apiUrl}${brand.image[0].url}`, this.state),
+                (
+                  <div className="item-wrangler">
+                    <h1>{brand.name}</h1>
+                    {/* , {brand.description} */}
+                    <img
+                      className="item"
+                      key={brand.id}
+                      src={`${apiUrl}${brand.image[0].url}`}
+                    ></img>
+                    {/* <a to={`/${brand.id}`}>TO</a> */}
+                  </div>
+                )
               )
-              // </div>
-            )
-          )}
+            )}
+          </div>
           {/* <Spinner show={loadingBrands} accessibilityLabel="Loading Spinner" /> */}
         </React.Fragment>
       </div>

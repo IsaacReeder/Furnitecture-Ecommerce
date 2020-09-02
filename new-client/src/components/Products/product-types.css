@@ -7,12 +7,21 @@
 }
 
 .item {
-  width: 22%;
+  max-width: 40%;
+  height: auto;
+  /* width: 50%; */
   padding-bottom: ; /* Same as width, sets height */
   margin: 6%; /* (100-32*3)/2 */
   margin-top: 4%;
   position: relative;
   background-color: black;
+  border: 1px solid black;
+}
+
+.item-wrangler {
+  width: 45%;
+  height: 25%;
+  border: 1px solid black;
 }
 
 .giffy {
@@ -31,6 +40,7 @@
   position: absolute;
   writing-mode: vertical-rl;
   text-orientation: mixed;
+  cursor: pointer;
 }
 
 .sign-out {
@@ -39,6 +49,7 @@
   border-radius: 50%;
   /* display: inline-block; */
   border: 1px solid black;
+  cursor: pointer;
 }
 
 .sign-out:hover {
