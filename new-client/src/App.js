@@ -6,7 +6,7 @@ import AboutMe from "./components/LandingPage/AboutMe/AboutMe";
 import LandingPage from "./components/LandingPage/LandingPage";
 import ProductTypes from "./components/Products/product-types";
 import Products from "./components/Products/products";
-import Signup from "./components/Auth/Signup-in";
+import Signup from "./components/Auth/Signup/Signup";
 
 function App() {
   return (
