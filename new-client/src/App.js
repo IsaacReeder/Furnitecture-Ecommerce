@@ -7,6 +7,7 @@ import LandingPage from "./components/LandingPage/LandingPage";
 import ProductTypes from "./components/Products/product-types";
 import Products from "./components/Products/products";
 import Signup from "./components/Auth/Signup/Signup";
+import Signin from "./components/Auth/Signin/Signin";
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
         </Route>
         <Route path="/signup" exact>
           <Signup />
+        </Route>
+        <Route path="/signin" exact>
+          <Signin />
         </Route>
         <Route path="/kind" exact>
           <ProductTypes />

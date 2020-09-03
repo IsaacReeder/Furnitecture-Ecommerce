@@ -15,18 +15,10 @@ class Signup extends React.Component {
     toastMessage: "",
     loading: false,
   };
-  // function handleChange(e) {
 
-  //   e.persist();
-  //   let change = {};
-  //   change[e.target.name] = e.target.value;
-  //   this.setState(change);
-  //   this.setState({ [e.target.name]: value });
-  // }
   handleChange = (event) => {
     console.log(event.target.name);
     event.persist();
-    // this.setState({ [event.target.name]: value });
     const target = event.target;
     const value = target.value;
     const name = target.name;
@@ -83,7 +75,6 @@ class Signup extends React.Component {
             type="text"
             name="username"
             placeholder="Username"
-            // onChange={handleChange}
             onChange={this.handleChange}
           ></input>
           <br></br>
@@ -113,10 +104,6 @@ class Signup extends React.Component {
             Submit
           </button>
         </form>
-        {/* onSubmit={this.handleSubmit} */}
-        {/* onChange={this.handleChange} */}
-        {/* onChange={this.handleChange} */}
-        {/* onChange={this.handleChange} */}
       </div>
     );
   }
