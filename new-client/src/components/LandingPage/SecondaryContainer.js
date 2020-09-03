@@ -20,7 +20,6 @@ class SecondaryContainer extends Component {
     this.setState((prevState) => {
       return {
         sideDrawerOpen2: !prevState.sideDrawerOpen2,
-        sideDrawerOpen: !prevState.sideDrawerOpen,
       };
     });
   };

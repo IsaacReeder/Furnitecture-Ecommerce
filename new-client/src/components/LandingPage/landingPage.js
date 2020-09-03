@@ -10,6 +10,7 @@ class NewLanding extends Component {
     time: new Date(),
     sideDrawerOpen: false,
     imageSrc: "",
+    signup: true,
   };
   handleMouseEnter = () => {
     console.log("Mouse enter");

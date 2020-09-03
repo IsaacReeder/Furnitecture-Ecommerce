@@ -8,6 +8,7 @@ import ProductTypes from "./components/Products/product-types";
 import Products from "./components/Products/products";
 import Signup from "./components/Auth/Signup/Signup";
 import Signin from "./components/Auth/Signin/Signin";
+import Connector from "./components/LandingPage/SideDrawer/Connector";
 
 function App() {
   return (
@@ -27,6 +28,9 @@ function App() {
         </Route>
         <Route path="/kind" exact>
           <ProductTypes />
+        </Route>
+        <Route path="/connector" exact>
+          <Connector />
         </Route>
         <Route component={Products} path="/:brandId" />
         {/* <Route path="/products" exact>

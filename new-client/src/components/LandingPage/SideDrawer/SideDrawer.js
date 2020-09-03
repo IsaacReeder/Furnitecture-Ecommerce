@@ -1,25 +1,20 @@
 import React from "react";
-// import DrawerToggleButton from "./DrawerToggleButton";
+import Signup from "../../Auth/Signup/Signup";
 
 import "./SideDrawer.css";
+import Connector from "./Connector";
 
 const SideDrawer = (props) => {
   let drawerClasses = "side-drawer";
+
   if (props.show) {
     drawerClasses = "side-drawer open";
   }
-
+  // if else conditional render signup or in
   return (
-    <nav className={drawerClasses}>
-      <ul>
-        <li>
-          <h1>'ello mate</h1>
-        </li>
-        <li>
-          <h1>cheers</h1>
-        </li>
-      </ul>
-    </nav>
+    <div className={drawerClasses}>
+      <Connector />
+    </div>
   );
 };
 

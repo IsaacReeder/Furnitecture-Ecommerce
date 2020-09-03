@@ -1,0 +1,17 @@
+.auth-hider {
+  height: 50%;
+  overflow: hidden;
+  background-color: antiquewhite;
+}
+
+.movement-container {
+  width: 50%;
+  background-color: bisque;
+}
+
+.auth-hider-sign-in {
+  transform: translateY(-25px);
+}
+.auth-hider-sign-up {
+  transform: translateY(-50px);
+}
