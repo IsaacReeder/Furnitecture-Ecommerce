@@ -1,8 +1,8 @@
 import React from "react";
 import Strapi from "strapi-sdk-javascript/build/main";
 // prettier-ignore
-
-import { calculatePrice, setCart, getCart } from "../../utils/index";
+// calculatePrice,
+import {  setCart, getCart } from "../../utils/index";
 // import { Link } from "react-router-dom";
 const apiUrl = process.env.API_URL || "http://localhost:1337";
 const strapi = new Strapi(apiUrl);
@@ -69,7 +69,8 @@ class Products extends React.Component {
   //Bring over search bar
 
   render() {
-    const { brand, items, cartItems } = this.state;
+    // const { brand, items, cartItems } = this.state;
+    const { items } = this.state;
     console.log(items);
     return (
       <div>
@@ -77,7 +78,7 @@ class Products extends React.Component {
         {items.map((item) => (
           <div>
             <div key={item.id}></div>
-            <img src={`${apiUrl}${item.image[0].url}`}></img>
+            <img src={`${apiUrl}${item.image[0].url}`} alt="item pic"></img>
             <h1>
               {item.name}, {item.description}, ${item.price}
             </h1>

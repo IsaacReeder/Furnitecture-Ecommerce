@@ -7,35 +7,49 @@ import Signin from "../../Auth/Signin/Signin";
 class Connector extends Component {
   state = {
     signup: true,
+    buttonTitle: "Sign in",
   };
 
-  signChanger = () => {
+  signChange = () => {
     this.setState((prevState) => ({
       signup: !prevState.signup,
     }));
-    console.log(this.state.signup);
+    if (!this.state.signup) {
+      this.setState((buttonTitle) => ({
+        buttonTitle: "Sign in",
+      }));
+    } else {
+      this.setState((buttonTitle) => ({
+        buttonTitle: "Sign up",
+      }));
+    }
+    console.log(this.state.buttonTitle);
   };
 
   render() {
     return (
-      <div className="auth-hider">
-        <div
-          className={
-            "movement-container " +
-            (this.state.signup === true
-              ? "auth-hider-sign-up"
-              : this.state.signup === false
-              ? "auth-hider-sign-in"
-              : "forgot")
-          }
-        >
-          <div className="su" show={this.state.signup}>
-            <Signup />
+      <div>
+        <div className="auth-hider">
+          <div
+            className={
+              "movement-container " +
+              (this.state.signup === true
+                ? "auth-hider-sign-up"
+                : this.state.signup === false
+                ? "auth-hider-sign-in"
+                : "forgot")
+            }
+          >
+            <div className="si">
+              <Signin />
+            </div>
+            <div className="su">
+              <Signup />
+            </div>
           </div>
-          <div className="si" show={!this.state.signup}>
-            <Signin />
-          </div>
-          <button onClick={this.signChanger}></button>
+          <button className="auth-button" onClick={this.signChange}>
+            {this.state.buttonTitle}
+          </button>
         </div>
       </div>
     );

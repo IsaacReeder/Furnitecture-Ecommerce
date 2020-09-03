@@ -51,7 +51,7 @@ class productTypes extends Component {
     });
   };
   render() {
-    const { searchTerm, loadingBrands } = this.state;
+    // const { searchTerm, loadingBrands } = this.state;
     return (
       <div>
         <React.Fragment>
@@ -60,21 +60,22 @@ class productTypes extends Component {
             <h1 className="verticle-sign-out">Sign-Out</h1>
           </div>
           <div className="container">
-            {this.filteredBrands(this.state).map(
-              (brand) => (
-                console.log(`${apiUrl}${brand.image[0].url}`, this.state),
-                (
-                  <div className="item-wrangler">
-                    <h1>{brand.name}</h1>
-                    {/* , {brand.description} */}
-                    <img
-                      className="item"
-                      key={brand.id}
-                      src={`${apiUrl}${brand.image[0].url}`}
-                    ></img>
-                    <Link to={`/${brand.id}`}>See Items</Link>
-                  </div>
-                )
+            {this.filteredBrands(this.state).map((brand) =>
+              console.log(
+                `${apiUrl}${brand.image[0].url}`,
+                this.state
+              )(
+                <div className="item-wrangler">
+                  <h1>{brand.name}</h1>
+                  {/* , {brand.description} */}
+                  <img
+                    className="item"
+                    alt="brand pic"
+                    key={brand.id}
+                    src={`${apiUrl}${brand.image[0].url}`}
+                  ></img>
+                  <Link to={`/${brand.id}`}>See Items</Link>
+                </div>
               )
             )}
           </div>

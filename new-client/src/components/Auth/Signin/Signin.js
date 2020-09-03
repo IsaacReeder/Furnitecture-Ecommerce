@@ -63,7 +63,7 @@ class Signin extends React.Component {
   };
 
   render() {
-    const { toastMessage, toast, loading } = this.state;
+    // const { toastMessage, toast, loading } = this.state;
 
     return (
       <div>
@@ -72,7 +72,7 @@ class Signin extends React.Component {
           <label htmlFor="uname">Username:</label>
           <br></br>
           <input
-            id="username"
+            id="signin-username"
             type="text"
             name="username"
             placeholder="Username"
@@ -83,7 +83,7 @@ class Signin extends React.Component {
           <br></br>
           <input
             onChange={this.handleChange}
-            id="password"
+            id="signin-password"
             name="password"
             type="password"
             label="password"

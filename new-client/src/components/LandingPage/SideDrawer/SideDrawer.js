@@ -1,5 +1,4 @@
 import React from "react";
-import Signup from "../../Auth/Signup/Signup";
 
 import "./SideDrawer.css";
 import Connector from "./Connector";
