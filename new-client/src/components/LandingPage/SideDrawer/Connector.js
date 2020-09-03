@@ -19,8 +19,16 @@ class Connector extends Component {
   render() {
     return (
       <div className="auth-hider">
-        <div className={'movement-container ' + (signup === true ? 'auth-hider-sign-up' : (signup === false ? 'auth-hider-sign-in'))}>
-         <div className={'account-form-fields ' + (option === 1 ? 'sign-in' : (option === 2 ? 'sign-up' : 'forgot')) }></div>
+        <div
+          className={
+            "movement-container " +
+            (this.state.signup === true
+              ? "auth-hider-sign-up"
+              : this.state.signup === false
+              ? "auth-hider-sign-in"
+              : "forgot")
+          }
+        >
           <div className="su" show={this.state.signup}>
             <Signup />
           </div>

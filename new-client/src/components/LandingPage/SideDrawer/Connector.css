@@ -5,8 +5,14 @@
 }
 
 .movement-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  justify-content: space-around;
   width: 50%;
-  background-color: bisque;
+  background-color: rgb(245, 187, 116);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
 .auth-hider-sign-in {
@@ -14,4 +20,9 @@
 }
 .auth-hider-sign-up {
   transform: translateY(-50px);
+}
+.su {
+}
+
+.si {
 }
