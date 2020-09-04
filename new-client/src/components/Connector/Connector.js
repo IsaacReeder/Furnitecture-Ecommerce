@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import "./Connector.css";
 
-import Signup from "../../Auth/Signup/Signup";
-import Signin from "../../Auth/Signin/Signin";
+import Signup from "../Auth/Signup/Signup";
+import Signin from "../Auth/Signin/Signin";
 
 class Connector extends Component {
   state = {
     signup: true,
-    buttonTitle: "Sign in",
+    buttonTitle: "Sign up",
   };
 
   signChange = () => {
@@ -15,12 +15,12 @@ class Connector extends Component {
       signup: !prevState.signup,
     }));
     if (!this.state.signup) {
-      this.setState((buttonTitle) => ({
-        buttonTitle: "Sign in",
+      this.setState(() => ({
+        buttonTitle: "Sign up",
       }));
     } else {
-      this.setState((buttonTitle) => ({
-        buttonTitle: "Sign up",
+      this.setState(() => ({
+        buttonTitle: "Sign in",
       }));
     }
     console.log(this.state.buttonTitle);
@@ -33,9 +33,9 @@ class Connector extends Component {
           <div
             className={
               "movement-container " +
-              (this.state.signup === true
+              (this.state.signup === false
                 ? "auth-hider-sign-up"
-                : this.state.signup === false
+                : this.state.signup === true
                 ? "auth-hider-sign-in"
                 : "forgot")
             }

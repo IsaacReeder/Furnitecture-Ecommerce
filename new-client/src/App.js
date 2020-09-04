@@ -8,7 +8,7 @@ import ProductTypes from "./components/Products/product-types";
 import Products from "./components/Products/products";
 import Signup from "./components/Auth/Signup/Signup";
 import Signin from "./components/Auth/Signin/Signin";
-import Connector from "./components/LandingPage/SideDrawer/Connector";
+import Connector from "./components/Connector/Connector";
 
 function App() {
   return (

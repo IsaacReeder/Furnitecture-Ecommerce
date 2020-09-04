@@ -1,6 +1,7 @@
 import React from "react";
 
 import { setToken } from "../../../utils/index";
+import { Redirect } from "react-router-dom";
 import "./Signin.css";
 import Strapi from "strapi-sdk-javascript/build/main";
 const apiUrl = process.env.API_URL || "http://localhost:1337";
@@ -14,6 +15,7 @@ class Signin extends React.Component {
     toast: false,
     toastMessage: "",
     loading: false,
+    redirect: false,
   };
 
   handleChange = (event) => {
@@ -43,7 +45,7 @@ class Signin extends React.Component {
       const response = await strapi.login(username, password);
       this.setState({ loading: false });
       setToken(response.jwt);
-      this.redirectUser("/");
+      this.redirectUser("/products");
       console.log("loggedin");
     } catch (err) {
       this.setState({ loading: false });
@@ -51,7 +53,16 @@ class Signin extends React.Component {
     }
   };
 
-  redirectUser = (path) => this.props.history.push(path);
+  setRedirect = () => {
+    this.setState({ redirect: true });
+  };
+
+  renderRedirect = () => {
+    if (this.state.redirect) {
+      return <Redirect to="/kind" />;
+    }
+  };
+  // redirectUser = (path) => this.props.history.push(path);
 
   isFormEmpty = ({ username, password }) => {
     return !username || !password;
@@ -91,9 +102,12 @@ class Signin extends React.Component {
             value={this.state.password}
           />
           <br></br>
-          <button text="Submit" type="submit">
-            Submit
-          </button>
+          <div>
+            {this.renderRedirect()}
+            <button text="Submit" type="submit" onClick={this.setRedirect}>
+              Submit
+            </button>
+          </div>
         </form>
       </div>
     );

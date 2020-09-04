@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@500&display=swap");
 .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   height: 100vh;
+  background-color: transparent;
   /* padding: 5%; */
 }
 
@@ -20,7 +22,7 @@
 
 .item-wrangler {
   width: 45%;
-  height: 25%;
+  height: 45%;
   /* border: 1px solid black; */
 }
 
@@ -60,4 +62,18 @@
   transition: ease 0.5s;
 }
 .vertical-sign-out:hover {
+}
+
+.middle-pic {
+  position: absolute;
+  height: 350px;
+  width: 650px;
+  margin-top: 22%;
+  margin-left: 24%;
+  background-color: black;
+  z-index: -1000;
+}
+
+h1 {
+  font-family: "Syne", sans-serif;
 }
