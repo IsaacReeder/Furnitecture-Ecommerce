@@ -1,0 +1,33 @@
+.products-container {
+  display: flex;
+}
+
+.map-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* justify-content: space-around; */
+  /* align-content: center; */
+  /* align-items: center; */
+  padding: 50px;
+  padding-left: 20%;
+  /* padding-right: 100px; */
+}
+
+.products-items {
+  margin-top: 1%;
+  /* margin: 50px; */
+  width: 40%;
+  height: 25%;
+
+  /* flex: auto;
+  align-self: auto; */
+}
+.products-title {
+  position: absolute;
+  margin-top: 5%;
+  margin-left: 5%;
+}
+.img {
+  background-size: contain;
+}

@@ -60,8 +60,9 @@ class productTypes extends Component {
             <div className="sign-out"></div>
             <h3 className="verticle-sign-out">Sign-Out</h3>
           </div>
-          {/* <div className="middle-pic"></div> */}
-          {/* The below gif is an example, not an original work. it will be replaced at a later stage */}
+          {/* The below gif is an example, not the final asset. 
+              It is not an original work.
+              it will be replaced at a later stage */}
           <img className="middle-pic" src={logo} alt="loading..." />
           <div className="container">
             {this.filteredBrands(this.state).map((brand) => (

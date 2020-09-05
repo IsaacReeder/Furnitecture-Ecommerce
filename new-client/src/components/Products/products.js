@@ -1,5 +1,6 @@
 import React from "react";
 import Strapi from "strapi-sdk-javascript/build/main";
+import "./products.css";
 // prettier-ignore
 // calculatePrice,
 import {  setCart, getCart } from "../../utils/index";
@@ -73,18 +74,21 @@ class Products extends React.Component {
     const { items } = this.state;
     console.log(items);
     return (
-      <div>
-        <h1>Products page</h1>
-        {items.map((item) => (
-          <div>
-            <div key={item.id}></div>
-            <img src={`${apiUrl}${item.image[0].url}`} alt="item pic"></img>
-            <h1>
-              {item.name}, {item.description}, ${item.price}
-            </h1>
-            <button onClick={() => this.addToCart(item)}></button>
-          </div>
-        ))}
+      <div className="products-container">
+        <h1 className="products-title">The goods</h1>
+        <div className="map-container">
+          {items.map((item) => (
+            <div key={item.id} className="products-items">
+              <div key={item.id}></div>
+              <img src={`${apiUrl}${item.image[0].url}`} alt="item pic"></img>
+              <h3>
+                {item.name}, ${item.price}
+              </h3>
+              <button onClick={() => this.addToCart(item)}>Add to cart</button>
+              <button>Details</button>
+            </div>
+          ))}
+        </div>
       </div>
     );
   }
