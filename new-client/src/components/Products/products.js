@@ -70,12 +70,25 @@ class Products extends React.Component {
   //Bring over search bar
 
   render() {
-    // const { brand, items, cartItems } = this.state;
-    const { items } = this.state;
+    const { brand, items, cartItems } = this.state;
+    // const { items } = this.state;
     console.log(items);
     return (
       <div className="products-container">
         <h1 className="products-title">The goods</h1>
+        <div className="products-cart">
+          Cart
+          <h4>Items: {cartItems.length}</h4>
+          {cartItems.map((item) => (
+            <div key={item.id}>
+              <h3>
+                {item.name} x {item.quantity} - $
+                {(item.quantity * item.price).toFixed(2)}
+              </h3>
+              <button onClick={() => this.deleteItemFromCart(item.id)}></button>
+            </div>
+          ))}
+        </div>
         <div className="map-container">
           {items.map((item) => (
             <div key={item.id} className="products-items">
