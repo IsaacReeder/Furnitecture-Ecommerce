@@ -1,0 +1,8 @@
+- cart 
+   |- items stored separately
+   |- "note to team"
+   |- terms and conditions + checkbox
+- shopping cart logo, modal on click
+- single item detail
+- about me combined w contact page
+- Stripe https integration

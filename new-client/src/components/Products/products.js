@@ -3,7 +3,7 @@ import Strapi from "strapi-sdk-javascript/build/main";
 import "./products.css";
 // prettier-ignore
 // calculatePrice,
-import {  setCart, getCart } from "../../utils/index";
+import {  setCart, getCart, calculatePrice } from "../../utils/index";
 // import { Link } from "react-router-dom";
 const apiUrl = process.env.API_URL || "http://localhost:1337";
 const strapi = new Strapi(apiUrl);
@@ -12,7 +12,7 @@ class Products extends React.Component {
   state = {
     items: [],
     brand: "",
-    cartItems: [],
+    cartItems: getCart(),
   };
   async componentDidMount() {
     try {
@@ -46,13 +46,18 @@ class Products extends React.Component {
   }
 
   addToCart = (item) => {
-    const alreadyInCart = this.state.cartItems.findIndex((item) => item.id);
-
+    const alreadyInCart = this.state.cartItems.findIndex(
+      (product) => product.id === item.id
+    );
+    console.log("-1 if its not in the cart: " + alreadyInCart);
+    console.log("the id is: " + item.id);
+    // console.log("cart items: " + JSON.stringify(this.state.cartItems));
     if (alreadyInCart === -1) {
-      const updatedItems = this.state.cartItems.concat({
+      let updatedItems = this.state.cartItems.concat({
         ...item,
         quantity: 1,
       });
+      console.log("the newly updated items are" + updatedItems);
       this.setState({ cartItems: updatedItems }, () => setCart(updatedItems));
     } else {
       const updatedItems = [...this.state.cartItems];
@@ -61,9 +66,9 @@ class Products extends React.Component {
     }
   };
 
-  deleteItemFromCart = (itemToDeleteId) => {
+  deleteItemFromCart = (productToDeleteId) => {
     const filteredItems = this.state.cartItems.filter(
-      (item) => item.id !== itemToDeleteId
+      (product) => product.id !== productToDeleteId
     );
     this.setState({ cartItems: filteredItems }, () => setCart(filteredItems));
   };
@@ -72,23 +77,35 @@ class Products extends React.Component {
   render() {
     const { brand, items, cartItems } = this.state;
     // const { items } = this.state;
-    console.log(items);
+    // console.log(items);
     return (
       <div className="products-container">
         <h1 className="products-title">The goods</h1>
+        {/* Cart Items */}
         <div className="products-cart">
           Cart
           <h4>Items: {cartItems.length}</h4>
-          {cartItems.map((item) => (
-            <div key={item.id}>
-              <h3>
-                {item.name} x {item.quantity} - $
-                {(item.quantity * item.price).toFixed(2)}
-              </h3>
-              <button onClick={() => this.deleteItemFromCart(item.id)}></button>
+          {cartItems.map((product) => (
+            <div key={product.id}>
+              {/* arry.push(item.name) */}
+              <div key={product.id}>
+                <h2>{product.name}</h2>
+                <h3>
+                  {product.name} x {product.quantity} - $
+                  {(product.quantity * product.price).toFixed(2)}
+                  <button
+                    onClick={() => this.deleteItemFromCart(product.id)}
+                  ></button>
+                </h3>
+                <h3>
+                  {cartItems.length === 0 && <h3>Please select some items</h3>}
+                </h3>
+              </div>
+              <h3> Total: {calculatePrice(cartItems)}</h3>
             </div>
           ))}
         </div>
+
         <div className="map-container">
           {items.map((item) => (
             <div key={item.id} className="products-items">
