@@ -9,6 +9,7 @@ import Products from "./components/Products/products";
 import Signup from "./components/Auth/Signup/Signup";
 import Signin from "./components/Auth/Signin/Signin";
 import Connector from "./components/Connector/Connector";
+import Modal from "./components/UIElements/modal";
 
 function App() {
   return (
@@ -31,6 +32,9 @@ function App() {
         </Route>
         <Route path="/connector" exact>
           <Connector />
+        </Route>
+        <Route path="/modal" exact>
+          <Modal />
         </Route>
         <Route component={Products} path="/:brandId" />
         {/* <Route path="/products" exact>

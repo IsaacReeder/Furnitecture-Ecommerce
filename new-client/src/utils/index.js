@@ -17,7 +17,6 @@ export const calculateAmount = (items) => {
 export const setCart = (value, cartKey = CART_KEY) => {
   if (localStorage) {
     localStorage.setItem(cartKey, JSON.stringify(value));
-    console.log("the json'd data is: " + JSON.stringify(value));
   }
 };
 

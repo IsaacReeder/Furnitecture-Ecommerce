@@ -49,15 +49,11 @@ class Products extends React.Component {
     const alreadyInCart = this.state.cartItems.findIndex(
       (product) => product.id === item.id
     );
-    console.log("-1 if its not in the cart: " + alreadyInCart);
-    console.log("the id is: " + item.id);
-    // console.log("cart items: " + JSON.stringify(this.state.cartItems));
     if (alreadyInCart === -1) {
       let updatedItems = this.state.cartItems.concat({
         ...item,
         quantity: 1,
       });
-      console.log("the newly updated items are" + updatedItems);
       this.setState({ cartItems: updatedItems }, () => setCart(updatedItems));
     } else {
       const updatedItems = [...this.state.cartItems];
@@ -101,9 +97,9 @@ class Products extends React.Component {
                   {cartItems.length === 0 && <h3>Please select some items</h3>}
                 </h3>
               </div>
-              <h3> Total: {calculatePrice(cartItems)}</h3>
             </div>
           ))}
+          <h3> Total: {calculatePrice(cartItems)}</h3>
         </div>
 
         <div className="map-container">
