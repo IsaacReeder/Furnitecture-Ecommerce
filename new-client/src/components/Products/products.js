@@ -4,6 +4,7 @@ import "./products.css";
 // prettier-ignore
 // calculatePrice,
 import {  setCart, getCart, calculatePrice } from "../../utils/index";
+import Modal from "../UIElements/modal";
 // import { Link } from "react-router-dom";
 const apiUrl = process.env.API_URL || "http://localhost:1337";
 const strapi = new Strapi(apiUrl);
@@ -13,7 +14,9 @@ class Products extends React.Component {
     items: [],
     brand: "",
     cartItems: getCart(),
+    showModal: false,
   };
+
   async componentDidMount() {
     try {
       const response = await strapi.request("POST", "/graphql", {
@@ -68,9 +71,20 @@ class Products extends React.Component {
     );
     this.setState({ cartItems: filteredItems }, () => setCart(filteredItems));
   };
+  modalAction = () => {
+    this.setState((prevState) => ({
+      showModal: !prevState.showModal,
+    }));
+    console.log(this.state.showModal);
+  };
+
   //Bring over search bar
 
   render() {
+    const button_styles = {
+      position: "relative",
+      zIndex: 1,
+    };
     const { brand, items, cartItems } = this.state;
     // const { items } = this.state;
     // console.log(items);
@@ -115,9 +129,14 @@ class Products extends React.Component {
             </div>
           ))}
         </div>
+        <div style={button_styles}>
+          <button onClick={this.modalAction}>Open modal</button>
+          <Modal open={this.state.showModal}>Cart goes here</Modal>
+        </div>
       </div>
     );
   }
+  f;
 }
 
 export default Products;
