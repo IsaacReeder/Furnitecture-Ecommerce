@@ -131,7 +131,9 @@ class Products extends React.Component {
         </div>
         <div style={button_styles}>
           <button onClick={this.modalAction}>Open modal</button>
-          <Modal open={this.state.showModal}>Cart goes here</Modal>
+          <Modal open={this.state.showModal} onClose={this.modalAction}>
+            Cart goes here
+          </Modal>
         </div>
       </div>
     );
