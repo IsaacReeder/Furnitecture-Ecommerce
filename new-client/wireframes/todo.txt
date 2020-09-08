@@ -1,6 +1,7 @@
 - cart 
    |- x
-- shopping cart logo, modal on click
+   |- modal X
+   |- cart logo button
 - single item detail
 - about me combined w contact page
 - checkout

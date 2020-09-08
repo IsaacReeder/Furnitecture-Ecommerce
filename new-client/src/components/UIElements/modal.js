@@ -1,5 +1,4 @@
 import React from "react";
-// import { getCart } from "../../../../client/src/utils";
 import Cart from "../Cart/Cart";
 
 const modal_styles = {
@@ -26,12 +25,13 @@ export default function modal({ open, children, onClose }) {
   if (!open) return null;
   return (
     <>
-      <h1>asdf</h1>
-      <div style={overlay_styles} />
-      <div style={modal_styles}>
-        <Cart />
-        <button onClick={onClose}>Close Modal</button>
-        {children}
+      <div className="cart-wrangler">
+        <div style={overlay_styles} />
+        <div style={modal_styles}>
+          <Cart />
+          <button onClick={onClose}>Close Modal</button>
+          {children}
+        </div>
       </div>
     </>
   );

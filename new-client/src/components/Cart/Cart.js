@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { setCart, getCart, calculatePrice } from "../../utils/index";
+import "./Cart.css";
 
 class Cart extends Component {
   state = {
@@ -15,29 +16,33 @@ class Cart extends Component {
     return (
       <>
         <div className="products-cart">
-          Shopping Cart
-          <h4>Items: {this.state.cartItems.length}</h4>
-          {this.state.cartItems.map((product) => (
-            <div key={product.id}>
-              {/* arry.push(item.name) */}
+          <div className="cart-left-section">
+            Bag
+            <h4>Items: {this.state.cartItems.length}</h4>
+            {this.state.cartItems.map((product) => (
               <div key={product.id}>
-                <h2>{product.name}</h2>
-                <h3>
-                  {product.name} x {product.quantity} - $
+                <div className="product-name">{product.name}</div>
+                <div className="product-price">
+                  Quantity {product.quantity} - $
                   {(product.quantity * product.price).toFixed(2)}
-                  <button
-                    onClick={() => this.deleteItemFromCart(product.id)}
-                  ></button>
+                </div>
+                <h3>
+                  <div onClick={() => this.deleteItemFromCart(product.id)}>
+                    <h4>Remove</h4>
+                  </div>
                 </h3>
+                <br />
                 <h3>
                   {this.state.cartItems.length === 0 && (
                     <h3>Please select some items</h3>
                   )}
                 </h3>
               </div>
-            </div>
-          ))}
-          <h3> Total: {calculatePrice(this.state.cartItems)}</h3>
+            ))}
+          </div>
+          <div className="cart-right-section">
+            <h3> Total: {calculatePrice(this.state.cartItems)}</h3>
+          </div>
         </div>
       </>
     );

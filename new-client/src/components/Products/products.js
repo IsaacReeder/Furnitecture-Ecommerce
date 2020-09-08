@@ -65,12 +65,6 @@ class Products extends React.Component {
     }
   };
 
-  // deleteItemFromCart = (productToDeleteId) => {
-  //   const filteredItems = this.state.cartItems.filter(
-  //     (product) => product.id !== productToDeleteId
-  //   );
-  //   this.setState({ cartItems: filteredItems }, () => setCart(filteredItems));
-  // };
   modalAction = () => {
     this.setState((prevState) => ({
       showModal: !prevState.showModal,
@@ -106,33 +100,20 @@ class Products extends React.Component {
           ))}
         </div>
         <div style={button_styles}>
-          <button onClick={this.modalAction}>Open modal</button>
-          <Modal open={this.state.showModal} onClose={this.modalAction}>
-            {/* <div className="products-cart">
-              Shopping Cart
-              <h4>Items: {cartItems.length}</h4>
-              {cartItems.map((product) => (
-                <div key={product.id}>
-                  <div key={product.id}>
-                    <h2>{product.name}</h2>
-                    <h3>
-                      {product.name} x {product.quantity} - $
-                      {(product.quantity * product.price).toFixed(2)}
-                      <button
-                        onClick={() => this.deleteItemFromCart(product.id)}
-                      ></button>
-                    </h3>
-                    <h3>
-                      {cartItems.length === 0 && (
-                        <h3>Please select some items</h3>
-                      )}
-                    </h3>
-                  </div>
-                </div>
-              ))}
-              <h3> Total: {calculatePrice(cartItems)}</h3>
-            </div> */}
-          </Modal>
+          <div
+            onClick={this.modalAction}
+            style={{
+              fontSize: "3em",
+              color: "black",
+              cursor: "pointer",
+              position: "absolute",
+              right: "4rem",
+              top: "1rem",
+            }}
+          >
+            <i className="fas fa-shopping-cart" />
+          </div>
+          <Modal open={this.state.showModal} onClose={this.modalAction}></Modal>
         </div>
       </div>
     );
