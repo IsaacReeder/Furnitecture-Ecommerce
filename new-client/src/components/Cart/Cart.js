@@ -1,9 +1,15 @@
 import React, { Component } from "react";
-import { getCart, calculatePrice } from "../../utils/index";
+import { setCart, getCart, calculatePrice } from "../../utils/index";
 
 class Cart extends Component {
   state = {
     cartItems: getCart(),
+  };
+  deleteItemFromCart = (productToDeleteId) => {
+    const filteredItems = this.state.cartItems.filter(
+      (product) => product.id !== productToDeleteId
+    );
+    this.setState({ cartItems: filteredItems }, () => setCart(filteredItems));
   };
   render() {
     return (

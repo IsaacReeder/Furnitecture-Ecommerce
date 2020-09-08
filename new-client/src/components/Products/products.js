@@ -65,12 +65,12 @@ class Products extends React.Component {
     }
   };
 
-  deleteItemFromCart = (productToDeleteId) => {
-    const filteredItems = this.state.cartItems.filter(
-      (product) => product.id !== productToDeleteId
-    );
-    this.setState({ cartItems: filteredItems }, () => setCart(filteredItems));
-  };
+  // deleteItemFromCart = (productToDeleteId) => {
+  //   const filteredItems = this.state.cartItems.filter(
+  //     (product) => product.id !== productToDeleteId
+  //   );
+  //   this.setState({ cartItems: filteredItems }, () => setCart(filteredItems));
+  // };
   modalAction = () => {
     this.setState((prevState) => ({
       showModal: !prevState.showModal,
