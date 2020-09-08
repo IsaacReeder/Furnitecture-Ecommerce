@@ -91,30 +91,6 @@ class Products extends React.Component {
     return (
       <div className="products-container">
         <h1 className="products-title">The goods</h1>
-        {/* Cart Items */}
-        <div className="products-cart">
-          Cart
-          <h4>Items: {cartItems.length}</h4>
-          {cartItems.map((product) => (
-            <div key={product.id}>
-              {/* arry.push(item.name) */}
-              <div key={product.id}>
-                <h2>{product.name}</h2>
-                <h3>
-                  {product.name} x {product.quantity} - $
-                  {(product.quantity * product.price).toFixed(2)}
-                  <button
-                    onClick={() => this.deleteItemFromCart(product.id)}
-                  ></button>
-                </h3>
-                <h3>
-                  {cartItems.length === 0 && <h3>Please select some items</h3>}
-                </h3>
-              </div>
-            </div>
-          ))}
-          <h3> Total: {calculatePrice(cartItems)}</h3>
-        </div>
 
         <div className="map-container">
           {items.map((item) => (
@@ -132,7 +108,30 @@ class Products extends React.Component {
         <div style={button_styles}>
           <button onClick={this.modalAction}>Open modal</button>
           <Modal open={this.state.showModal} onClose={this.modalAction}>
-            Cart goes here
+            {/* <div className="products-cart">
+              Shopping Cart
+              <h4>Items: {cartItems.length}</h4>
+              {cartItems.map((product) => (
+                <div key={product.id}>
+                  <div key={product.id}>
+                    <h2>{product.name}</h2>
+                    <h3>
+                      {product.name} x {product.quantity} - $
+                      {(product.quantity * product.price).toFixed(2)}
+                      <button
+                        onClick={() => this.deleteItemFromCart(product.id)}
+                      ></button>
+                    </h3>
+                    <h3>
+                      {cartItems.length === 0 && (
+                        <h3>Please select some items</h3>
+                      )}
+                    </h3>
+                  </div>
+                </div>
+              ))}
+              <h3> Total: {calculatePrice(cartItems)}</h3>
+            </div> */}
           </Modal>
         </div>
       </div>
