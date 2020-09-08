@@ -8,10 +8,12 @@
   height: 100%;
   justify-content: flex-start;
   flex-direction: row;
+  overflow: hidden;
 }
 .cart-left-section {
+  overflow-y: scroll;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   height: 100%;
   width: 50%;
   background-color: blanchedalmond;
@@ -22,12 +24,12 @@
   background-color: olivedrab;
 }
 .product-name {
-  height: 25%;
-  width: 50%;
+  height: 5%;
+  width: 100%;
   background-color: yellowgreen;
 }
 .product-price {
+  height: 5%;
+  width: 100%;
   background-color: brown;
-  height: 25%;
-  width: 50%;
 }
