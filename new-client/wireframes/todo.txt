@@ -2,6 +2,7 @@
    |- x
    |- modal X
    |- cart logo button X
+   |- close modal button within modal
 - single item detail
 - about me combined w contact page
 - checkout

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { setCart, getCart, calculatePrice } from "../../utils/index";
+import Button from "../FormElements/Button";
 import "./Cart.css";
 
 const apiUrl = process.env.API_URL || "http://localhost:1337";
@@ -8,6 +9,7 @@ const apiUrl = process.env.API_URL || "http://localhost:1337";
 class Cart extends Component {
   state = {
     cartItems: getCart(),
+    onClose: this.props.onClose,
   };
   deleteItemFromCart = (productToDeleteId) => {
     const filteredItems = this.state.cartItems.filter(
@@ -50,6 +52,9 @@ class Cart extends Component {
           </div>
           <div className="cart-right-section">
             <h3> Total: {calculatePrice(this.state.cartItems)}</h3>
+            <div className="modal-close-button">
+              <Button onClose={this.props.onClose} />
+            </div>
           </div>
         </div>
       </>
