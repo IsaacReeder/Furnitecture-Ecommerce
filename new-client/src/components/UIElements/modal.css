@@ -1,4 +1,4 @@
-.modal {
+/* .modal {
   z-index: 100;
   position: fixed;
   top: 22vh;
@@ -7,7 +7,7 @@
   background: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   border-radius: 8px;
-}
+} */
 
 @media (min-width: 768px) {
   .modal {
@@ -36,4 +36,11 @@
   bottom: 0;
   background-color: "rgba(0, 0, 0, .7)";
   z-index: 1000;
+}
+.modal-close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+  background-color: aqua;
 }

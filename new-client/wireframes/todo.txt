@@ -1,7 +1,7 @@
 - cart 
    |- x
    |- modal X
-   |- cart logo button
+   |- cart logo button X
 - single item detail
 - about me combined w contact page
 - checkout

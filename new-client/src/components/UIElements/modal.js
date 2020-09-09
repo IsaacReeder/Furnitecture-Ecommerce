@@ -29,8 +29,10 @@ export default function modal({ open, children, onClose }) {
         <div style={overlay_styles} />
         <div style={modal_styles}>
           <Cart />
-          <button onClick={onClose}>Close Modal</button>
           {children}
+          <button className="modal-close-button" onClick={onClose}>
+            Close Modal
+          </button>
         </div>
       </div>
     </>

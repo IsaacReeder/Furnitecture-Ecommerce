@@ -16,20 +16,21 @@
   flex-direction: column;
   height: 100%;
   width: 50%;
-  background-color: blanchedalmond;
+  background-color: transparent;
 }
 .cart-right-section {
   height: 100%;
   width: 50%;
-  background-color: olivedrab;
+  /* background-color: olivedrab; */
+  background-color: transparent;
 }
 .product-name {
   height: 5%;
   width: 100%;
-  background-color: yellowgreen;
+  /* background-color: yellowgreen; */
 }
 .product-price {
   height: 5%;
   width: 100%;
-  background-color: brown;
+  /* background-color: brown; */
 }

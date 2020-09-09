@@ -3,7 +3,7 @@ import Strapi from "strapi-sdk-javascript/build/main";
 import "./products.css";
 // prettier-ignore
 // calculatePrice,
-import {  setCart, getCart, calculatePrice } from "../../utils/index";
+import {  setCart, getCart } from "../../utils/index";
 import Modal from "../UIElements/modal";
 // import { Link } from "react-router-dom";
 const apiUrl = process.env.API_URL || "http://localhost:1337";
@@ -79,8 +79,8 @@ class Products extends React.Component {
       position: "relative",
       zIndex: 1,
     };
-    const { brand, items, cartItems } = this.state;
-    // const { items } = this.state;
+    // const { brand, items, cartItems } = this.state;
+    const { items } = this.state;
     // console.log(items);
     return (
       <div className="products-container">
