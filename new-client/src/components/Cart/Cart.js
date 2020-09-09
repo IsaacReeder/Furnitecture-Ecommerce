@@ -17,6 +17,18 @@ class Cart extends Component {
     );
     this.setState({ cartItems: filteredItems }, () => setCart(filteredItems));
   };
+  componentDidMount() {
+    fetch("https://api.ipify.org?format=jsonp?callback=?", {
+      method: "GET",
+      headers: {},
+    })
+      .then((res) => {
+        return res.text();
+      })
+      .then((ip) => {
+        console.log("ip", ip);
+      });
+  }
   render() {
     return (
       <>
@@ -36,7 +48,9 @@ class Cart extends Component {
                   Quantity {product.quantity} - $
                   {(product.quantity * product.price).toFixed(2)}
                 </div>
-                <h3 style={{ borderBottom: "1px solid black" }}>
+                <h3
+                  style={{ borderBottom: "1px solid black", cursor: "pointer" }}
+                >
                   <div onClick={() => this.deleteItemFromCart(product.id)}>
                     <h4>Remove</h4>
                   </div>
@@ -51,7 +65,19 @@ class Cart extends Component {
             ))}
           </div>
           <div className="cart-right-section">
-            <h3> Total: {calculatePrice(this.state.cartItems)}</h3>
+            <h2 style={{ paddingTop: "25%" }}>Summary</h2>
+
+            <h3> Subtotal: {calculatePrice(this.state.cartItems)}</h3>
+            <h4
+              style={{ borderBottom: "1px solid black", paddingBottom: "1rem" }}
+            >
+              Estimated shipping & Handling: $$$$
+            </h4>
+            <h3
+              style={{ borderBottom: "1px solid black", paddingBottom: "1rem" }}
+            >
+              Total:
+            </h3>
             <div className="modal-close-button">
               <Button onClose={this.props.onClose} />
             </div>

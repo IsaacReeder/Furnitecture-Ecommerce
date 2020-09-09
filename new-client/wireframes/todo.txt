@@ -2,8 +2,9 @@
    |- x
    |- modal X
    |- cart logo button X
-   |- close modal button within modal
-- single item detail
+   |- close modal button within modal X
+   |- add total and checkout button to modal
+- single item detail 
 - about me combined w contact page
 - checkout
     |- Stripe https integration

@@ -79,7 +79,6 @@ class Products extends React.Component {
     };
     // const { brand, items, cartItems } = this.state;
     const { items } = this.state;
-    // console.log(items);
     return (
       <div className="products-container">
         <h1 className="products-title">The goods</h1>

@@ -36,6 +36,7 @@ function App() {
         <Route path="/modal" exact>
           <Modal />
         </Route>
+
         <Route component={Products} path="/:brandId" />
         {/* <Route path="/products" exact>
           <Products />
