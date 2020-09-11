@@ -42,3 +42,8 @@
   background-color: aqua;
   cursor: pointer;
 }
+.checkout-button {
+  border-radius: 8px;
+  width: 50%;
+  height: 10%;
+}

@@ -1,6 +1,12 @@
 import React, { Component } from "react";
-import { setCart, getCart, calculatePrice } from "../../utils/index";
+import {
+  setCart,
+  getCart,
+  calculatePrice,
+  calculateShipping,
+} from "../../utils/index";
 import Button from "../FormElements/Button";
+import { Link } from "react-router-dom";
 import "./Cart.css";
 
 const apiUrl = process.env.API_URL || "http://localhost:1337";
@@ -71,16 +77,22 @@ class Cart extends Component {
             <h4
               style={{ borderBottom: "1px solid black", paddingBottom: "1rem" }}
             >
-              Estimated shipping & Handling: $$$$
+              Estimated shipping & Handling: ${this.state.cartItems.length * 5}
             </h4>
             <h3
               style={{ borderBottom: "1px solid black", paddingBottom: "1rem" }}
             >
-              Total:
+              Total:$
+              {calculateShipping(this.state.cartItems)}
             </h3>
             <div className="modal-close-button">
               <Button onClose={this.props.onClose} />
             </div>
+            <button className="checkout-button">
+              <Link to={`/checkout`}>
+                <h1>Checkout</h1>
+              </Link>
+            </button>
           </div>
         </div>
       </>

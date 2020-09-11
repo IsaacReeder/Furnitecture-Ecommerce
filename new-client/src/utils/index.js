@@ -13,6 +13,17 @@ export const calculateAmount = (items) => {
   );
 };
 
+export const calculateShipping = (items) => {
+  return (
+    Number(
+      items
+        .reduce((acc, item) => acc + item.quantity * item.price, 0)
+        .toFixed(2)
+    ) +
+    items.length * 5
+  );
+};
+
 // Cart
 export const setCart = (value, cartKey = CART_KEY) => {
   if (localStorage) {
