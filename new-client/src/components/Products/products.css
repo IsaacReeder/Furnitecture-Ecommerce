@@ -11,9 +11,12 @@
 }
 
 .products-items {
+  clear: both;
+  margin: 40px;
   margin-top: 1%;
   width: 40%;
   height: 25%;
+  /* border: 1px solid black; */
 }
 .products-title {
   position: absolute;
