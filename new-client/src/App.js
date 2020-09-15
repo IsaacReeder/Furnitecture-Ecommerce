@@ -10,6 +10,7 @@ import Signup from "./components/Auth/Signup/Signup";
 import Signin from "./components/Auth/Signin/Signin";
 import Connector from "./components/Connector/Connector";
 import Modal from "./components/UIElements/modal";
+import Checkout from "./components/Checkout/Checkout";
 
 function App() {
   return (
@@ -35,6 +36,9 @@ function App() {
         </Route>
         <Route path="/modal" exact>
           <Modal />
+        </Route>
+        <Route path="/co" exact>
+          <Checkout />
         </Route>
 
         <Route component={Products} path="/:brandId" />
