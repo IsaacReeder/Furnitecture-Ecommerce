@@ -1,18 +1,21 @@
 import React from "react";
+import { CardElement, injectStripe } from "react-stripe-elements";
+// import { withRouter } from "react-router-dom";
 import {
-  Elements,
-  StripeProvider,
-  CardElement,
-  injectStripe,
-} from "react-stripe-elements";
-import { getCart, calculatePrice, clearCart, calculateAmount } from "../utils";
+  getCart,
+  // calculatePrice,
+  clearCart,
+  calculateAmount,
+} from "../../utils/index";
+import Cart from "../Cart/Cart";
+import Success from "./Success";
 import Strapi from "strapi-sdk-javascript/build/main";
 const apiUrl = process.env.API_URL || "http://localhost:1337";
 const strapi = new Strapi(apiUrl);
 
-class _CheckoutForm extends React.Component {
+class Checkout extends React.Component {
   state = {
-    cartItems: [],
+    cartItems: getCart(),
     address: "",
     postalCode: "",
     city: "",
@@ -21,6 +24,7 @@ class _CheckoutForm extends React.Component {
     toastMessage: "",
     orderProcessing: false,
     modal: false,
+    success: false,
   };
 
   componentDidMount() {
@@ -91,10 +95,52 @@ class _CheckoutForm extends React.Component {
 
   render() {
     // prettier-ignore
-    const { toast, toastMessage, cartItems, modal, orderProcessing } = this.state;
+    const {  cartItems } = this.state;
+    // toast, toastMessage, modal, orderProcessing
+    return (
+      <div>
+        <h1>Checkout</h1>
+        {cartItems.length > 0 ? (
+          <div>
+            {cartItems.map((item) => (
+              <>
+                <img
+                  style={{ width: "10%" }}
+                  src={`${apiUrl}${item.image[0].url}`}
+                  alt="item pic"
+                ></img>
+                <h3>{item.name}</h3>
+                <h3>
+                  Quantity {item.quantity} - $
+                  {(item.quantity * item.price).toFixed(2)}
+                </h3>
+                <h3
+                  style={{ borderBottom: "1px solid black", cursor: "pointer" }}
+                >
+                  <div onClick={() => this.deleteItemFromCart(item.id)}>
+                    <h4>Remove</h4>
+                  </div>
+                </h3>
+              </>
+            ))}
+          </div>
+        ) : (
+          <>
+            <h1>Your cart is empty</h1>
+            <h1>Shop</h1>
+            <h1>Sign out</h1>
+          </>
+        )}
+        <form>
+          <CardElement id="stripe__input" onReady={(input) => input.focus()} />
+          <button id="stripe__button" type="submit">
+            Submit
+          </button>
+        </form>
 
-    return <div></div>;
+        {this.success && <Success />}
+      </div>
+    );
   }
 }
-
 export default Checkout;

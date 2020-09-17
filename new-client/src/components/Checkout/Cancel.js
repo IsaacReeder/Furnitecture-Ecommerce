@@ -3,9 +3,7 @@ import React from "react";
 const Cancel = () => {
   return (
     <div>
-      <h2>
-        Forgot to add something to your cart? Shop around then come back to pay
-      </h2>
+      <h2>Forgot to add something to your cart? Shop around then come back</h2>
     </div>
   );
 };

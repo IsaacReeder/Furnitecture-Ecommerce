@@ -7,9 +7,9 @@ const AboutMe = () => {
     <div className="about-me-container">
       <div className="left-am-container">
         <div className="am-title">
-          <h1>About Me</h1>
+          <h1 style={{ fontSize: "4vw" }}>About Me</h1>
         </div>
-        <h2 className="whoami">
+        <h2 style={{ fontSize: "1.5vw" }} className="whoami">
           whoami really Lorem ipsum dolor sit amet, consectetur adipiscing elit,
           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
           enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
@@ -41,7 +41,9 @@ const AboutMe = () => {
               rel="noopener noreferrer"
               target="_blank"
             >
-              <h1 className="book-1-title">IsaacReeder.com</h1>
+              <h1 style={{ fontSize: "2vw" }} className="book-1-title">
+                IsaacReeder.com
+              </h1>
             </a>
           </div>
           <div className="book-2">
@@ -50,7 +52,9 @@ const AboutMe = () => {
               rel="noopener noreferrer"
               target="_blank"
             >
-              <h1 className="book-2-title">Pictures</h1>
+              <h1 style={{ fontSize: "2vw" }} className="book-2-title">
+                &#9830;&#9830; Pictures
+              </h1>
             </a>
           </div>
           <div className="book-3">
@@ -59,7 +63,9 @@ const AboutMe = () => {
               rel="noopener noreferrer"
               target="_blank"
             >
-              <h1 className="book-3-title">GitHub Repository</h1>
+              <h1 style={{ fontSize: "2vw" }} className="book-3-title">
+                GitHub Repository
+              </h1>
             </a>
           </div>
           <div className="vase"></div>
@@ -69,10 +75,12 @@ const AboutMe = () => {
               rel="noopener noreferrer"
               target="_blank"
             >
-              <h1 className="book-3-title">LinkedIn</h1>
+              <h1 style={{ fontSize: "2vw" }} className="book-3-title">
+                LinkedIn
+              </h1>
             </a>
           </div>
-          <div className="book-5">
+          <div style={{ fontSize: "1vw" }} className="book-5">
             <a
               href="https://www.linkedin.com/in/isaac-reeder/"
               rel="noopener noreferrer"

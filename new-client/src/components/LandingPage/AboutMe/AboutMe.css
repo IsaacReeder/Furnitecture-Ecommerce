@@ -16,7 +16,7 @@
 
 .am-title {
   flex: 1;
-  background-color: yellow;
+  /* background-color: yellow; */
   flex-basis: 100%;
   height: 15%;
   padding: 10%;
@@ -24,7 +24,7 @@
 }
 .whoami {
   flex: 2;
-  background-color: yellowgreen;
+  /* background-color: yellowgreen; */
   flex-basis: 100%;
   height: 25%;
   padding: 20%;
@@ -33,7 +33,7 @@
   flex: 2;
   display: flex;
   flex-wrap: wrap;
-  background-color: blanchedalmond;
+  background-color: aliceblue;
   max-height: 100vh;
 }
 .button-box {
@@ -66,7 +66,7 @@
   margin-left: 10%;
 }
 .book-box {
-  background-color: red;
+  /* background-color: red; */
   display: flex;
   flex: 2;
   justify-content: center;
@@ -85,13 +85,14 @@
 
 .book-1 {
   /* flex: 1; */
+  overflow: hidden;
   display: flex;
   height: 95%;
   background-color: rgb(116, 77, 77);
-  flex-basis: 11%;
+  flex-basis: 5vw;
   bottom: 0;
   margin-right: -17%;
-  transform: rotate(-4deg);
+  transform: rotate(-2deg);
   transition: all 0.3s ease-in-out 0s;
   flex-wrap: wrap;
   align-items: center;
@@ -101,7 +102,7 @@
   padding-bottom: 1%;
 }
 .book-1:hover {
-  transform: rotate(-2deg);
+  transform: rotate(-0deg);
 }
 .book-1-title {
   color: white;
@@ -113,10 +114,12 @@
 
 .book-2 {
   /* flex: 2; */
-  display: flex;
+  /* flex-shrink: 0; */
+  /* display: flex; */
+  overflow: hidden;
   height: 95%;
   background-color: rgb(49, 40, 40);
-  flex-basis: 5%;
+  flex-basis: 4vw;
   margin-right: -17%;
   transform: rotate(2deg);
   transition: all 0.3s ease-in-out 0s;
@@ -127,23 +130,25 @@
   border-radius: 3px;
 }
 .book-2:hover {
-  transform: rotate(4deg);
+  transform: rotate(3deg);
 }
 .book-2-title {
   color: white;
   text-decoration: none;
+  margin-top: 40%;
 }
 a {
   text-decoration: none;
 }
 .book-3 {
   /* flex: 3; */
+  overflow: hidden;
   display: flex;
   height: 70%;
   background-color: rgb(122, 66, 66);
   flex-basis: 14%;
   margin-right: -17%;
-  transform: rotate(-6deg);
+  transform: rotate(-4deg);
   transition: all 0.3s ease-in-out 0s;
   writing-mode: vertical-rl;
   text-orientation: mixed;
@@ -152,7 +157,7 @@ a {
   border-radius: 3px;
 }
 .book-3:hover {
-  transform: rotate(-4deg);
+  transform: rotate(-3deg);
 }
 .book-3-title {
   color: white;
@@ -160,6 +165,7 @@ a {
 }
 .book-4 {
   /* flex: 2; */
+  overflow: hidden;
   display: flex;
   height: 50%;
   background-color: rgb(49, 40, 40);
@@ -173,17 +179,18 @@ a {
   justify-content: center;
 }
 .book-4:hover {
-  transform: rotate(4deg);
+  transform: rotate(1.5deg);
 }
 .book-5 {
   /* flex: 2; */
+  overflow: hidden;
   display: flex;
   height: 85%;
   background-color: rgb(49, 40, 40);
   flex-basis: 8%;
   margin-right: -10%;
   border-radius: 3px;
-  transform: rotate(8deg);
+  transform: rotate(4deg);
   transition: all 0.3s ease-in-out 0s;
   writing-mode: vertical-rl;
   text-orientation: mixed;
@@ -191,7 +198,7 @@ a {
   justify-content: center;
 }
 .book-5:hover {
-  transform: rotate(6deg);
+  transform: rotate(3deg);
 }
 .vase {
   height: 60%;
