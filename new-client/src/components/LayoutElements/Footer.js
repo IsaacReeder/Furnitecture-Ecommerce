@@ -13,50 +13,34 @@ const Footer = () => {
             <h2 className="ft-title">About</h2>
             <ul>
               <li>
-                <a href="#">Services</a>
+                <a href="#asdf">Services</a>
               </li>
               <li>
-                <a href="#">Portfolio</a>
+                <a href="#asdf">Portfolio</a>
               </li>
               <li>
-                <a href="#">Pricing</a>
+                <a href="#asdf">Pricing</a>
               </li>
               <li>
-                <a href="#">Customers</a>
+                <a href="#asdf">Customers</a>
               </li>
               <li>
-                <a href="#">Collaborate</a>
+                <a href="#asdf">Collaborate</a>
               </li>
             </ul>
           </div>
-          {/* <div className="ft-main-item">
-            <h2 className="ft-title">Resources</h2>
-            <ul>
-              <li>
-                <a href="#">Docs</a>
-              </li>
-              <li>
-                <a href="#">Blog</a>
-              </li>
-              <li>
-                <a href="#">eBooks</a>
-              </li>
-              <li>
-                <a href="#">Webinars</a>
-              </li>
-            </ul>
-          </div> */}
+
           <div className="ft-main-item">
             <h2 className="ft-title">Contact</h2>
             <ul>
               <li>
-                <a href="#">Help</a>
+                <a href="#asdf">Help</a>
               </li>
               <li>
-                <a href="#">Sales</a>
+                <a href="#asdf">Sales</a>
               </li>
               <li>
-                <a href="#">Advertise</a>
+                <a href="#asdf">Advertise</a>
               </li>
             </ul>
           </div>
@@ -81,32 +65,32 @@ const Footer = () => {
         <section className="ft-social">
           <ul className="ft-social-list">
             <li>
-              <a href="#">
+              <a href="#asdf">
                 <i className="fab fa-facebook"></i>
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="#asdf">
                 <i className="fab fa-twitter"></i>
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="#asdf">
                 <i className="fab fa-instagram"></i>
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="#asdf">
                 <i className="fab fa-github"></i>
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="#asdf">
                 <i className="fab fa-linkedin"></i>
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="#asdf">
                 <i className="fab fa-youtube"></i>
               </a>
             </li>
@@ -117,10 +101,10 @@ const Footer = () => {
         <section className="ft-legal">
           <ul className="ft-legal-list">
             <li>
-              <a href="#">Terms &amp; Conditions</a>
+              <a href="#asdf">Terms &amp; Conditions</a>
             </li>
             <li>
-              <a href="#">Privacy Policy</a>
+              <a href="#asdf">Privacy Policy</a>
             </li>
             <li>&copy; 2020 Copyright Isaac Reeder</li>
           </ul>

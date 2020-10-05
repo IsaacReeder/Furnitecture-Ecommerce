@@ -117,6 +117,9 @@ class productTypes extends Component {
                   <Button size="small" color="primary">
                     Share
                   </Button>
+                  <Link to={`/${brand.id}`}>
+                    <h1>See Items</h1>
+                  </Link>
                   <Button size="small" color="primary">
                     Learn More
                   </Button>
