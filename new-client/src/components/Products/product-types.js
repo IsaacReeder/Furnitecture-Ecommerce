@@ -4,6 +4,7 @@ import { Component } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/R01logo2.gif";
 import Footer from "../LayoutElements/Footer";
+import Header from "../LayoutElements/Header";
 
 import Strapi from "strapi-sdk-javascript/build/main";
 const apiUrl = process.env.API_URL || "http://localhost:1337";
@@ -57,10 +58,12 @@ class productTypes extends Component {
     return (
       <div>
         <React.Fragment>
-          <div className="sign-out-container">
+          <Header />
+
+          {/* <div className="sign-out-container">
             <div className="sign-out"></div>
             <h3 className="verticle-sign-out">Sign-Out</h3>
-          </div>
+          </div> */}
           {/* The below gif is an example, not the final asset. 
               It is not an original work.
               it will be replaced at a later stage */}
