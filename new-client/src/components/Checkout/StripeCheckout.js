@@ -10,7 +10,7 @@ import Checkout from "./Checkout";
 const StripeCheckout = () => {
   return (
     <div>
-      <Checkout />
+      {/* <Checkout /> */}
       {/* <StripeScriptLoader
         uniqueId=""
         script="https://js.stripe.com/v3/"

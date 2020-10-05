@@ -3,6 +3,7 @@ import "./product-types.css";
 import { Component } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/R01logo2.gif";
+import Footer from "../LayoutElements/Footer";
 
 import Strapi from "strapi-sdk-javascript/build/main";
 const apiUrl = process.env.API_URL || "http://localhost:1337";
@@ -63,7 +64,7 @@ class productTypes extends Component {
           {/* The below gif is an example, not the final asset. 
               It is not an original work.
               it will be replaced at a later stage */}
-          <img className="middle-pic" src={logo} alt="loading..." />
+          {/* <img className="middle-pic" src={logo} alt="loading..." /> */}
           <div className="container">
             {this.filteredBrands(this.state).map((brand) => (
               <div className="item-wrangler" key={brand.id}>
@@ -81,6 +82,7 @@ class productTypes extends Component {
               </div>
             ))}
           </div>
+          <Footer />
         </React.Fragment>
       </div>
     );

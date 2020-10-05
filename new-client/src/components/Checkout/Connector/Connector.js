@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import "./Connector.css";
 
-import Signup from "../Auth/Signup/Signup";
-import Signin from "../Auth/Signin/Signin";
+import Signup from "../../Auth/Signup/Signup";
+import Signin from "../../Auth/Signin/Signin";
 
 class Connector extends Component {
   state = {

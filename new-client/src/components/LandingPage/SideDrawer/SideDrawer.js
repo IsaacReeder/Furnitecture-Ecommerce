@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./SideDrawer.css";
-import Connector from "../../Connector/Connector";
+import Connector from "../../Checkout/Connector/Connector";
 
 const SideDrawer = (props) => {
   let drawerClasses = "side-drawer";

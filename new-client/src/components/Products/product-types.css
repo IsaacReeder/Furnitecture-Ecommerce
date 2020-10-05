@@ -13,7 +13,8 @@
   height: auto;
   /* width: 50%; */
   /* padding-bottom: ; Same as width, sets height */
-  margin: 6%; /* (100-32*3)/2 */
+  margin: 6%;
+  /* (100-32*3)/2 */
   margin-top: 4%;
   position: relative;
   background-color: black;
@@ -57,12 +58,13 @@
 .vertical-sign-out {
   position: absolute;
 }
+
 .sign-out:hover {
   background-color: black;
   transition: ease 0.5s;
 }
-.vertical-sign-out:hover {
-}
+
+.vertical-sign-out:hover {}
 
 .middle-pic {
   position: absolute;
