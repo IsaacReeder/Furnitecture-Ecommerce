@@ -15,6 +15,7 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 
 import Strapi from "strapi-sdk-javascript/build/main";
+import MainNavigation from "../Navigation/MainNavigation";
 const apiUrl = process.env.API_URL || "http://localhost:1337";
 const strapi = new Strapi(apiUrl);
 
@@ -64,8 +65,9 @@ class productTypes extends Component {
   render() {
     // const { searchTerm, loadingBrands } = this.state;
     return (
-      <div>
+      <div style={{ paddingTop: "40px" }}>
         <React.Fragment>
+          <MainNavigation />
           {/* <div className="sign-out-container">
             <div className="sign-out"></div>
             <h3 className="verticle-sign-out">Sign-Out</h3>
@@ -89,7 +91,14 @@ class productTypes extends Component {
               //     <h1>See Items</h1>
               //   </Link>
               // </div>
-              <Card style={{ minWidth: "40%", maxHeight: "40%" }}>
+              <Card
+                style={{
+                  minWidth: "40%",
+                  minHeight: "40%",
+                  // marginTop: "100px",
+                  marginBottom: "10px",
+                }}
+              >
                 <CardActionArea>
                   <CardMedia
                     style={{ display: "flex" }}
@@ -111,15 +120,11 @@ class productTypes extends Component {
                   </CardContent>
                 </CardActionArea>
                 <CardActions>
-                  <Button size="small" color="primary">
-                    Share
-                  </Button>
                   <Link to={`/${brand.id}`}>
-                    <h1>See Items</h1>
+                    <Button size="small" color="primary">
+                      See more
+                    </Button>
                   </Link>
-                  <Button size="small" color="primary">
-                    Learn More
-                  </Button>
                 </CardActions>
               </Card>
             ))}

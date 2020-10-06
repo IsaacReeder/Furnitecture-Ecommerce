@@ -1,5 +1,7 @@
 import React from "react";
 import Cart from "../Cart/Cart";
+import { CSSTransition } from "react-transition-group";
+import "./modal.css";
 
 const modal_styles = {
   position: "fixed",
@@ -25,13 +27,20 @@ export default function modal({ open, children, onClose }) {
   if (!open) return null;
   return (
     <>
-      <div className="cart-wrangler">
-        <div style={overlay_styles} />
-        <div style={modal_styles}>
-          <Cart onClose={onClose} />
-          {children}
+      <CSSTransition
+        in={true}
+        appear={true}
+        timeout={1000}
+        classNames="modal-fade"
+      >
+        <div className="cart-wrangler">
+          <div style={overlay_styles} />
+          <div style={modal_styles}>
+            <Cart onClose={onClose} />
+            {children}
+          </div>
         </div>
-      </div>
+      </CSSTransition>
     </>
   );
 }

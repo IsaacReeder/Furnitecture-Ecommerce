@@ -45,3 +45,19 @@
   background-color: aqua;
   cursor: pointer;
 }
+.modal-fade-appear {
+  opacity: 0;
+  z-index: 1;
+}
+.modal-fade-appear.modal-fade-appear-active {
+  opacity: 1;
+  transition: opacity 300ms linear;
+}
+.modal-fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+.modal-fade-enter.modal-fade-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms linear 1000ms;
+}

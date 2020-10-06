@@ -11,41 +11,44 @@ import Signin from "./components/Auth/Signin/Signin";
 import Connector from "./components/Checkout/Connector/Connector";
 import Modal from "./components/UIElements/modal";
 import StripeCheckout from "./components/Checkout/StripeCheckout";
+import { CSSTransition } from "react-transition-group";
 
 function App() {
   return (
     <Router>
-      <Switch>
-        <Route path="/" exact>
-          <LandingPage />
-        </Route>
-        <Route path="/about" exact>
-          <AboutMe />
-        </Route>
-        <Route path="/signup" exact>
-          <Signup />
-        </Route>
-        <Route path="/signin" exact>
-          <Signin />
-        </Route>
-        <Route path="/kind" exact>
-          <ProductTypes />
-        </Route>
-        <Route path="/connector" exact>
-          <Connector />
-        </Route>
-        <Route path="/modal" exact>
-          <Modal />
-        </Route>
-        <Route path="/co" exact>
-          <StripeCheckout />
-        </Route>
+      <CSSTransition in={true} appear={true} timeout={1000} classNames="fade">
+        <Switch>
+          <Route path="/" exact>
+            <LandingPage />
+          </Route>
+          <Route path="/about" exact>
+            <AboutMe />
+          </Route>
+          <Route path="/signup" exact>
+            <Signup />
+          </Route>
+          <Route path="/signin" exact>
+            <Signin />
+          </Route>
+          <Route path="/kind" exact>
+            <ProductTypes />
+          </Route>
+          <Route path="/connector" exact>
+            <Connector />
+          </Route>
+          <Route path="/modal" exact>
+            <Modal />
+          </Route>
+          <Route path="/co" exact>
+            <StripeCheckout />
+          </Route>
 
-        <Route component={Products} path="/:brandId" />
-        {/* <Route path="/products" exact>
+          <Route component={Products} path="/:brandId" />
+          {/* <Route path="/products" exact>
           <Products />
         </Route> */}
-      </Switch>
+        </Switch>
+      </CSSTransition>
     </Router>
   );
 }

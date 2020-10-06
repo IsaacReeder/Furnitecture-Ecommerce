@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Syne:wght@500&display=swap");
+
+body {
+  padding-top: 65px;
+}
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -64,7 +68,8 @@
   transition: ease 0.5s;
 }
 
-.vertical-sign-out:hover {}
+.vertical-sign-out:hover {
+}
 
 .middle-pic {
   position: absolute;

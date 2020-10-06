@@ -3,6 +3,7 @@ import Modal from "../UIElements/modal";
 import { getCart } from "../../utils/index";
 // import { AuthContext } from '../../context/auth-context';
 import "./NavLinks.css";
+import { CSSTransition } from "react-transition-group";
 
 class NavLinks extends Component {
   state = {
