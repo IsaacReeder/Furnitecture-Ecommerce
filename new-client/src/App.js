@@ -10,7 +10,7 @@ import Signup from "./components/Auth/Signup/Signup";
 import Signin from "./components/Auth/Signin/Signin";
 import Connector from "./components/Checkout/Connector/Connector";
 import Modal from "./components/UIElements/modal";
-import StripeCheckout from "./components/Checkout/StripeCheckout";
+import Checkout from "./components/Checkout/Checkout";
 import { CSSTransition } from "react-transition-group";
 
 function App() {
@@ -40,7 +40,7 @@ function App() {
             <Modal />
           </Route>
           <Route path="/co" exact>
-            <StripeCheckout />
+            <Checkout />
           </Route>
 
           <Route component={Products} path="/:brandId" />

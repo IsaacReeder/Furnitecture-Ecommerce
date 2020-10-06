@@ -13,7 +13,9 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.3",
+    "react-scripts": "^3.4.3",
+    "react-stripe-checkout": "^2.6.3",
+    "react-toastify": "^6.0.9",
     "react-transition-group": "^4.4.1",
     "strapi-sdk-javascript": "^0.3.3",
     "stripe": "^8.96.0"
