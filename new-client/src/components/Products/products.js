@@ -1,10 +1,10 @@
 import React from "react";
 import Strapi from "strapi-sdk-javascript/build/main";
 import "./products.css";
+import MainNavigation from "../Navigation/MainNavigation";
 // calculatePrice,
 import { setCart, getCart } from "../../utils/index";
 import Modal from "../UIElements/modal";
-import Header from "../LayoutElements/Header";
 import Footer from "../LayoutElements/Footer";
 
 // Card
@@ -93,7 +93,8 @@ class Products extends React.Component {
     const { items } = this.state;
     return (
       <>
-        <Header />
+        {/* <Header /> */}
+        <MainNavigation />
         <div className="products-container">
           <h1 className="products-title">The goods</h1>
 

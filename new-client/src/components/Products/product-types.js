@@ -4,7 +4,6 @@ import { Component } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/R01logo2.gif";
 import Footer from "../LayoutElements/Footer";
-import Header from "../LayoutElements/Header";
 
 // Cards
 import Card from "@material-ui/core/Card";
@@ -67,8 +66,6 @@ class productTypes extends Component {
     return (
       <div>
         <React.Fragment>
-          <Header />
-
           {/* <div className="sign-out-container">
             <div className="sign-out"></div>
             <h3 className="verticle-sign-out">Sign-Out</h3>
