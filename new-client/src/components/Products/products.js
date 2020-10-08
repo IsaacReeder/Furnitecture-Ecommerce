@@ -5,9 +5,8 @@ import MainNavigation from "../Navigation/MainNavigation";
 import { CSSTransition } from "react-transition-group";
 // calculatePrice,
 import { setCart, getCart } from "../../utils/index";
-import Modal from "../UIElements/modal";
 import Footer from "../LayoutElements/Footer";
-
+import { Link } from "react-router-dom";
 // Card
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
@@ -26,6 +25,8 @@ class Products extends React.Component {
     brand: "",
     cartItems: getCart(),
     showModal: false,
+    singularProduct: 0,
+    singleItemId: 0,
   };
 
   async componentDidMount() {
@@ -83,6 +84,24 @@ class Products extends React.Component {
     console.log(this.state.showModal);
   };
 
+  // One button toggles boolean true, and adds an integer to singluarItem. another button passes in 0 to singularItem and toggles false
+
+  closerLook = (itemId) => {
+    this.setState({ singleItemId: itemId }, () => {
+      console.log(this.state.singleItemId);
+    });
+    // this.setState((prevState) => ({
+    //   singularProduct: !prevState.singularProduct,
+    // }));
+    // console.log(this.state.singularProduct, this.state.singleItemId);
+  };
+
+  closeDetail = () => {
+    this.setState({ singleItemId: 0 }, () => {
+      console.log(this.state.singleItemId);
+    });
+  };
+
   //Bring over search bar
 
   render() {
@@ -97,22 +116,11 @@ class Products extends React.Component {
         <>
           {/* <Header /> */}
           <MainNavigation />
+          {this.state.singleItemId > 0 ? <h1>zzzzzas</h1> : <h1>asdf</h1>}
+          <button></button>
           <div className="products-container">
-            <h1 className="products-title">The goods</h1>
-
             <div className="map-container">
               {items.map((item) => (
-                // <div key={item.id} className="products-items">
-                //   <div key={item.id}></div>
-                //   <img src={`${apiUrl}${item.image[0].url}`} alt="item pic"></img>
-                //   <h3>
-                //     {item.name}, ${item.price}
-                //   </h3>
-                //   <button onClick={() => this.addToCart(item)}>
-                //     Add to cart
-                //   </button>
-                //   <button>Details</button>
-                // </div>
                 <Card style={{ margin: "25px" }}>
                   <CardActionArea>
                     <CardMedia
@@ -130,7 +138,7 @@ class Products extends React.Component {
                         {item.name}
                       </Typography>
                       <Typography gutterBottom variant="h5" component="h2">
-                        ${item.price}
+                        ${item.price}, {item.id}
                       </Typography>
                     </CardContent>
                   </CardActionArea>
@@ -142,8 +150,20 @@ class Products extends React.Component {
                     >
                       Add to cart
                     </Button>
-                    <Button size="small" color="primary">
+
+                    <Button
+                      onClick={() => this.closerLook(item.id)}
+                      size="small"
+                      color="primary"
+                    >
                       Closer lಠ ಠk
+                    </Button>
+                    <Button
+                      onClick={() => this.closeDetail()}
+                      size="small"
+                      color="primary"
+                    >
+                      Close it
                     </Button>
                   </CardActions>
                 </Card>
@@ -155,7 +175,6 @@ class Products extends React.Component {
       </CSSTransition>
     );
   }
-  f;
 }
 
 export default Products;

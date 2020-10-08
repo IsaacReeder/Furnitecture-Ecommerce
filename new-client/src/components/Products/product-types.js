@@ -2,7 +2,6 @@ import React from "react";
 import "./product-types.css";
 import { Component } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../assets/R01logo2.gif";
 import Footer from "../LayoutElements/Footer";
 
 // Cards
@@ -67,30 +66,9 @@ class productTypes extends Component {
     return (
       <div style={{ paddingTop: "40px" }}>
         <React.Fragment>
-          <MainNavigation />
-          {/* <div className="sign-out-container">
-            <div className="sign-out"></div>
-            <h3 className="verticle-sign-out">Sign-Out</h3>
-          </div> */}
-          {/* The below gif is an example, not the final asset. 
-              It is not an original work.
-              it will be replaced at a later stage */}
-          {/* <img className="middle-pic" src={logo} alt="loading..." /> */}
+          <MainNavigation />}
           <div className="container">
             {this.filteredBrands(this.state).map((brand) => (
-              // <div className="item-wrangler" key={brand.id}>
-              //   <h1>{brand.name}</h1>
-              //   {/* , {brand.description} */}
-              //   <img
-              //     className="item"
-              //     alt="brand pic"
-              //     key={brand.id}
-              //     src={`${apiUrl}${brand.image[0].url}`}
-              //   ></img>
-              //   <Link to={`/${brand.id}`}>
-              //     <h1>See Items</h1>
-              //   </Link>
-              // </div>
               <Card
                 style={{
                   minWidth: "40%",

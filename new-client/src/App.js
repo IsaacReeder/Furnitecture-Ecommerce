@@ -12,6 +12,7 @@ import Connector from "./components/Checkout/Connector/Connector";
 import Modal from "./components/UIElements/modal";
 import Checkout from "./components/Checkout/Checkout";
 import { CSSTransition } from "react-transition-group";
+import SingleProduct from "./components/Products/SingleProduct";
 
 function App() {
   return (
@@ -41,6 +42,9 @@ function App() {
           </Route>
           <Route path="/co" exact>
             <Checkout />
+          </Route>
+          <Route path="/single-product" exact>
+            <SingleProduct />
           </Route>
 
           <Route component={Products} path="/:brandId" />
