@@ -19,6 +19,7 @@
 
 .main-navigation__title {
   color: white;
+  margin-left: 3%;
 }
 
 .main-navigation__title a {
@@ -38,7 +39,6 @@
   .main-navigation__menu-btn {
     display: none;
   }
-
   .main-navigation__header-nav {
     display: block;
   }

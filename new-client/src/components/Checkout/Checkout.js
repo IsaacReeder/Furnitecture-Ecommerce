@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import ReactDOM, { render } from "react-dom";
+import React from "react";
 import StripeCheckout from "react-stripe-checkout";
 import axios from "axios";
 import { toast } from "react-toastify";
@@ -7,7 +6,6 @@ import { calculatePrice } from "../../utils/index";
 
 import "react-toastify/dist/ReactToastify.css";
 import "./Checkout.css";
-import { Component } from "react";
 import { getCart } from "../../utils/index";
 const apiUrl = process.env.API_URL || "http://localhost:1337";
 
