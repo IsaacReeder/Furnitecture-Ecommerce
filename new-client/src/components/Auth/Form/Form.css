@@ -10,18 +10,20 @@
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
+
 .account-form-fields.sign-in {
   max-height: 123px;
 }
+
 .account-form-fields.sign-up {
   max-height: 250px;
 }
+
 .account-form-fields.forgot {
   max-height: 61px;
 }
 
 .button-submit-form {
-  /* border:0 */
   appearance: none;
   cursor: pointer;
   padding: 15px;
@@ -30,7 +32,6 @@
   font-size: 1rem;
   font-family: Arial, Helvetica, sans-serif;
   background: burlywood;
-  /* box-shadow: ; */
   transition: all 0.2s ease;
 }
 

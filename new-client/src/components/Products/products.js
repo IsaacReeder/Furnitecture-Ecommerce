@@ -1,7 +1,6 @@
 import React from "react";
 import Strapi from "strapi-sdk-javascript/build/main";
-import "./products.css";
-import SingleProduct from "./SingleProduct";
+import "./Products.css";
 import MainNavigation from "../Navigation/MainNavigation";
 import { CSSTransition } from "react-transition-group";
 // calculatePrice,
@@ -279,15 +278,6 @@ class Products extends React.Component {
                         </Typography>
                       </CardContent>
                     </CardActionArea>
-                    <CardActions>
-                      {/* <Button
-                        onClick={() => this.addToCart(item)}
-                        size="small"
-                        color="primary"
-                      >
-                        Add to cart
-                      </Button> */}
-                    </CardActions>
                   </Card>
                 ))}
               </div>

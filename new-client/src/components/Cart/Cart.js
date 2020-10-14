@@ -40,8 +40,6 @@ class Cart extends Component {
       <>
         <div className="products-cart">
           <div className="cart-left-section">
-            Bag
-            {/* <h4>Items: {this.state.cartItems.length}</h4> */}
             {this.state.cartItems.map((product) => (
               <>
                 <img
@@ -62,11 +60,6 @@ class Cart extends Component {
                   </div>
                 </h3>
                 <br />
-                {/* <h3>
-                  {this.state.cartItems.length === 0 && (
-                    <h3>Please select some items</h3>
-                  )}
-                </h3> */}
               </>
             ))}
           </div>

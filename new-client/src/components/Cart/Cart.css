@@ -10,6 +10,7 @@
   flex-direction: row;
   overflow: hidden;
 }
+
 .cart-left-section {
   overflow-y: scroll;
   display: flex;
@@ -18,22 +19,23 @@
   width: 50%;
   background-color: transparent;
 }
+
 .cart-right-section {
   height: 100%;
   width: 50%;
-  /* background-color: olivedrab; */
   background-color: transparent;
 }
+
 .product-name {
   height: 5%;
   width: 100%;
-  /* background-color: yellowgreen; */
 }
+
 .product-price {
   height: 5%;
   width: 100%;
-  /* background-color: brown; */
 }
+
 .modal-close-button {
   position: absolute;
   top: 1rem;
@@ -42,6 +44,7 @@
   background-color: aqua;
   cursor: pointer;
 }
+
 .checkout-button {
   border-radius: 8px;
   width: 50%;

@@ -6,7 +6,6 @@
   top: 0;
   right: 0;
   width: 79.8%;
-  /* max-width: 0%; */
   z-index: 200;
   transform: translateX(100%);
   transition: transform 0.5s ease-out;
@@ -35,16 +34,9 @@
   font-size: 1.2rem;
 }
 
-.side-drawer a:hover,
-.side-drawer a:active {
+.side-drawer a:hover, .side-drawer a:active {
   color: #fa923f;
 }
-
-/* @media (min-width: 769px) {
-    .side-drawer {
-        display: none;
-    }
-} */
 
 .toggle-button {
   height: 10px;

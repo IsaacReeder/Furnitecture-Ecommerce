@@ -4,12 +4,12 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import AboutMe from "./components/LandingPage/AboutMe/AboutMe";
 import LandingPage from "./components/LandingPage/LandingPage";
-import ProductTypes from "./components/Products/product-types";
-import Products from "./components/Products/products";
+import ProductTypes from "./components/Products/Product-types";
+import Products from "./components/Products/Products";
 import Signup from "./components/Auth/Signup/Signup";
 import Signin from "./components/Auth/Signin/Signin";
 import Connector from "./components/Checkout/Connector/Connector";
-import Modal from "./components/UIElements/modal";
+import Modal from "./components/UIElements/Modal";
 import Checkout from "./components/Checkout/Checkout";
 import { CSSTransition } from "react-transition-group";
 import SingleProduct from "./components/Products/SingleProduct";
@@ -46,11 +46,7 @@ function App() {
           <Route path="/single-product" exact>
             <SingleProduct />
           </Route>
-
-          <Route component={Products} path="/:brandId" />
-          {/* <Route path="/products" exact>
-          <Products />
-        </Route> */}
+          <Route component={Products} path="/:brandId" />}
         </Switch>
       </CSSTransition>
     </Router>

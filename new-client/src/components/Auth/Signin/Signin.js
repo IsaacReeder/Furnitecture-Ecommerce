@@ -2,7 +2,6 @@ import React from "react";
 
 import { setToken } from "../../../utils/index";
 import { Redirect } from "react-router-dom";
-import "./Signin.css";
 import Strapi from "strapi-sdk-javascript/build/main";
 const apiUrl = process.env.API_URL || "http://localhost:1337";
 const strapi = new Strapi(apiUrl);

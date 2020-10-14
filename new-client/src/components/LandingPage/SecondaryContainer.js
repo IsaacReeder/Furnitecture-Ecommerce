@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./SecondaryContainer.css";
 import SideDrawer from "./SideDrawer/SideDrawer";
 import SideDrawer2 from "./SideDrawer2/SideDrawer2";
-import Backdrop from "./Backdrop/Backdrop";
 import MagicButton from "./SideDrawer/MagicButton";
 import MagicButton2 from "./SideDrawer/MagicButton";
 
@@ -31,9 +30,6 @@ class SecondaryContainer extends Component {
   render() {
     let backdrop;
 
-    if (this.state.sideDrawerOpen) {
-      backdrop = <Backdrop click={this.backdropClickHandler} />;
-    }
     return (
       <div classname="titles">
         <h1 className="title-box">Types of products</h1>

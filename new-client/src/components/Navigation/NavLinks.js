@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Modal from "../UIElements/modal";
+import Modal from "../UIElements/Modal";
 import { getCart } from "../../utils/index";
 // import { AuthContext } from '../../context/auth-context';
 import Badge from "@material-ui/core/Badge";

@@ -1,7 +1,7 @@
 import React from "react";
 import Cart from "../Cart/Cart";
 import { CSSTransition } from "react-transition-group";
-import "./modal.css";
+import "./Modal.css";
 
 const modal_styles = {
   position: "fixed",

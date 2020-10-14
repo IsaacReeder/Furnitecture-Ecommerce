@@ -45,7 +45,6 @@ body {
 .container-footer {
   flex: 1;
   max-height: 25px;
-  /* margin-top: 25px; */
 }
 
 /* Footer main */
@@ -54,7 +53,6 @@ body {
   padding: 1rem 1rem;
   display: flex;
   flex-wrap: wrap;
-  /* max-height: 200px; */
 }
 
 @media only screen and (min-width: 29.8125rem

@@ -62,8 +62,6 @@ class Signup extends React.Component {
   };
 
   render() {
-    // const { toastMessage, toast, loading } = this.state;
-
     return (
       <div>
         <h1>Signup</h1>

@@ -48,7 +48,6 @@ class NewLanding extends Component {
     const h = this.state.time.getHours();
     const m = this.state.time.getMinutes();
     const s = this.state.time.getSeconds();
-    // imageSrc = this.state.imageSrc;
     return (
       <div className="new-landing-container">
         <LandingNav style={{ display: "flex" }} />

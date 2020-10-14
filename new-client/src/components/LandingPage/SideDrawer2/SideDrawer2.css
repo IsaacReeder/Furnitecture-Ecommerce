@@ -36,16 +36,9 @@
   font-size: 1.2rem;
 }
 
-.side-drawer a:hover,
-.side-drawer a:active {
+.side-drawer a:hover, .side-drawer a:active {
   color: #fa923f;
 }
-
-/* @media (min-width: 769px) {
-    .side-drawer {
-        display: none;
-    }
-} */
 
 .toggle-button {
   height: 10px;

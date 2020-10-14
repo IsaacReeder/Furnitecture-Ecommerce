@@ -1,5 +1,5 @@
 import React from "react";
-import "./product-types.css";
+import "./Product-types.css";
 import { Component } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../LayoutElements/Footer";
@@ -62,7 +62,6 @@ class productTypes extends Component {
     });
   };
   render() {
-    // const { searchTerm, loadingBrands } = this.state;
     return (
       <div>
         <React.Fragment>

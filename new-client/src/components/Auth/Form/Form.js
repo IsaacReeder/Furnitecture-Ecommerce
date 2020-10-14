@@ -60,8 +60,6 @@ class Form extends Component {
   };
 
   render() {
-    // const { toastMessage, toast, loading } = this.state;
-    // const [option, setOption] = React.useState(1);
     const option = this.state.option;
     console.log(option);
     return (
@@ -87,8 +85,6 @@ class Form extends Component {
             placeholder="Email Address"
             onChange={this.handleChange}
             required
-            // required={option === 1 || option === 2 ? true : false}
-            // disabled={option === 3 ? true : false}
           />
           <input
             id="password"
@@ -97,8 +93,6 @@ class Form extends Component {
             placeholder="Password"
             onChange={this.handleChange}
             required
-            // required={option === 2 ? true : false}
-            // disabled={option === 1 || option === 3 ? true : false}
           />
         </div>
         <button className="btn-submit-form" type="submit">
