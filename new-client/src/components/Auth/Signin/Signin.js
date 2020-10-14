@@ -80,7 +80,6 @@ class Signin extends React.Component {
       <div>
         <h1>Welcome back!</h1>
         <form className="signup-form" onSubmit={this.handleSubmit}>
-          <label htmlFor="uname">Username:</label>
           <br></br>
           <input
             id="signin-username"
@@ -90,7 +89,6 @@ class Signin extends React.Component {
             onChange={this.handleChange}
           ></input>
           <br></br>
-          <label htmlFor="pword">Password</label>
           <br></br>
           <input
             onChange={this.handleChange}

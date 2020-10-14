@@ -4,8 +4,7 @@
    |- cart logo button X
    |- close modal button within modal X
    |- add total and checkout button to modal
-- single item detail 
-- about me combined w contact page
+- single item detail X 
 - checkout
     |- Stripe https integration
     |- "note to team"

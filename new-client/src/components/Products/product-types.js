@@ -64,16 +64,15 @@ class productTypes extends Component {
   render() {
     // const { searchTerm, loadingBrands } = this.state;
     return (
-      <div style={{ paddingTop: "40px" }}>
+      <div>
         <React.Fragment>
-          <MainNavigation />}
+          <MainNavigation />
           <div className="container">
             {this.filteredBrands(this.state).map((brand) => (
               <Card
                 style={{
                   minWidth: "40%",
                   minHeight: "40%",
-                  // marginTop: "100px",
                   marginBottom: "10px",
                 }}
               >

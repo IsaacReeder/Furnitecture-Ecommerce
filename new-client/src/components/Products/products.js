@@ -17,6 +17,9 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
+import { makeStyles } from "@material-ui/core/styles";
+import TextField from "@material-ui/core/TextField";
+import SearchIcon from "@material-ui/icons/Search";
 
 const apiUrl = process.env.API_URL || "http://localhost:1337";
 const strapi = new Strapi(apiUrl);
@@ -29,6 +32,7 @@ class Products extends React.Component {
     showModal: false,
     singularProduct: 0,
     singleItemId: 0,
+    searchTerm: "",
   };
 
   async componentDidMount() {
@@ -98,21 +102,31 @@ class Products extends React.Component {
     });
   };
 
-  //Bring over search bar
+  handleChange = ({ value }) => {
+    this.setState({ searchTerm: value });
+  };
+
+  filteredItems = ({ searchTerm, items }) => {
+    return items.filter((item) => {
+      console.log(
+        `name is ${item.name.toLowerCase().includes(searchTerm.toLowerCase())}`
+      );
+      return (
+        item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        item.description.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    });
+  };
 
   render() {
-    const { items } = this.state;
+    const { items, searchTerm } = this.state;
+
     return (
       <CSSTransition in={true} appear={true} timeout={1000} classNames="fade">
         <>
           {/* <Header /> */}
           <MainNavigation />
           {this.state.singleItemId > 0 ? (
-            // <SingleProduct
-            //   singleItemId={this.state.singleItemId}
-            //   items={this.state.items}
-            //   addToCart={this.addToCart}
-            // />
             <div
               style={{
                 display: "flex",
@@ -127,10 +141,7 @@ class Products extends React.Component {
                 .map((singleItem) => (
                   <>
                     {/* Left Side */}
-                    <div
-                      alt="image container"
-                      // style={{ backgroundColor: "yellow" }}
-                    >
+                    <div alt="image container">
                       <img
                         src={`${apiUrl}${singleItem.image[0].url}`}
                         alt="item pic"
@@ -161,7 +172,6 @@ class Products extends React.Component {
                         alignContent: "flex-start",
                         alignContent: "spaceBetween",
                         justifyContent: "center",
-                        // height: "60%vh",
                         width: "25%",
                       }}
                     >
@@ -213,7 +223,40 @@ class Products extends React.Component {
           ) : (
             <div className="products-container">
               <div className="map-container">
-                {items.map((item) => (
+                {/* SearchField */}
+                <form
+                  style={{
+                    position: "fixed",
+                    marginTop: "-4%",
+                    marginLeft: "-45%",
+                    zIndex: "10000",
+                  }}
+                  noValidate
+                  autoComplete="off"
+                >
+                  <TextField
+                    style={{
+                      backgroundColor: "white",
+                      borderRadius: "2%",
+                    }}
+                    onChange={this.handleChange}
+                    value={searchTerm}
+                    color="primary"
+                    id="standard-basic"
+                    label="Search"
+                  />
+                </form>
+                <SearchIcon
+                  fontSize="large"
+                  style={{
+                    color: "white",
+                    position: "fixed",
+                    marginTop: "-3.4%",
+                    marginLeft: "-14%",
+                    zIndex: "10000",
+                  }}
+                />
+                {this.filteredItems(this.state).map((item) => (
                   <Card style={{ margin: "25px" }} key={item.id}>
                     <CardActionArea>
                       <CardMedia
@@ -225,6 +268,7 @@ class Products extends React.Component {
                           <img
                             src={`${apiUrl}${item.image[0].url}`}
                             alt="item pic"
+                            onClick={() => this.closerLook(item.id)}
                           ></img>
                         </div>
                         <Typography gutterBottom variant="h5" component="h2">
@@ -236,21 +280,13 @@ class Products extends React.Component {
                       </CardContent>
                     </CardActionArea>
                     <CardActions>
-                      <Button
+                      {/* <Button
                         onClick={() => this.addToCart(item)}
                         size="small"
                         color="primary"
                       >
                         Add to cart
-                      </Button>
-
-                      <Button
-                        onClick={() => this.closerLook(item.id)}
-                        size="small"
-                        color="primary"
-                      >
-                        Closer lಠ ಠk
-                      </Button>
+                      </Button> */}
                     </CardActions>
                   </Card>
                 ))}

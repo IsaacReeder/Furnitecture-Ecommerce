@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext");
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@1&family=MuseoModerno:wght@600&display=swap");
-
 .new-landing-container {
   display: flex;
   /* position: relative; */
@@ -19,6 +18,7 @@
   border-bottom: 3px solid black;
   z-index: 250;
 }
+
 .main-title-nav {
   font-family: "MuseoModerno", cursive;
   font-size: 60px;
@@ -71,6 +71,7 @@
   cursor: pointer;
   /* border: 1px solid black; */
 }
+
 .hover-or {
   margin-top: 10%;
   margin-left: 10%;
@@ -121,7 +122,6 @@
   text-decoration: none;
 }
 
-.toolbar-navigation-items a:hover,
-.toolbar-navigation-items a:active {
+.toolbar-navigation-items a:hover, .toolbar-navigation-items a:active {
   color: #fa923f;
 }

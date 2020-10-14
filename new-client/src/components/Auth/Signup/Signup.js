@@ -68,7 +68,6 @@ class Signup extends React.Component {
       <div>
         <h1>Signup</h1>
         <form className="signup-form" onSubmit={this.handleSubmit}>
-          <label htmlFor="fname">Username:</label>
           <br></br>
           <input
             id="username"
@@ -88,7 +87,6 @@ class Signup extends React.Component {
             onChange={this.handleChange}
           ></input>
           <br></br>
-          <label htmlFor="lname">Password</label>
           <br></br>
           <input
             onChange={this.handleChange}

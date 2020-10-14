@@ -4,21 +4,18 @@
   align-items: center;
   height: 300px;
   margin-top: 25%;
-  /* width: 100%; */
   overflow: hidden;
-  /* background-color: antiquewhite; */
 }
 
 .movement-container {
   display: flex;
   flex-direction: column;
-  /* position: absolute; */
   justify-content: center;
   width: 50%;
-  /* background-color: rgb(245, 187, 116); */
   overflow: hidden;
   transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
+
 input {
   background-color: #fdf8e2;
   border-style: solid;
@@ -34,9 +31,11 @@ input {
 .auth-hider-sign-in {
   transform: translateY(160px);
 }
+
 .auth-hider-sign-up {
   transform: translateY(-140px);
 }
+
 .su {
   display: flex;
   justify-content: center;

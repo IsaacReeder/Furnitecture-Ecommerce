@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import SideDrawer from "./SideDrawer/SideDrawer";
 import MagicButton from "./SideDrawer/MagicButton";
 import MagicButton2 from "./SideDrawer2/MagicButton2";
+import LandingNav from "./LandingNav";
 
 import "./LandingPage.css";
 
@@ -50,7 +51,8 @@ class NewLanding extends Component {
     // imageSrc = this.state.imageSrc;
     return (
       <div className="new-landing-container">
-        <header className="navie">
+        <LandingNav style={{ display: "flex" }} />
+        {/* <header className="navie">
           <nav className="toolbar-navigation">
             <div className="toolbar-logo">
               <h2 className="main-title-nav">Furnitecture</h2>
@@ -59,19 +61,15 @@ class NewLanding extends Component {
             <div className="toolbar-navigation-items">
               <ul>
                 <li>
-                  {/* Put other time zones in addition */}
                   <h1>
                     {h % 12}:{m < 10 ? "0" + m : m}:{s < 10 ? "0" + s : s}
                     {h < 12 ? "am" : "pm"}
                   </h1>
                 </li>
-                {/* <li>
-                  <h1>Cart</h1>
-                </li> */}
               </ul>
             </div>
           </nav>
-        </header>
+        </header> */}
         <div className="left-side">
           <div className="paragraph">
             <h3>
@@ -100,13 +98,6 @@ class NewLanding extends Component {
               drawerClickHandler={this.drawerToggleClickHandler}
             />
           </div>
-          {/* <div
-            className="hover-title"
-            onMouseEnter={this.handleMouseEnter}
-            onMouseLeave={this.handleMouseExit}
-          >
-            Sign up
-          </div> */}
           <div className="drawery">
             <SideDrawer show={this.state.sideDrawerOpen} />
           </div>

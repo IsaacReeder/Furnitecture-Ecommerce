@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Syne:wght@500&display=swap");
-
-body {
-  padding-top: 65px;
+.spacer {
+  margin-bottom: 65px;
 }
+
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -15,10 +15,7 @@ body {
 .item {
   max-width: 40%;
   height: auto;
-  /* width: 50%; */
-  /* padding-bottom: ; Same as width, sets height */
   margin: 6%;
-  /* (100-32*3)/2 */
   margin-top: 4%;
   position: relative;
   background-color: black;
@@ -28,13 +25,11 @@ body {
 .item-wrangler {
   width: 45%;
   height: 45%;
-  /* border: 1px solid black; */
 }
 
 .giffy {
   position: absolute;
   margin-top: 25%;
-  /* margin-left: 2%; */
 }
 
 .sign-out-container {
@@ -54,7 +49,6 @@ body {
   height: 25px;
   width: 25px;
   border-radius: 50%;
-  /* display: inline-block; */
   border: 1px solid black;
   cursor: pointer;
 }
@@ -66,9 +60,6 @@ body {
 .sign-out:hover {
   background-color: black;
   transition: ease 0.5s;
-}
-
-.vertical-sign-out:hover {
 }
 
 .middle-pic {

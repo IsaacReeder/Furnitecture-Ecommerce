@@ -4,8 +4,8 @@ import { getCart } from "../../utils/index";
 // import { AuthContext } from '../../context/auth-context';
 import Badge from "@material-ui/core/Badge";
 import { withStyles } from "@material-ui/core/styles";
-import IconButton from "@material-ui/core/IconButton";
-import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import { makeStyles } from "@material-ui/core/styles";
+
 import "./NavLinks.css";
 
 class NavLinks extends Component {
@@ -14,6 +14,7 @@ class NavLinks extends Component {
     brand: "",
     cartItems: getCart(),
     showModal: false,
+    open: false,
   };
 
   modalAction = () => {
@@ -23,6 +24,7 @@ class NavLinks extends Component {
     console.log(this.state.showModal);
     console.log(this.state.cartItems);
   };
+
   render() {
     const StyledBadge = withStyles((theme) => ({
       badge: {
@@ -41,6 +43,7 @@ class NavLinks extends Component {
       <ul className="nav-links">
         <li style={{ color: "white" }}>asdf</li>
         <li style={{ color: "white" }}>Search</li>
+
         <li style={{ marginRight: "50%" }}>
           {/* {this.state.cartItems.map((item) => ({ item.id }))} */}
           <StyledBadge badgeContent={3} color="secondary">
