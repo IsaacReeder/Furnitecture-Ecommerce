@@ -30,6 +30,7 @@ class Connector extends Component {
     return (
       <div>
         <div className="auth-hider">
+          asdf
           <div
             className={
               "movement-container " +
@@ -40,11 +41,14 @@ class Connector extends Component {
                 : "forgot")
             }
           >
+            asdf
             <div className="si">
               <Signin />
+              asdf
             </div>
             <div className="su">
               <Signup />
+              asdf
             </div>
           </div>
           <button className="auth-button" onClick={this.signChange}>

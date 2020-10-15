@@ -73,8 +73,6 @@ class Signin extends React.Component {
   };
 
   render() {
-    // const { toastMessage, toast, loading } = this.state;
-
     return (
       <div>
         <h1>Welcome back!</h1>

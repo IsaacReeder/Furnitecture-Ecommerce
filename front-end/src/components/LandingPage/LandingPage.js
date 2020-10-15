@@ -7,16 +7,18 @@ import SideDrawer from "./SideDrawer/SideDrawer";
 class LandingPage extends Component {
   state = {
     sideDrawerOpen: false,
+    isHovered: false,
   };
+
   handleMouseEnter = () => {
     console.log("Mouse enter");
     this.setState({
-      coler: "white",
+      isHovered: true,
     });
   };
   handleMouseExit = () => {
     this.setState({
-      color: "hsl(14, 84%, 57%)",
+      isHovered: false,
     });
   };
   drawerToggleClickHandler = () => {
@@ -33,12 +35,12 @@ class LandingPage extends Component {
           display: "flex",
           height: "100vh",
           alignItems: "center",
+          justifyContent: "center",
         }}
       >
-        <p style={{ marginLeft: "10%" }}>
+        <p>
           <MagicButton
-            onMouseEnter={this.handleMouseEnter}
-            onMouseLeave={this.handleMouseExit}
+            className="magicButtonLogin"
             drawerClickHandler={this.drawerToggleClickHandler}
           />
         </p>

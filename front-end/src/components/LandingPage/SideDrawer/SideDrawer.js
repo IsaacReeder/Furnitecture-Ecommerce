@@ -13,6 +13,7 @@ const SideDrawer = (props) => {
   return (
     <div className={drawerClasses}>
       <Connector />
+      Hi
     </div>
   );
 };
