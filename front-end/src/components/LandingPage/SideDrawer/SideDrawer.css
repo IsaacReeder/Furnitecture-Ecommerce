@@ -1,24 +1,22 @@
-.side-drawer2 {
+.side-drawer {
   height: 100%;
-  background: grey;
+  background: white;
   box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
-  margin-top: 4.3%;
   right: 0;
-  width: 70%;
-  max-width: 60%;
+  width: 79.8%;
   z-index: 200;
-  transform: translateX(80%);
+  transform: translateX(100%);
   transition: transform 0.5s ease-out;
-  overflow: scroll;
+  border: 3px solid black;
 }
 
-.side-drawer2.open {
+.side-drawer.open {
   transform: translateX(0);
 }
 
-.side-drawer2 ul {
+.side-drawer ul {
   height: 100%;
   list-style: none;
   display: flex;
@@ -26,11 +24,11 @@
   justify-content: center;
 }
 
-.side-drawer2 li {
+.side-drawer li {
   margin: 0.5rem 0;
 }
 
-.side-drawer2 a {
+.side-drawer a {
   color: #521751;
   text-decoration: none;
   font-size: 1.2rem;

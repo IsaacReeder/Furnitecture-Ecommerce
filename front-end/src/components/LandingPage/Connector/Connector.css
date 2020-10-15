@@ -1,0 +1,52 @@
+.auth-hider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  margin-top: 25%;
+  overflow: hidden;
+}
+
+.movement-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+input {
+  background-color: #fdf8e2;
+  border-style: solid;
+  border-color: black;
+  border-radius: 5px;
+  text-align: left;
+  width: 300px;
+  height: 40px;
+  margin-top: 10px;
+  padding-left: 15px;
+}
+
+.auth-hider-sign-in {
+  transform: translateY(160px);
+}
+
+.auth-hider-sign-up {
+  transform: translateY(-140px);
+}
+
+.su {
+  display: flex;
+  justify-content: center;
+}
+
+.si {
+  display: flex;
+  justify-content: center;
+}
+
+.auth-button {
+  height: 50px;
+  width: 50px;
+}

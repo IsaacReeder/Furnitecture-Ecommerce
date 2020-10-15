@@ -46,7 +46,8 @@ function App() {
           <Route path="/single-product" exact>
             <SingleProduct />
           </Route>
-          <Route component={Products} path="/:brandId" />}
+
+          <Route component={Products} path="/:brandId" />
         </Switch>
       </CSSTransition>
     </Router>

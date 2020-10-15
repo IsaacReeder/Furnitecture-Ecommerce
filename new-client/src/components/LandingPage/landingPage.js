@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import SideDrawer from "./SideDrawer/SideDrawer";
 import MagicButton from "./SideDrawer/MagicButton";
-import MagicButton2 from "./SideDrawer2/MagicButton2";
 import LandingNav from "./LandingNav";
 
 import "./LandingPage.css";
@@ -90,13 +89,6 @@ class NewLanding extends Component {
             />
           </div>
           <h3 className="hover-or">&nbsp;&nbsp;&nbsp;or</h3>
-          <div className="hover-title">
-            <MagicButton2
-              onMouseEnter={this.handleMouseEnter}
-              onMouseLeave={this.handleMouseExit}
-              drawerClickHandler={this.drawerToggleClickHandler}
-            />
-          </div>
           <div className="drawery">
             <SideDrawer show={this.state.sideDrawerOpen} />
           </div>
