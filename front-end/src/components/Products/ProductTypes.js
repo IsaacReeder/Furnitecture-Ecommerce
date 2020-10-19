@@ -62,14 +62,16 @@ class ProductTypes extends Component {
           }}
         >
           {brands.map((brand, i) => (
-            <Kind
-              key={i}
-              onMouseEnter={() => this.handleMouseEnter(i)}
-              onMouseLeave={() => this.handleMouseExit(i)}
-              isHovering={isHovered[i]}
-              text={brand.name}
-              id={brand.id}
-            />
+            <>
+              <Kind
+                key={i}
+                onMouseEnter={() => this.handleMouseEnter(i)}
+                onMouseLeave={() => this.handleMouseExit(i)}
+                isHovering={isHovered[i]}
+                text={brand.name}
+                id={brand.id}
+              ></Kind>
+            </>
           ))}
         </div>
       </>
