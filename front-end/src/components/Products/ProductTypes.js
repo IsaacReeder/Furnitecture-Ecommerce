@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Kind from "./Kind";
 
 import Strapi from "strapi-sdk-javascript/build/main";
 const apiUrl = process.env.API_URL || "http://localhost:1337";
@@ -9,6 +10,7 @@ class ProductTypes extends Component {
     brands: [],
     searchTerm: "",
     loadingBrands: true,
+    isHovered: {},
   };
   async componentDidMount() {
     try {
@@ -33,24 +35,44 @@ class ProductTypes extends Component {
       this.setState({ loadingBrands: false });
     }
   }
+
+  handleMouseEnter = (i) => {
+    console.log("mouse enter");
+    this.setState((prevState) => {
+      return { isHovered: { ...prevState.isHovered, [i]: true } };
+    });
+  };
+  handleMouseExit = (i) => {
+    this.setState((prevState) => {
+      return { isHovered: { ...prevState.isHovered, [i]: false } };
+    });
+  };
   render() {
-    const { brands } = this.state;
+    const { brands, isHovered } = this.state;
     return (
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignContent: "center",
-          // flexWrap: "wrap",
-          flexDirection: "column",
-          height: "100vh",
-          flexBasis: "100%",
-        }}
-      >
-        {brands.map((brand) => (
-          <div style={{ fontSize: "15vw", height: "20%" }}>{brand.name}</div>
-        ))}
-      </div>
+      <>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignContent: "center",
+            flexDirection: "column",
+            height: "100vh",
+            flexBasis: "100%",
+          }}
+        >
+          {brands.map((brand, i) => (
+            <Kind
+              key={i}
+              onMouseEnter={() => this.handleMouseEnter(i)}
+              onMouseLeave={() => this.handleMouseExit(i)}
+              isHovering={isHovered[i]}
+              text={brand.name}
+              id={brand.id}
+            />
+          ))}
+        </div>
+      </>
     );
   }
 }
