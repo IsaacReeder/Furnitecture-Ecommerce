@@ -20,28 +20,28 @@ class Products extends Component {
       const response = await strapi.request("POST", "/graphql", {
         data: {
           query: `query {
-              brand(id: "4") {
-                id
-                name
-                items {
-                  id
-                  name
-                  description
-                  image {
-                    url
-                  }
-                  price
-                }
+          brand(id: "4") {
+            id
+            name
+            items {
+              id
+              name
+              description
+              image {
+                url
               }
-            }`,
+              price
+            }
+          }
+        }`,
         },
       });
       this.setState({
         items: response.data.brand.items,
         brand: response.data.brand.name,
+        id: response.data.brand.id,
         cartItems: getCart(),
       });
-      console.log(this.items);
     } catch (err) {
       console.error(err);
     }
@@ -57,22 +57,30 @@ class Products extends Component {
       console.log(this.state.singleItemId);
     });
   };
+  filteredBrands = ({ searchTerm, brands }) => {
+    return brands.filter((brand) => {
+      return (
+        brand.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        brand.description.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    });
+  };
 
   render() {
-    const { items, singleItemId } = this.state;
-    const { id } = 4;
+    const { items, singleItemId, id } = this.state;
+
     // this.props.match.params.brandId .  This goes above instead of 4
     return (
       <>
-        <div style={{ padding: "10%" }}>
+        <div style={{ padding: "10%", paddingTop: "5%" }}>
           <KindNav
             items={[
               {
-                id: 4,
-                one: "Sculpture",
-                two: "Furniture",
-                three: "Drawings",
-                four: "Paintings",
+                id: id,
+                three: "Paintings",
+                four: "Illustrations",
+                five: "Sculpture",
+                six: "Furniture",
               },
             ]}
           />

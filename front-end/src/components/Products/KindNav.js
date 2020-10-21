@@ -10,41 +10,37 @@ const KindNav = ({ items, id }) => {
     paddingLeft: "25%",
     paddingRight: "25%",
   };
-  const white = {
-    textDecoration: "none",
-    color: "white",
-  };
-  const black = {
-    textDecoration: "none",
-    color: "black",
-  };
+
   return (
     <div style={typeContainer}>
       {items.map((item) => (
         <>
           <Link
+            to={`/3`}
+            style={{
+              color: item.id == 3 ? "white" : "black",
+              textDecoration: "none",
+              fontSize: "1.5vw",
+            }}
+          >
+            <h3>{item.three}</h3>
+          </Link>
+          <Link
             to={`/4`}
             style={{
               color: item.id == 4 ? "white" : "black",
               textDecoration: "none",
+              fontSize: "1.5vw",
             }}
           >
-            <h3>{item.one}</h3>
+            <h3>{item.four}</h3>
           </Link>
           <Link
             to={`/5`}
             style={{
-              color: item.id == 4 ? "white" : "black",
+              color: item.id == 5 ? "white" : "black",
               textDecoration: "none",
-            }}
-          >
-            <h3>{item.two}</h3>
-          </Link>
-          <Link
-            to={`/5`}
-            style={{
-              color: item.id == 4 ? "white" : "black",
-              textDecoration: "none",
+              fontSize: "1.5vw",
             }}
           >
             <h3>{item.three}</h3>
@@ -52,8 +48,9 @@ const KindNav = ({ items, id }) => {
           <Link
             to={`/6`}
             style={{
-              color: item.id == 4 ? "white" : "black",
+              color: item.id == 6 ? "white" : "black",
               textDecoration: "none",
+              fontSize: "1.5vw",
             }}
           >
             <h3>{item.four}</h3>

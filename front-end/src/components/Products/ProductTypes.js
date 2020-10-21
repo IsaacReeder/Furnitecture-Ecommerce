@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Kind from "./Kind";
+import { Link } from "react-router-dom";
 
 import Strapi from "strapi-sdk-javascript/build/main";
 const apiUrl = process.env.API_URL || "http://localhost:1337";
