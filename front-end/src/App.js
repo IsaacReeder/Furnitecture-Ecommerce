@@ -6,6 +6,7 @@ import { CSSTransition } from "react-transition-group";
 import MainNavigation from "./components/Navigation/MainNavigation";
 import LandingPage from "./components/LandingPage/LandingPage";
 import ProductTypes from "../src/components/Products/ProductTypes";
+import Products from "./components/Products/Products";
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
             </Route>
             <Route path="/kind" exact>
               <ProductTypes />
+            </Route>
+            <Route path="/products" exact>
+              <Products />
             </Route>
           </Switch>
         </CSSTransition>
