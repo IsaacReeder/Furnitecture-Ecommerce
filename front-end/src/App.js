@@ -7,28 +7,40 @@ import MainNavigation from "./components/Navigation/MainNavigation";
 import LandingPage from "./components/LandingPage/LandingPage";
 import ProductTypes from "../src/components/Products/ProductTypes";
 import Products from "./components/Products/Products";
+import Checkout from "./components/Checkout/Checkout";
+import { Component } from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <MainNavigation />
-      <Router>
-        <CSSTransition in={true} appear={true} timeout={1000} classNames="fade">
-          <Switch>
-            <Route path="/" exact>
-              <LandingPage />
-            </Route>
-            <Route path="/kind" exact>
-              <ProductTypes />
-            </Route>
-            <Route path="/products" exact>
-              <Products />
-            </Route>
-          </Switch>
-        </CSSTransition>
-      </Router>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <MainNavigation />
+        <Router>
+          <CSSTransition
+            in={true}
+            appear={true}
+            timeout={1000}
+            classNames="fade"
+          >
+            <Switch>
+              <Route path="/" exact>
+                <LandingPage />
+              </Route>
+              <Route path="/kind" exact>
+                <ProductTypes />
+              </Route>
+              <Route path="/products" exact>
+                <Products />
+              </Route>
+              <Route path="/co" exact>
+                <Checkout />
+              </Route>
+            </Switch>
+          </CSSTransition>
+        </Router>
+      </div>
+    );
+  }
 }
 
 export default App;

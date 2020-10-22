@@ -1,7 +1,7 @@
 import React from "react";
 import DrawerToggleButton from "./DrawerToggleButton";
 
-const MagicButton = (props) => {
+const ShowAuth = (props) => {
   return (
     <div>
       <DrawerToggleButton click={props.drawerClickHandler} />
@@ -9,4 +9,4 @@ const MagicButton = (props) => {
   );
 };
 
-export default MagicButton;
+export default ShowAuth;

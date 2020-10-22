@@ -25,33 +25,28 @@ class Connector extends Component {
     }
     console.log(this.state.buttonTitle);
   };
-
+  // +
+  // (this.state.signup === false
+  //   ? "authy-hider-sign-up"
+  //   : this.state.signup === true
+  //   ? "authy-hider-sign-in"
+  //   : "forgot")
+  // Above chunk goes in after {"authy-container "} below
   render() {
     return (
       <div>
-        <div className="auth-hider">
-          asdf
-          <div
-            className={
-              "movement-container " +
-              (this.state.signup === false
-                ? "auth-hider-sign-up"
-                : this.state.signup === true
-                ? "auth-hider-sign-in"
-                : "forgot")
-            }
-          >
-            asdf
-            <div className="si">
+        <div className="authy-hider">
+          <div className="authy-container ">
+            <div className="sin">
               <Signin />
-              asdf
+              <h5 style={{ fontSize: " 2vw" }}>Sign-in</h5>
             </div>
-            <div className="su">
+            <div className="sup">
               <Signup />
-              asdf
+              <h5 style={{ fontSize: " 2vw" }}>Sign-up</h5>
             </div>
           </div>
-          <button className="auth-button" onClick={this.signChange}>
+          <button className="authy-button" onClick={this.signChange}>
             {this.state.buttonTitle}
           </button>
         </div>

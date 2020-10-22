@@ -1,23 +1,23 @@
-.auth-hider {
+.authy-hider {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 300px;
+  /* height: 500px;
   margin-top: 25%;
-  overflow: hidden;
+  overflow: hidden; */
 }
 
-.movement-container {
+.authy-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 50%;
-  overflow: hidden;
+  /* overflow: hidden; */
   transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
 input {
-  /* background-color: #fdf8e2; */
+  background-color: #fdf8e2;
   border-style: solid;
   border-color: black;
   border-radius: 5px;
@@ -36,17 +36,18 @@ input {
   transform: translateY(-140px);
 }
 
-.su {
+.sup {
   display: flex;
-  justify-content: center;
+
+  /* justify-content: center; */
 }
 
-.si {
+.sin {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
-.auth-button {
+.authy-button {
   height: 50px;
   width: 50px;
 }

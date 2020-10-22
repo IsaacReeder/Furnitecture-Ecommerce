@@ -1,9 +1,9 @@
 import React from "react";
 
-import "./SideDrawer.css";
+import "./AuthDrawer.css";
 import Connector from "../Connector/Connector";
 
-const SideDrawer = (props) => {
+const AuthDrawer = (props) => {
   let drawerClasses = "side-drawer";
 
   if (props.show) {
@@ -13,9 +13,8 @@ const SideDrawer = (props) => {
   return (
     <div className={drawerClasses}>
       <Connector />
-      Hi
     </div>
   );
 };
 
-export default SideDrawer;
+export default AuthDrawer;

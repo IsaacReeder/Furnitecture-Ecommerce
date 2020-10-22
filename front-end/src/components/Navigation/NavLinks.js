@@ -31,7 +31,10 @@ class NavLinks extends Component {
   render() {
     return (
       <ul className="nav-links">
-        <li style={{ color: "white" }}>search</li>
+        <li>
+          <i className="fas fa-heart-o">asdf</i>
+        </li>
+        <li style={{ color: "white" }}>account</li>
         <li>
           <CartButton
             className="magicButtonLogin"
@@ -39,7 +42,6 @@ class NavLinks extends Component {
           />
         </li>
         <SideCart show={this.state.sideDrawerOpen} />
-
         <li style={{ marginRight: "50%" }}></li>
       </ul>
     );

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { getCart } from "../../utils/index";
+import { getCart, setCart } from "../../utils/index";
 import "./Products.css";
 import KindNav from "./KindNav";
 
@@ -65,6 +65,22 @@ class Products extends Component {
       );
     });
   };
+  addToCart = (item) => {
+    const alreadyInCart = this.state.cartItems.findIndex(
+      (product) => product.id === item.id
+    );
+    if (alreadyInCart === -1) {
+      let updatedItems = this.state.cartItems.concat({
+        ...item,
+        quantity: 1,
+      });
+      this.setState({ cartItems: updatedItems }, () => setCart(updatedItems));
+    } else {
+      const updatedItems = [...this.state.cartItems];
+      updatedItems[alreadyInCart].quantity += 1;
+      this.setState({ cartItems: updatedItems }, () => setCart(updatedItems));
+    }
+  };
 
   render() {
     const { items, singleItemId, id } = this.state;
@@ -98,6 +114,9 @@ class Products extends Component {
                       style={{ minHeight: "100%", width: "70%" }}
                     ></img>
                     <button onClick={() => this.closeDetail()}>Back</button>
+                    <button onClick={() => this.addToCart(focusItem)}>
+                      Add to cart
+                    </button>
                   </>
                 ))}
             </div>
