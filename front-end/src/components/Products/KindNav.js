@@ -43,7 +43,7 @@ const KindNav = ({ items, id }) => {
               fontSize: "1.5vw",
             }}
           >
-            <h3>{item.three}</h3>
+            <h3>{item.five}</h3>
           </Link>
           <Link
             to={`/6`}
@@ -53,7 +53,7 @@ const KindNav = ({ items, id }) => {
               fontSize: "1.5vw",
             }}
           >
-            <h3>{item.four}</h3>
+            <h3>{item.six}</h3>
           </Link>
         </>
       ))}
@@ -62,38 +62,3 @@ const KindNav = ({ items, id }) => {
 };
 
 export default KindNav;
-
-// function KindNav(props) {
-//   const { items } = props;
-//   return (
-//     <div
-//       style={{
-//         display: "flex",
-//         flexDirection: "row",
-//         order: "1",
-//         justifyContent: "space-around",
-//         paddingLeft: "25%",
-//         paddingRight: "25%",
-//         // maxWidth: "50%",
-//       }}
-//     >
-//       {this.items.map((item) => (
-//         <div></div>
-//       ))}
-//       <Link to={`/4`} style={{ textDecoration: "none", color: "black" }}>
-//         <h3>a</h3>
-//       </Link>
-//       <Link to={`/5`} style={{ textDecoration: "none", color: "black" }}>
-//         <h3>a</h3>
-//       </Link>{" "}
-//       <Link to={`/5`} style={{ textDecoration: "none", color: "black" }}>
-//         <h3>a</h3>
-//       </Link>{" "}
-//       <Link to={`/6`} style={{ textDecoration: "none", color: "black" }}>
-//         <h3>a</h3>
-//       </Link>
-//     </div>
-//   );
-// }
-
-// export default KindNav;

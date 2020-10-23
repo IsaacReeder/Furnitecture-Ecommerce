@@ -5,6 +5,7 @@ import React, { Component } from "react";
 import CartButton from "./SideDrawer/CartButton";
 import SideCart from "./SideDrawer/SideCart";
 
+import { Link, BrowserRouter } from "react-router-dom";
 import "./NavLinks.css";
 
 class NavLinks extends Component {
@@ -32,7 +33,11 @@ class NavLinks extends Component {
     return (
       <ul className="nav-links">
         <li>
-          <i className="fas fa-heart-o">asdf</i>
+          <BrowserRouter>
+            <Link style={{ color: "" }} to="/wishlist">
+              <i style={{ fontSize: "1.5em" }} className="fas fa-heart"></i>
+            </Link>
+          </BrowserRouter>
         </li>
         <li style={{ color: "white" }}>account</li>
         <li>

@@ -20,7 +20,7 @@ class Products extends Component {
       const response = await strapi.request("POST", "/graphql", {
         data: {
           query: `query {
-          brand(id: "4") {
+            brand(id: "${this.props.match.params.brandId}") {
             id
             name
             items {

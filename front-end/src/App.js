@@ -29,9 +29,7 @@ class App extends Component {
               <Route path="/kind" exact>
                 <ProductTypes />
               </Route>
-              <Route path="/products" exact>
-                <Products />
-              </Route>
+              <Route component={Products} path="/:brandId" />
               <Route path="/co" exact>
                 <Checkout />
               </Route>

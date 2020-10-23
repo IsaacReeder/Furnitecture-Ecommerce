@@ -64,14 +64,15 @@ class ProductTypes extends Component {
         >
           {brands.map((brand, i) => (
             <>
-              <Kind
+              {/* <Kind
                 key={i}
                 onMouseEnter={() => this.handleMouseEnter(i)}
                 onMouseLeave={() => this.handleMouseExit(i)}
                 isHovering={isHovered[i]}
                 text={brand.name}
                 id={brand.id}
-              ></Kind>
+              ></Kind> */}
+              <Link to={`${brand.id}`}>asdf</Link>
             </>
           ))}
         </div>
