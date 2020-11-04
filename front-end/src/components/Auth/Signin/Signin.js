@@ -100,7 +100,7 @@ class Signin extends React.Component {
           <div>
             {this.renderRedirect()}
             <button text="Submit" type="submit" onClick={this.setRedirect}>
-              Submit
+              Sign-in
             </button>
           </div>
         </form>

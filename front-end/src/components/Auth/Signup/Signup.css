@@ -1,4 +1,5 @@
-.container {
+/* .container {
+  display: flex;
   text-align: center;
   color: rgb(209, 94, 94);
   margin-top: 10px;
@@ -67,4 +68,10 @@ li:hover {
 
 li:active {
   opacity: 1;
+} */
+.signup-form {
+  /* padding: 5px; */
+}
+.auth-inputs {
+  /* width: 100%; */
 }

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { getCart, setCart } from "../../utils/index";
+import { getCart, setCart, getList } from "../../utils/index";
 import "./Products.css";
 import KindNav from "./KindNav";
 
@@ -12,6 +12,7 @@ class Products extends Component {
     items: [],
     brand: "",
     cartItems: getCart(),
+    listItems: getList(),
     singleItemId: 0,
   };
   //   brand(id: "${this.props.match.params.brandId}")
@@ -69,6 +70,7 @@ class Products extends Component {
     const alreadyInCart = this.state.cartItems.findIndex(
       (product) => product.id === item.id
     );
+    console.log(alreadyInCart);
     if (alreadyInCart === -1) {
       let updatedItems = this.state.cartItems.concat({
         ...item,
@@ -79,6 +81,22 @@ class Products extends Component {
       const updatedItems = [...this.state.cartItems];
       updatedItems[alreadyInCart].quantity += 1;
       this.setState({ cartItems: updatedItems }, () => setCart(updatedItems));
+    }
+  };
+  addToWishList = (savedItem) => {
+    const alreadyOnList = this.state.listItems.findIndex(
+      (item) => item.id === savedItem.id
+    );
+    if (alreadyOnList === -1) {
+      let updatedItems = this.state.listItems.concat({
+        ...savedItem,
+        quantity: 1,
+      });
+      this.setState({ listItems: updatedItems }, () => setCart(updatedItems));
+      console.log(this.state.listItems);
+    } else {
+      console.log("Already on wishlist");
+      console.log(this.wishlist);
     }
   };
 
@@ -116,6 +134,9 @@ class Products extends Component {
                     <button onClick={() => this.closeDetail()}>Back</button>
                     <button onClick={() => this.addToCart(focusItem)}>
                       Add to cart
+                    </button>
+                    <button onClick={() => this.addToWishList(focusItem)}>
+                      Add to wishlist
                     </button>
                   </>
                 ))}

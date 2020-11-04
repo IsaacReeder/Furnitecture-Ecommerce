@@ -2,6 +2,7 @@ import React from "react";
 
 import "./AuthDrawer.css";
 import Connector from "../Connector/Connector";
+import Signin from "../../Auth/Signin/Signin";
 
 const AuthDrawer = (props) => {
   let drawerClasses = "side-drawer";

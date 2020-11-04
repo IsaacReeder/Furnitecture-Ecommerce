@@ -1,4 +1,5 @@
 const CART_KEY = "cart";
+const LIST_KEY = "list";
 const TOKEN_KEY = "jwt";
 
 export const calculatePrice = (items) => {
@@ -41,6 +42,26 @@ export const getCart = (cartKey = CART_KEY) => {
 export const clearCart = (cartKey = CART_KEY) => {
   if (localStorage) {
     localStorage.removeItem(cartKey);
+  }
+};
+
+// Wishlist
+export const setList = (value, listKey = LIST_KEY) => {
+  if (localStorage) {
+    localStorage.setItem(listKey, JSON.stringify(value));
+  }
+};
+
+export const getList = (listKey = LIST_KEY) => {
+  if (localStorage && localStorage.getItem(listKey)) {
+    return JSON.parse(localStorage.getItem(listKey));
+  }
+  return [];
+};
+
+export const clearList = (listKey = CART_KEY) => {
+  if (localStorage) {
+    localStorage.removeItem(listKey);
   }
 };
 

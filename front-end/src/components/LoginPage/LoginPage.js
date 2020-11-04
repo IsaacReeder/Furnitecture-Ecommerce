@@ -28,24 +28,26 @@ class LoginPage extends Component {
   };
   render() {
     return (
-      <div
-        style={{
-          fontSize: "20rem",
-          color: "hsl(14, 84%, 57%)",
-          display: "flex",
-          height: "100vh",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <p>
-          <ShowAuth
-            className="magicButtonLogin"
-            drawerClickHandler={this.drawerToggleClickHandler}
-          />
-        </p>
+      <>
         <AuthDrawer show={this.state.sideDrawerOpen} />
-      </div>
+        <div
+          style={{
+            fontSize: "20rem",
+            color: "hsl(14, 84%, 57%)",
+            display: "flex",
+            height: "100vh",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <p>
+            <ShowAuth
+              className="magicButtonLogin"
+              drawerClickHandler={this.drawerToggleClickHandler}
+            />
+          </p>
+        </div>
+      </>
     );
   }
 }

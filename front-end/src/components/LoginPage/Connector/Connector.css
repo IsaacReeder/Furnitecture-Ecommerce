@@ -2,17 +2,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* height: 500px;
+  height: 19em;
   margin-top: 25%;
-  overflow: hidden; */
+  overflow: hidden;
+  width: 100%;
 }
 
 .authy-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 50%;
-  /* overflow: hidden; */
+  width: 100%;
+  overflow: hidden;
   transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
@@ -28,23 +29,23 @@ input {
   padding-left: 15px;
 }
 
-.auth-hider-sign-in {
+.authy-hider-sign-in {
   transform: translateY(160px);
 }
 
-.auth-hider-sign-up {
+.authy-hider-sign-up {
   transform: translateY(-140px);
 }
 
 .sup {
   display: flex;
 
-  /* justify-content: center; */
+  justify-content: center;
 }
 
 .sin {
   display: flex;
-  /* justify-content: center; */
+  justify-content: center;
 }
 
 .authy-button {

@@ -64,10 +64,10 @@ class Signup extends React.Component {
   render() {
     return (
       <div>
-        <h1>Signup</h1>
         <form className="signup-form" onSubmit={this.handleSubmit}>
           <br></br>
           <input
+            className="auth-inputs"
             id="username"
             type="text"
             name="username"
@@ -78,6 +78,7 @@ class Signup extends React.Component {
           <label htmlFor="lname">Email</label>
           <br></br>
           <input
+            className="auth-inputs"
             id="email"
             type="email"
             name="email"
@@ -87,6 +88,7 @@ class Signup extends React.Component {
           <br></br>
           <br></br>
           <input
+            className="auth-inputs"
             onChange={this.handleChange}
             id="password"
             name="password"
@@ -97,7 +99,7 @@ class Signup extends React.Component {
           />
           <br></br>
           <button text="Submit" type="submit">
-            Submit
+            Sign Up
           </button>
         </form>
       </div>
