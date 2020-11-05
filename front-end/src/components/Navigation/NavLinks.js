@@ -4,6 +4,7 @@ import React, { Component } from "react";
 // import { AuthContext } from '../../context/auth-context';
 import CartButton from "./SideDrawer/CartButton";
 import SideCart from "./SideDrawer/SideCart";
+import Backdrop from "./SideDrawer/Backdrop";
 
 import { Link, BrowserRouter } from "react-router-dom";
 import "./NavLinks.css";
@@ -31,24 +32,30 @@ class NavLinks extends Component {
   };
   render() {
     return (
-      <ul className="nav-links">
-        <li>
-          <BrowserRouter>
-            <Link to="/wishlist" style={{}}>
-              <i style={{ fontSize: "1.5em" }} className="fas fa-heart"></i>
-            </Link>
-          </BrowserRouter>
-        </li>
-        <li style={{ color: "white" }}>account</li>
-        <li>
-          <CartButton
-            className="magicButtonLogin"
-            drawerClickHandler={this.drawerToggleClickHandler}
-          />
-        </li>
-        <SideCart show={this.state.sideDrawerOpen} />
-        <li style={{ marginRight: "50%" }}></li>
-      </ul>
+      <>
+        {this.state.sideDrawerOpen && (
+          <Backdrop onClick={this.drawerToggleClickHandler} />
+        )}
+
+        <ul className="nav-links">
+          <li>
+            <BrowserRouter>
+              <Link to="/wishlist" style={{}}>
+                <i style={{ fontSize: "1.5em" }} className="fas fa-heart"></i>
+              </Link>
+            </BrowserRouter>
+          </li>
+          <li style={{ color: "white" }}>account</li>
+          <li>
+            <CartButton
+              className="magicButtonLogin"
+              drawerClickHandler={this.drawerToggleClickHandler}
+            />
+          </li>
+          <SideCart show={this.state.sideDrawerOpen} />
+          <li style={{ marginRight: "50%" }}></li>
+        </ul>
+      </>
     );
   }
 }

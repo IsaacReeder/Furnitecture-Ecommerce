@@ -13,6 +13,7 @@ class Wishlist extends Component {
       (product) => product.id !== productToDeleteId
     );
     this.setState({ wishlist: filteredItems }, () => setList(filteredItems));
+    console.log("deleted");
   };
   render() {
     const { wishlist } = this.state;
@@ -22,7 +23,7 @@ class Wishlist extends Component {
         {wishlist.map((listItem) => (
           <p>
             <h3>{listItem.name}</h3>
-            <button onClick={this.deleteFromWishlist}></button>
+            <button onClick={this.deleteFromWishlist}>Delete</button>
           </p>
         ))}
       </div>

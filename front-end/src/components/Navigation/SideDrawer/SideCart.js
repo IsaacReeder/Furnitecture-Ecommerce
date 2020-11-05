@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import Backdrop from "./Backdrop";
 
 import "./SideCart.css";
 import CartConnector from "../Connector/CartConnector";
@@ -13,7 +12,6 @@ const SideDrawer = (props) => {
   }
   const content = (
     <div className={drawerClasses}>
-      {props.show && <Backdrop />}
       <CartConnector />
     </div>
   );
