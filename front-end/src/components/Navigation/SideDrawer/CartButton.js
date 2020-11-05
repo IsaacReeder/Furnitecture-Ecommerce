@@ -4,7 +4,10 @@ import DrawerToggleButton from "./DrawerToggleButton";
 const MagicButton = (props) => {
   return (
     <div>
-      <DrawerToggleButton click={props.drawerClickHandler} />
+      <DrawerToggleButton
+        style={{ cursor: "pointer" }}
+        click={props.drawerClickHandler}
+      />
     </div>
   );
 };
