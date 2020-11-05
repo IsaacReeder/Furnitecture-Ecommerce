@@ -36,7 +36,6 @@ class NavLinks extends Component {
         {this.state.sideDrawerOpen && (
           <Backdrop onClick={this.drawerToggleClickHandler} />
         )}
-
         <ul className="nav-links">
           <li>
             <BrowserRouter>

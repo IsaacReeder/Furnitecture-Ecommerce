@@ -23,7 +23,9 @@ class Wishlist extends Component {
         {wishlist.map((listItem) => (
           <p>
             <h3>{listItem.name}</h3>
-            <button onClick={this.deleteFromWishlist}>Delete</button>
+            <button onClick={() => this.deleteFromWishlist(listItem.id)}>
+              Delete
+            </button>
           </p>
         ))}
       </div>
