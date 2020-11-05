@@ -39,8 +39,8 @@ class App extends Component {
     );
     return (
       <div className="App">
-        <MainNavigation />
         <Router>
+          <MainNavigation />
           <CSSTransition
             in={true}
             appear={true}

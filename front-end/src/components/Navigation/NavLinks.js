@@ -6,7 +6,7 @@ import CartButton from "./SideDrawer/CartButton";
 import SideCart from "./SideDrawer/SideCart";
 import Backdrop from "./SideDrawer/Backdrop";
 
-import { Link, BrowserRouter, Redirect } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import "./NavLinks.css";
 import { getToken, clearToken, clearCart } from "../../utils";
 
@@ -36,11 +36,9 @@ class NavLinks extends Component {
       return (
         <ul className="nav-links">
           <li>
-            <BrowserRouter>
-              <Link to="/wishlist" style={{}}>
-                <i style={{ fontSize: "1.5em" }} className="fas fa-heart"></i>
-              </Link>
-            </BrowserRouter>
+            <Link to="/wishlist" style={{}}>
+              <i style={{ fontSize: "1.5em" }} className="fas fa-heart"></i>
+            </Link>
           </li>
           <li style={{ color: "white" }}>account</li>
           <li>
@@ -49,6 +47,7 @@ class NavLinks extends Component {
               drawerClickHandler={this.drawerToggleClickHandler}
             />
           </li>
+
           <SideCart show={this.state.sideDrawerOpen} />
           <li style={{ marginRight: "50%" }} onClick={() => this.signOut()}>
             Signout
@@ -59,7 +58,9 @@ class NavLinks extends Component {
     const UnAuthNav = () => {
       return (
         <ul className="nav-links">
-          <li>Login</li>
+          <Link to={"/login"}>
+            <li>Login</li>
+          </Link>
           <li>
             <CartButton
               className="magicButtonLogin"
