@@ -1,6 +1,6 @@
 import React from "react";
 
-import { setToken } from "../../../utils/index";
+import { setToken, getToken } from "../../../utils/index";
 import { Redirect } from "react-router-dom";
 import Strapi from "strapi-sdk-javascript/build/main";
 const apiUrl = process.env.API_URL || "http://localhost:1337";
@@ -9,10 +9,7 @@ const strapi = new Strapi(apiUrl);
 class Signin extends React.Component {
   state = {
     username: "",
-    email: "",
     password: "",
-    toast: false,
-    toastMessage: "",
     loading: false,
     redirect: false,
   };
@@ -57,7 +54,7 @@ class Signin extends React.Component {
   };
 
   renderRedirect = () => {
-    if (this.state.redirect) {
+    if (this.state.redirect && getToken() != null) {
       return <Redirect to="/kind" />;
     }
   };
