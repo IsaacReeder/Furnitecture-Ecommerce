@@ -25,9 +25,6 @@ class App extends Component {
             classNames="fade"
           >
             <Switch>
-              <Route path="/wishlist" exact>
-                <Wishlist />
-              </Route>
               <Route path="/" exact>
                 <LandingPage />
               </Route>
@@ -39,6 +36,9 @@ class App extends Component {
               </Route>
               <Route path="/co" exact>
                 <Checkout />
+              </Route>
+              <Route path="/wishlist" exact>
+                <Wishlist />
               </Route>
               <Route component={Products} path="/:brandId" />
             </Switch>

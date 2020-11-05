@@ -22,18 +22,18 @@ class Cart extends Component {
     );
     this.setState({ cartItems: filteredItems }, () => setCart(filteredItems));
   };
-  componentDidMount() {
-    fetch("https://api.ipify.org?format=jsonp?callback=?", {
-      method: "GET",
-      headers: {},
-    })
-      .then((res) => {
-        return res.text();
-      })
-      .then((ip) => {
-        console.log("ip", ip);
-      });
-  }
+  // componentDidMount() {
+  //   fetch("https://api.ipify.org?format=jsonp?callback=?", {
+  //     method: "GET",
+  //     headers: {},
+  //   })
+  //     .then((res) => {
+  //       return res.text();
+  //     })
+  //     .then((ip) => {
+  //       console.log("ip", ip);
+  //     });
+  // }
   render() {
     return (
       <>

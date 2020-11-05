@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Kind from "./Kind";
-import { Link } from "react-router-dom";
 
 import Strapi from "strapi-sdk-javascript/build/main";
 const apiUrl = process.env.API_URL || "http://localhost:1337";
@@ -29,7 +28,7 @@ class ProductTypes extends Component {
           }`,
         },
       });
-      console.log(response);
+      // console.log(response);
       this.setState({ brands: response.data.brands, loadingBrands: false });
     } catch (err) {
       console.error(err);
@@ -64,15 +63,15 @@ class ProductTypes extends Component {
         >
           {brands.map((brand, i) => (
             <>
-              {/* <Kind
-                key={i}
+              <Kind
+                key={brand.id}
                 onMouseEnter={() => this.handleMouseEnter(i)}
                 onMouseLeave={() => this.handleMouseExit(i)}
                 isHovering={isHovered[i]}
                 text={brand.name}
                 id={brand.id}
-              ></Kind> */}
-              <Link to={`${brand.id}`}>asdf</Link>
+              ></Kind>
+              {/* <Link to={`${brand.id}`}>asdf</Link> */}
             </>
           ))}
         </div>

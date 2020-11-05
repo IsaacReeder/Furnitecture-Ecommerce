@@ -18,7 +18,7 @@ const KindNav = ({ items, id }) => {
           <Link
             to={`/3`}
             style={{
-              color: item.id == 3 ? "white" : "black",
+              color: item.id === 3 ? "white" : "black",
               textDecoration: "none",
               fontSize: "1.5vw",
             }}
@@ -28,7 +28,7 @@ const KindNav = ({ items, id }) => {
           <Link
             to={`/4`}
             style={{
-              color: item.id == 4 ? "white" : "black",
+              color: item.id === 4 ? "white" : "black",
               textDecoration: "none",
               fontSize: "1.5vw",
             }}
@@ -38,7 +38,7 @@ const KindNav = ({ items, id }) => {
           <Link
             to={`/5`}
             style={{
-              color: item.id == 5 ? "white" : "black",
+              color: item.id === 5 ? "white" : "black",
               textDecoration: "none",
               fontSize: "1.5vw",
             }}
@@ -48,7 +48,7 @@ const KindNav = ({ items, id }) => {
           <Link
             to={`/6`}
             style={{
-              color: item.id == 6 ? "white" : "black",
+              color: item.id === 6 ? "white" : "black",
               textDecoration: "none",
               fontSize: "1.5vw",
             }}

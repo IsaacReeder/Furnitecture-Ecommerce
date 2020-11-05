@@ -6,7 +6,11 @@ class LandingPage extends Component {
   render() {
     return (
       <div>
-        <img src={image} style={{ width: "100vw", paddingTop: "10%" }}></img>
+        <img
+          alt="pleasant yet melancholic"
+          src={image}
+          style={{ width: "100vw", paddingTop: "10%" }}
+        ></img>
       </div>
     );
   }

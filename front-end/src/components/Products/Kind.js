@@ -5,6 +5,7 @@ const Kind = (props) => {
   const { onMouseEnter, onMouseLeave, isHovering, text, id } = props;
   return (
     <div
+      key={id}
       style={{
         fontSize: "12vw",
         height: "20%",

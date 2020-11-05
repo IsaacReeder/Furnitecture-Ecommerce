@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { getCart, setCart, getList } from "../../utils/index";
+import { getCart, setCart, getList, setList } from "../../utils/index";
 import "./Products.css";
 import KindNav from "./KindNav";
 
@@ -92,11 +92,12 @@ class Products extends Component {
         ...savedItem,
         quantity: 1,
       });
-      this.setState({ listItems: updatedItems }, () => setCart(updatedItems));
+      this.setState({ listItems: updatedItems }, () => setList(updatedItems));
       console.log(this.state.listItems);
     } else {
       console.log("Already on wishlist");
-      console.log(this.wishlist);
+      // SMALL POP UP SAYING ALREADY ON WISHLIST
+      console.log(this.state.listItems);
     }
   };
 

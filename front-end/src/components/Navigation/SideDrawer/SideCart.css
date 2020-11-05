@@ -6,7 +6,7 @@
   top: 0;
   right: 0;
   width: 30%;
-  z-index: 200;
+  z-index: 1000;
   transform: translateX(100%);
   transition: transform 0.5s ease-out;
   height: "100vh";
@@ -34,8 +34,7 @@
   font-size: 1.2rem;
 }
 
-.side-cart a:hover,
-.side-cart a:active {
+.side-cart a:hover, .side-cart a:active {
   color: #fa923f;
 }
 

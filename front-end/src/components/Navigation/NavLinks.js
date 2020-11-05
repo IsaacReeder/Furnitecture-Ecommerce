@@ -34,7 +34,7 @@ class NavLinks extends Component {
       <ul className="nav-links">
         <li>
           <BrowserRouter>
-            <Link style={{ color: "" }} to="/wishlist">
+            <Link to="/wishlist" style={{}}>
               <i style={{ fontSize: "1.5em" }} className="fas fa-heart"></i>
             </Link>
           </BrowserRouter>
