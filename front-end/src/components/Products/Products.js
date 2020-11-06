@@ -107,7 +107,7 @@ class Products extends Component {
     // this.props.match.params.brandId .  This goes above instead of 4
     return (
       <>
-        <div style={{ padding: "10%", paddingTop: "5%" }}>
+        <div style={{ padding: "10%", paddingTop: "0%" }}>
           <KindNav
             items={[
               {

@@ -9,7 +9,7 @@ class LandingPage extends Component {
         <img
           alt="pleasant yet melancholic"
           src={image}
-          style={{ width: "100vw", paddingTop: "10%" }}
+          style={{ width: "100vw" }}
         ></img>
       </div>
     );

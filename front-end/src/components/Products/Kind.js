@@ -8,7 +8,7 @@ const Kind = (props) => {
       key={id}
       style={{
         fontSize: "12vw",
-        height: "20%",
+        // height: "20%",
         cursor: "pointer",
       }}
       onMouseEnter={onMouseEnter}

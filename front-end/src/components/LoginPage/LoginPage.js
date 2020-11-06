@@ -35,7 +35,7 @@ class LoginPage extends Component {
             fontSize: "20rem",
             color: "hsl(14, 84%, 57%)",
             display: "flex",
-            height: "100vh",
+            height: "80vh",
             alignItems: "center",
             justifyContent: "center",
           }}
