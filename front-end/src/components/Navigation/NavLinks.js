@@ -6,7 +6,7 @@ import CartButton from "./SideDrawer/CartButton";
 import SideCart from "./SideDrawer/SideCart";
 import Backdrop from "./SideDrawer/Backdrop";
 
-import { Link, Redirect } from "react-router-dom";
+import { Link, Redirect, withRouter } from "react-router-dom";
 import "./NavLinks.css";
 import { getToken, clearToken, clearCart } from "../../utils";
 
@@ -14,7 +14,6 @@ class NavLinks extends Component {
   state = {
     items: [],
     brand: "",
-    // cartItems: getCart(),
     showModal: false,
     open: false,
   };
@@ -22,7 +21,8 @@ class NavLinks extends Component {
   signOut = () => {
     clearToken();
     clearCart();
-    return <Redirect to={"/"} />;
+    this.props.history.push("/");
+    // return <Redirect to={"/"} />;
     // Need a better redirect
   };
 
@@ -89,4 +89,4 @@ class NavLinks extends Component {
   }
 }
 
-export default NavLinks;
+export default withRouter(NavLinks);
