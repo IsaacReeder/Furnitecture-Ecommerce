@@ -107,22 +107,26 @@ class Products extends Component {
     // this.props.match.params.brandId .  This goes above instead of 4
     return (
       <>
-        <div style={{ padding: "10%", paddingTop: "0%" }}>
-          <KindNav
-            items={[
-              {
-                id: id,
-                three: "Paintings",
-                four: "Illustrations",
-                five: "Sculpture",
-                six: "Furniture",
-              },
-            ]}
-          />
-          {/* (. ͡👁️ ͜ ʖ ͡👁️.) */}
-          {/* why hello there. */}
+        <div style={{ paddingTop: "0%", marginTop: "-10%" }}>
           {singleItemId > 0 ? (
-            <div>
+            ""
+          ) : (
+            <KindNav
+              items={[
+                {
+                  id: id,
+                  three: "Paintings",
+                  four: "Illustrations",
+                  five: "Sculpture",
+                  six: "Furniture",
+                },
+              ]}
+            />
+          )}
+          {/* (. ͡👁️ ͜ ʖ ͡👁️.) */}
+          {/* Closer look */}
+          {singleItemId > 0 ? (
+            <div style={{ display: "flex" }}>
               {items
                 .filter((item) => item.id.includes(singleItemId))
                 .map((focusItem) => (
@@ -132,25 +136,69 @@ class Products extends Component {
                       alt="item pic"
                       style={{ minHeight: "100%", width: "70%" }}
                     ></img>
-                    <button onClick={() => this.closeDetail()}>Back</button>
-                    <button onClick={() => this.addToCart(focusItem)}>
-                      Add to cart
-                    </button>
-                    <button onClick={() => this.addToWishList(focusItem)}>
-                      Add to wishlist
-                    </button>
+                    <div
+                      style={{
+                        flexDirection: "row",
+                        alignContent: "flex-start",
+                        paddingRight: "5%",
+                        paddingLeft: "5%",
+                      }}
+                    >
+                      <h1
+                        style={{
+                          width: "100%",
+                          alignContent: "flex-start",
+                          fontWeight: "bold",
+                          marginTop: "-5%",
+                          marginBottom: "10%",
+                        }}
+                      >
+                        {focusItem.name}
+                      </h1>
+
+                      <h2 style={{ width: "100%", marginBottom: "10%" }}>
+                        {focusItem.description}
+                      </h2>
+                      <div style={{ width: "100%", marginBottom: "10%" }}>
+                        ${focusItem.price}
+                      </div>
+
+                      <button
+                        style={{
+                          borderRadius: "15px",
+                          border: "none",
+                          marginRight: "5%",
+                          padding: "2%",
+                        }}
+                        onClick={() => this.addToCart(focusItem)}
+                      >
+                        Add to cart
+                      </button>
+                      <i
+                        onClick={() => this.addToWishList(focusItem)}
+                        style={{ fontSize: "1.5em" }}
+                        className="fas fa-heart"
+                      ></i>
+                      <button
+                        style={{ width: "100%" }}
+                        onClick={() => this.closeDetail()}
+                      >
+                        Back
+                      </button>
+                    </div>
                   </>
                 ))}
             </div>
           ) : (
             <div className="grid2x2">
+              {/* Products in total */}
               {items.map((item) => (
                 <>
                   <div className="box box1">
                     <img
                       src={`${apiUrl}${item.image[0].url}`}
                       alt="item pic"
-                      style={{ minHeight: "70%", width: "100%" }}
+                      style={{ minHeight: "70%", width: "90%" }}
                     ></img>
                     <i
                       className="fas fa-plus"
@@ -160,8 +208,8 @@ class Products extends Component {
                         color: "hsl(14, 84%, 57%)",
                         backgroundColor: "transparent",
                         position: "absolute",
-                        marginLeft: "30%",
-                        marginTop: "23%",
+                        marginLeft: "20%",
+                        marginTop: "15%",
                         cursor: "pointer",
                       }}
                     />

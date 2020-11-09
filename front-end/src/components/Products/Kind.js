@@ -15,7 +15,7 @@ const Kind = (props) => {
       onMouseLeave={onMouseLeave}
     >
       <Link to={`/${id}`} style={{ textDecoration: "none", color: "black" }}>
-        {text} {isHovering && ">>>"}
+        {text} {isHovering && ">>"}
       </Link>
     </div>
   );
