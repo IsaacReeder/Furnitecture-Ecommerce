@@ -91,6 +91,8 @@ class NavLinks extends Component {
             {cartItems.length !== 0 ? (
               <div
                 style={{
+                  display: "flex",
+                  alignContent: "center",
                   justifyContent: "center",
                   borderRadius: "15px",
                   border: "none",
@@ -99,7 +101,11 @@ class NavLinks extends Component {
                   width: "40px",
                 }}
               >
-                {calculateQuantity(cartItems)}
+                <div
+                  style={{ justifyContent: "center", alignContent: "center" }}
+                >
+                  {calculateQuantity(cartItems)}
+                </div>
               </div>
             ) : (
               ""
