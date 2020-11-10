@@ -2,6 +2,7 @@ import React from "react";
 
 import MainHeader from "./MainHeader";
 import NavLinks from "./NavLinks";
+import { getToken } from "../../utils/index";
 
 import "./MainNavigation.css";
 

@@ -107,7 +107,7 @@ class Products extends Component {
     // this.props.match.params.brandId .  This goes above instead of 4
     return (
       <>
-        <div style={{ paddingTop: "0%", marginTop: "-10%" }}>
+        <div style={{ paddingTop: "0%", marginTop: "-15%" }}>
           {singleItemId > 0 ? (
             ""
           ) : (
@@ -142,6 +142,7 @@ class Products extends Component {
                         alignContent: "flex-start",
                         paddingRight: "5%",
                         paddingLeft: "5%",
+                        color: "white",
                       }}
                     >
                       <h1
@@ -204,11 +205,11 @@ class Products extends Component {
                       className="fas fa-plus"
                       onClick={() => this.closerLook(item.id)}
                       style={{
-                        fontSize: "50px",
+                        fontSize: "35px",
                         color: "hsl(14, 84%, 57%)",
                         backgroundColor: "transparent",
                         position: "absolute",
-                        marginLeft: "20%",
+                        marginLeft: "23%",
                         marginTop: "15%",
                         cursor: "pointer",
                       }}

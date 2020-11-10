@@ -14,6 +14,15 @@ export const calculateAmount = (items) => {
   );
 };
 
+export const calculateQuantity = (items) => {
+  var totalQuantity = 0;
+  for (let item of items) {
+    totalQuantity += item.quantity;
+    console.log("total qual function produces: " + totalQuantity);
+  }
+  return totalQuantity;
+};
+
 export const calculateShipping = (items) => {
   return (
     Number(

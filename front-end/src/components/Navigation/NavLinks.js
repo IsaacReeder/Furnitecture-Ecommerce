@@ -6,9 +6,15 @@ import CartButton from "./SideDrawer/CartButton";
 import SideCart from "./SideDrawer/SideCart";
 import Backdrop from "./SideDrawer/Backdrop";
 
-import { Link, Redirect, withRouter } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import "./NavLinks.css";
-import { getToken, clearToken, clearCart } from "../../utils";
+import {
+  getCart,
+  getToken,
+  clearToken,
+  clearCart,
+  calculateQuantity,
+} from "../../utils";
 
 class NavLinks extends Component {
   state = {
@@ -16,6 +22,7 @@ class NavLinks extends Component {
     brand: "",
     showModal: false,
     open: false,
+    cartItems: getCart(),
   };
 
   signOut = () => {
@@ -32,6 +39,7 @@ class NavLinks extends Component {
     });
   };
   render() {
+    const { cartItems } = this.state;
     const AuthNav = () => {
       return (
         <ul className="nav-links">
@@ -46,6 +54,17 @@ class NavLinks extends Component {
               className="magicButtonLogin"
               drawerClickHandler={this.drawerToggleClickHandler}
             />
+          </li>
+          <li>
+            {cartItems.length !== 0 ? (
+              <div
+                style={{ borderRadius: "15px", border: "none", color: "white" }}
+              >
+                {cartItems.length}
+              </div>
+            ) : (
+              ""
+            )}
           </li>
 
           <SideCart show={this.state.sideDrawerOpen} />
@@ -66,6 +85,25 @@ class NavLinks extends Component {
               className="magicButtonLogin"
               drawerClickHandler={this.drawerToggleClickHandler}
             />
+          </li>
+          {/* WORKING HERE, RENDER CART ITEM QUANTITY PROPER POSITIONING   */}
+          <li style={{ display: "flex" }}>
+            {cartItems.length !== 0 ? (
+              <div
+                style={{
+                  justifyContent: "center",
+                  borderRadius: "15px",
+                  border: "none",
+                  color: "black",
+                  backgroundColor: "white",
+                  width: "40px",
+                }}
+              >
+                {calculateQuantity(cartItems)}
+              </div>
+            ) : (
+              ""
+            )}
           </li>
           <SideCart show={this.state.sideDrawerOpen} />
           <li style={{ marginRight: "50%" }}></li>

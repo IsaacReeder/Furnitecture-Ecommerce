@@ -9,6 +9,8 @@ const KindNav = ({ items, id }) => {
     justifyContent: "space-around",
     paddingLeft: "25%",
     paddingRight: "25%",
+    paddingBottom: "3%",
+    // paddingTop: "3%",
   };
 
   return (
@@ -18,7 +20,7 @@ const KindNav = ({ items, id }) => {
           <Link
             to={`/3`}
             style={{
-              color: item.id === 3 ? "white" : "black",
+              color: item.id === 3 ? "hsl(14, 84%, 57%)" : "white",
               textDecoration: "none",
               fontSize: "1.5vw",
             }}
@@ -28,7 +30,7 @@ const KindNav = ({ items, id }) => {
           <Link
             to={`/4`}
             style={{
-              color: item.id === 4 ? "white" : "black",
+              color: item.id === 4 ? "black" : "white",
               textDecoration: "none",
               fontSize: "1.5vw",
             }}
@@ -38,7 +40,7 @@ const KindNav = ({ items, id }) => {
           <Link
             to={`/5`}
             style={{
-              color: item.id === 5 ? "white" : "black",
+              color: item.id === 5 ? "black" : "white",
               textDecoration: "none",
               fontSize: "1.5vw",
             }}
@@ -48,7 +50,7 @@ const KindNav = ({ items, id }) => {
           <Link
             to={`/6`}
             style={{
-              color: item.id === 6 ? "white" : "black",
+              color: item.id === 6 ? "black" : "white",
               textDecoration: "none",
               fontSize: "1.5vw",
             }}
