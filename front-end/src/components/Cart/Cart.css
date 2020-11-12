@@ -1,14 +1,11 @@
 .products-cart {
   display: flex;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border: 1px solid black;
+  /* position: absolute; */
+  padding-top: 10%;
   width: 100%;
-  height: 100%;
-  justify-content: flex-start;
-  flex-direction: row;
-  overflow: hidden;
+  height: 100vh;
+  flex-direction: column;
+  overflow: scroll;
 }
 
 .cart-left-section {

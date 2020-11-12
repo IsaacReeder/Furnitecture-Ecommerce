@@ -1,11 +1,11 @@
 .side-cart {
   height: 100%;
-  background: rgb(211, 208, 208);
-  opacity: 0.8;
+  background: rgb(255, 255, 255);
+  opacity: 0.95;
   position: fixed;
   top: 0;
   right: 0;
-  width: 30%;
+  width: 50%;
   z-index: 1000;
   transform: translateX(100%);
   transition: transform 0.5s ease-out;
