@@ -75,7 +75,7 @@ class Signup extends React.Component {
             onChange={this.handleChange}
           ></input>
           <br></br>
-          <label htmlFor="lname">Email</label>
+          {/* <label htmlFor="lname">Email</label> */}
           <br></br>
           <input
             className="auth-inputs"
