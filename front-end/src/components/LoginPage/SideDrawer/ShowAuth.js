@@ -4,7 +4,7 @@ import DrawerToggleButton from "./DrawerToggleButton";
 const ShowAuth = (props) => {
   return (
     <div>
-      <DrawerToggleButton click={props.drawerClickHandler} />
+      <DrawerToggleButton click={props.loginDrawerClickHandler} />
     </div>
   );
 };

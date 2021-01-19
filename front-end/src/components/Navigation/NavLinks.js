@@ -5,6 +5,8 @@ import React, { Component } from "react";
 import CartButton from "./SideDrawer/CartButton";
 import SideCart from "./SideDrawer/SideCart";
 import Backdrop from "./SideDrawer/Backdrop";
+import ShowAuth from "../LoginPage/SideDrawer/ShowAuth";
+import AuthDrawer from "../LoginPage/SideDrawer/AuthDrawer";
 
 import { Link, withRouter } from "react-router-dom";
 import "./NavLinks.css";
@@ -20,7 +22,6 @@ class NavLinks extends Component {
   state = {
     items: [],
     brand: "",
-    showModal: false,
     open: false,
     cartItems: getCart(),
   };
@@ -38,91 +39,122 @@ class NavLinks extends Component {
       return { sideDrawerOpen: !prevState.sideDrawerOpen };
     });
   };
+  loginDrawerToggleClickHandler = () => {
+    this.setState((prevState) => {
+      return { loginDrawerOpen: !prevState.loginDrawerOpen };
+    });
+  };
   render() {
     const { cartItems } = this.state;
     const AuthNav = () => {
       return (
-        <ul className="nav-links">
-          <li>
-            <Link to="/wishlist" style={{}}>
-              <i style={{ fontSize: "1.5em" }} className="fas fa-heart"></i>
-            </Link>
-          </li>
-          <li style={{ color: "white" }}>account</li>
-          <li>
-            <CartButton
-              className="magicButtonLogin"
-              drawerClickHandler={this.drawerToggleClickHandler}
-            />
-          </li>
-          <li>
-            {cartItems.length !== 0 ? (
-              <div
-                style={{ borderRadius: "15px", border: "none", color: "white" }}
-              >
-                {cartItems.length}
-              </div>
-            ) : (
-              ""
-            )}
-          </li>
+        <>
+          <ul className="nav-links">
+            <li>
+              <Link to="/wishlist" style={{}}>
+                <i style={{ fontSize: "1.5em" }} className="fas fa-heart"></i>
+              </Link>
+            </li>
+            <li style={{ color: "white" }}>account</li>
+            <li>
+              <CartButton
+                className="magicButtonLogin"
+                drawerClickHandler={this.drawerToggleClickHandler}
+              />
+            </li>
+            <li>
+              {cartItems.length !== 0 ? (
+                <div
+                  style={{
+                    display: "flex",
+                    alignContent: "center",
+                    justifyContent: "center",
+                    borderRadius: "15px",
+                    border: "none",
+                    color: "black",
+                    backgroundColor: "white",
+                    width: "40px",
+                  }}
+                >
+                  <div
+                    style={{ justifyContent: "center", alignContent: "center" }}
+                  >
+                    {calculateQuantity(cartItems)}
+                  </div>
+                </div>
+              ) : (
+                ""
+              )}
+            </li>
 
-          <SideCart show={this.state.sideDrawerOpen} />
-          <li style={{ marginRight: "50%" }} onClick={() => this.signOut()}>
-            Signout
-          </li>
-        </ul>
+            <SideCart show={this.state.sideDrawerOpen} />
+            <li style={{ marginRight: "50%" }} onClick={() => this.signOut()}>
+              Signout
+            </li>
+          </ul>
+        </>
       );
     };
     const UnAuthNav = () => {
       return (
-        <ul className="nav-links">
-          <Link to={"/login"}>
+        <>
+          <AuthDrawer show={this.state.loginDrawerOpen} />
+          <ul className="nav-links">
+            {/* <Link to={"/login"}>
             <li>Login</li>
-          </Link>
-          <li>
-            <CartButton
+          </Link> */}
+            <ShowAuth
               className="magicButtonLogin"
-              drawerClickHandler={this.drawerToggleClickHandler}
+              loginDrawerClickHandler={this.loginDrawerToggleClickHandler}
             />
-          </li>
-          {/* WORKING HERE, RENDER CART ITEM QUANTITY PROPER POSITIONING   */}
-          <li style={{ display: "flex" }}>
-            {cartItems.length !== 0 ? (
-              <div
-                style={{
-                  display: "flex",
-                  alignContent: "center",
-                  justifyContent: "center",
-                  borderRadius: "15px",
-                  border: "none",
-                  color: "black",
-                  backgroundColor: "white",
-                  width: "40px",
-                }}
-              >
+            <li>
+              <CartButton
+                className="magicButtonLogin"
+                drawerClickHandler={this.drawerToggleClickHandler}
+              />
+            </li>
+
+            <li style={{ display: "flex" }}>
+              {cartItems.length !== 0 ? (
                 <div
-                  style={{ justifyContent: "center", alignContent: "center" }}
+                  style={{
+                    display: "flex",
+                    alignContent: "center",
+                    justifyContent: "center",
+                    borderRadius: "15px",
+                    border: "none",
+                    color: "black",
+                    backgroundColor: "white",
+                    width: "40px",
+                  }}
                 >
-                  {calculateQuantity(cartItems)}
+                  <div
+                    style={{ justifyContent: "center", alignContent: "center" }}
+                  >
+                    {calculateQuantity(cartItems)}
+                  </div>
                 </div>
-              </div>
-            ) : (
-              ""
-            )}
-          </li>
-          <SideCart show={this.state.sideDrawerOpen} />
-          <li style={{ marginRight: "50%" }}></li>
-        </ul>
+              ) : (
+                ""
+              )}
+            </li>
+            <SideCart show={this.state.sideDrawerOpen} />
+            <li style={{ marginRight: "50%" }}></li>
+          </ul>
+        </>
       );
     };
     return (
       <>
-        {/* Backdrop */}
+        {/* Backdrop 1 */}
         {this.state.sideDrawerOpen && (
           <Backdrop onClick={this.drawerToggleClickHandler} />
         )}
-        {/* Navlinks */}
+        {/* Backdrop 2 */}
+        {this.state.loginDrawerOpen && (
+          <Backdrop onClick={this.loginDrawerToggleClickHandler} />
+        )}
+        {/* Conditional Navlinks */}
         {getToken() != null ? (
           <AuthNav signOut={this.signOut} />
         ) : (

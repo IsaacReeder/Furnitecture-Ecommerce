@@ -18,7 +18,6 @@ export const calculateQuantity = (items) => {
   var totalQuantity = 0;
   for (let item of items) {
     totalQuantity += item.quantity;
-    console.log("total qual function produces: " + totalQuantity);
   }
   return totalQuantity;
 };
