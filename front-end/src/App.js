@@ -14,7 +14,6 @@ import LandingPage from "./components/LandingPage/LandingPage";
 import ProductTypes from "../src/components/Products/ProductTypes";
 import Products from "./components/Products/Products";
 import Checkout from "./components/Checkout/Checkout";
-import Login from "./components/LoginPage/LoginPage";
 import { Component } from "react";
 import Wishlist from "./components/Wishlist/Wishlist";
 

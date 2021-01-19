@@ -3,7 +3,7 @@ import {
   setCart,
   getCart,
   calculatePrice,
-  calculateShipping,
+  // calculateShipping,
 } from "../../utils/index";
 import { Link } from "react-router-dom";
 import "./Cart.css";
@@ -147,56 +147,5 @@ class Cart extends Component {
     );
   }
 }
-{
-  /* <div className="cart-left-section">
-            {this.state.cartItems.map((product) => (
-              <>
-                <img
-                  style={{ width: "50%" }}
-                  src={`${apiUrl}${product.image[0].url}`}
-                  alt="item pic"
-                ></img>
-                <div className="product-name">{product.name}</div>
-                <div className="product-price">
-                  Quantity {product.quantity} - $
-                  {(product.quantity * product.price).toFixed(2)}
-                </div>
-                <h3
-                  style={{ borderBottom: "1px solid black", cursor: "pointer" }}
-                >
-                  <div onClick={() => this.deleteItemFromCart(product.id)}>
-                    <h4>Remove</h4>
-                  </div>
-                </h3>
-                <br />
-              </>
-            ))}
-          </div>
-          <div className="cart-right-section">
-            <h2 style={{ paddingTop: "25%" }}>Summary</h2>
-
-            <h3> Subtotal: {calculatePrice(this.state.cartItems)}</h3>
-            <h4
-              style={{ borderBottom: "1px solid black", paddingBottom: "1rem" }}
-            >
-              Estimated shipping & Handling: ${this.state.cartItems.length * 5}
-            </h4>
-            <h3
-              style={{ borderBottom: "1px solid black", paddingBottom: "1rem" }}
-            >
-              Total:$
-              {calculateShipping(this.state.cartItems)}
-            </h3>
-            <div className="modal-close-button">
-              <button onClose={this.props.onClose} />
-            </div>
-            {/* <button className="checkout-button">
-              <Link to={`/checkout`}>
-                <h1>Checkout</h1>
-              </Link>
-            </button> */
-}
-
-// </div> */}
 
 export default Cart;

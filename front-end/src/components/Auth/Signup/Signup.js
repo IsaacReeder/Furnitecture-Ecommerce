@@ -1,8 +1,12 @@
 import React from "react";
 
 import { setToken } from "../../../utils/index";
+
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./Signup.css";
 import Strapi from "strapi-sdk-javascript/build/main";
+
 const apiUrl = process.env.API_URL || "http://localhost:1337";
 const strapi = new Strapi(apiUrl);
 
@@ -30,12 +34,23 @@ class Signup extends React.Component {
 
   handleSubmit = async (event) => {
     event.preventDefault();
+
     const { username, email, password } = this.state;
 
     if (this.isFormEmpty(this.state)) {
-      this.showToast("Fill in all fields");
+      toast.warning("Fill in all fields", {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        color: "white",
+      });
       return;
     }
+    this.setState({ state: this.state });
 
     // Sign up user
     try {
@@ -43,14 +58,31 @@ class Signup extends React.Component {
       const response = await strapi.register(username, email, password);
       this.setState({ loading: false });
       setToken(response.jwt);
-      this.redirectUser("/");
+      toast.success("Thanks! Please sign in.", {
+        position: "bottom-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        color: "white",
+      });
     } catch (err) {
       this.setState({ loading: false });
-      this.showToast(err.message);
+      console.table(err.message);
+      toast.error("🦄 Please try again", {
+        position: "bottom-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        color: "white",
+      });
     }
   };
-
-  redirectUser = (path) => this.props.history.push(path);
 
   isFormEmpty = ({ username, email, password }) => {
     return !username || !email || !password;
@@ -62,6 +94,7 @@ class Signup extends React.Component {
   };
 
   render() {
+    const { loading } = this.state;
     return (
       <div>
         <form className="signup-form" onSubmit={this.handleSubmit}>
@@ -98,7 +131,7 @@ class Signup extends React.Component {
             value={this.state.password}
           />
           <br></br>
-          <button text="Submit" type="submit">
+          <button text="Submit" type="submit" disabled={loading}>
             Sign Up
           </button>
         </form>

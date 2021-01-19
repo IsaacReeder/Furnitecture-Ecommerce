@@ -2,6 +2,8 @@ import React from "react";
 
 import { setToken, getToken } from "../../../utils/index";
 import { Redirect } from "react-router-dom";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Strapi from "strapi-sdk-javascript/build/main";
 const apiUrl = process.env.API_URL || "http://localhost:1337";
 const strapi = new Strapi(apiUrl);
@@ -41,11 +43,32 @@ class Signin extends React.Component {
       const response = await strapi.login(username, password);
       this.setState({ loading: false });
       setToken(response.jwt);
+      toast.success("Welcome back!", {
+        position: "bottom-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        color: "white",
+      });
       this.redirectUser("/products");
+
       console.log("loggedin");
     } catch (err) {
       this.setState({ loading: false });
-      this.showToast(err.message);
+      toast.error("Incorrect credentials, Please try again", {
+        position: "bottom-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        color: "white",
+      });
+      console.log(err.message);
     }
   };
 
