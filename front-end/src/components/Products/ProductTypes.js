@@ -57,7 +57,7 @@ class ProductTypes extends Component {
             justifyContent: "center",
             alignContent: "center",
             flexDirection: "column",
-            height: "75vh",
+            height: "50vh",
             flexBasis: "100%",
           }}
         >

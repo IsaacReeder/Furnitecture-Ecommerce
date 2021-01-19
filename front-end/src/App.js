@@ -29,7 +29,7 @@ class App extends Component {
           ) : (
             <Redirect
               to={{
-                pathname: "/login",
+                pathname: "/",
                 state: { from: props.location },
               }}
             />
@@ -51,18 +51,14 @@ class App extends Component {
               <Route path="/" exact>
                 <LandingPage />
               </Route>
-              <Route path="/login" exact>
-                <Login />
-              </Route>
-              <Route path="/kind" exact>
+              <PrivateRoute path="/kind" exact>
                 <ProductTypes />
-              </Route>
-              <Route path="/checkout" exact>
+              </PrivateRoute>
+              <PrivateRoute path="/checkout" exact>
                 <Checkout />
-              </Route>
+              </PrivateRoute>
               <PrivateRoute component={Wishlist} exact path="/wishlist" />
-
-              <Route component={Products} path="/:brandId" />
+              <PrivateRoute component={Products} path="/:brandId" />
             </Switch>
           </CSSTransition>
         </Router>

@@ -5,7 +5,7 @@ import React, { Component } from "react";
 import CartButton from "./SideDrawer/CartButton";
 import SideCart from "./SideDrawer/SideCart";
 import Backdrop from "./SideDrawer/Backdrop";
-import ShowAuth from "../LoginPage/SideDrawer/ShowAuth";
+// import ShowAuth from "../LoginPage/SideDrawer/ShowAuth";
 import AuthDrawer from "../LoginPage/SideDrawer/AuthDrawer";
 
 import { Link, withRouter } from "react-router-dom";
@@ -103,10 +103,11 @@ class NavLinks extends Component {
             {/* <Link to={"/login"}>
             <li>Login</li>
           </Link> */}
-            <ShowAuth
+            {/* LOGIN BUTTON BELOW */}
+            {/* <ShowAuth
               className="magicButtonLogin"
               loginDrawerClickHandler={this.loginDrawerToggleClickHandler}
-            />
+            /> */}
             <li>
               <CartButton
                 className="magicButtonLogin"
