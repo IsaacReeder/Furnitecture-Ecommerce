@@ -1,11 +1,23 @@
 import React, { Component } from "react";
 import { getCart, setCart, getList, setList } from "../../utils/index";
 import "./Products.css";
+import { Link } from "react-router-dom";
 import KindNav from "./KindNav";
 
 import Strapi from "strapi-sdk-javascript/build/main";
 const apiUrl = process.env.API_URL || "http://localhost:1337";
 const strapi = new Strapi(apiUrl);
+
+const typeContainer = {
+  display: "flex",
+  flexDirection: "row",
+  order: "1",
+  justifyContent: "space-around",
+  paddingLeft: "25%",
+  paddingRight: "25%",
+  paddingBottom: "3%",
+  // paddingTop: "3%",
+};
 
 class Products extends Component {
   state = {
@@ -37,6 +49,7 @@ class Products extends Component {
         }`,
         },
       });
+
       this.setState({
         items: response.data.brand.items,
         brand: response.data.brand.name,

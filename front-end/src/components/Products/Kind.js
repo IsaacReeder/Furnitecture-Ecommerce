@@ -7,7 +7,7 @@ const Kind = (props) => {
     <div
       key={id}
       style={{
-        fontSize: "10vw",
+        fontSize: "7.5vw",
         // height: "20%",
         cursor: "pointer",
       }}

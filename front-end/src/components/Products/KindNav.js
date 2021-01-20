@@ -20,7 +20,7 @@ const KindNav = ({ items, id }) => {
           <Link
             to={`/3`}
             style={{
-              color: item.id === 3 ? "hsl(14, 84%, 57%)" : "white",
+              color: item.id !== 3 ? "black" : "white",
               textDecoration: "none",
               fontSize: "1.5vw",
             }}
@@ -30,7 +30,7 @@ const KindNav = ({ items, id }) => {
           <Link
             to={`/4`}
             style={{
-              color: item.id === 4 ? "black" : "white",
+              color: item.id !== 4 ? "black" : "white",
               textDecoration: "none",
               fontSize: "1.5vw",
             }}
@@ -40,7 +40,7 @@ const KindNav = ({ items, id }) => {
           <Link
             to={`/5`}
             style={{
-              color: item.id === 5 ? "black" : "white",
+              color: item.id !== 5 ? "black" : "white",
               textDecoration: "none",
               fontSize: "1.5vw",
             }}
@@ -50,7 +50,7 @@ const KindNav = ({ items, id }) => {
           <Link
             to={`/6`}
             style={{
-              color: item.id === 6 ? "black" : "white",
+              color: item.id !== 6 ? "black" : "white",
               textDecoration: "none",
               fontSize: "1.5vw",
             }}

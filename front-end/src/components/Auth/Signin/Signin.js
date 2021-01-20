@@ -53,7 +53,6 @@ class Signin extends React.Component {
         progress: undefined,
         color: "white",
       });
-      this.redirectUser("/products");
 
       console.log("loggedin");
     } catch (err) {
