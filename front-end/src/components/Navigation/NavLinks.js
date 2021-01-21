@@ -1,11 +1,9 @@
 import React, { Component } from "react";
-// import Modal from "../UIElements/Modal";
-// import { getCart } from "../../utils/index";
-// import { AuthContext } from '../../context/auth-context';
+
 import CartButton from "./SideDrawer/CartButton";
 import SideCart from "./SideDrawer/SideCart";
 import Backdrop from "./SideDrawer/Backdrop";
-// import ShowAuth from "../LoginPage/SideDrawer/ShowAuth";
+
 import AuthDrawer from "../LoginPage/SideDrawer/AuthDrawer";
 
 import { Link, withRouter } from "react-router-dom";
@@ -56,30 +54,7 @@ class NavLinks extends Component {
                 drawerClickHandler={this.drawerToggleClickHandler}
               />
             </li>
-            <li>
-              {cartItems.length !== 0 ? (
-                <div
-                  style={{
-                    display: "flex",
-                    alignContent: "center",
-                    justifyContent: "center",
-                    borderRadius: "15px",
-                    border: "none",
-                    color: "black",
-                    backgroundColor: "white",
-                    width: "40px",
-                  }}
-                >
-                  <div
-                    style={{ justifyContent: "center", alignContent: "center" }}
-                  >
-                    {calculateQuantity(cartItems)}
-                  </div>
-                </div>
-              ) : (
-                ""
-              )}
-            </li>
+
             <SideCart show={this.state.sideDrawerOpen} />
             <li style={{ marginRight: "20rem" }} onClick={() => this.signOut()}>
               Signout

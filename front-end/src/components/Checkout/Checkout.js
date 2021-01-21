@@ -32,24 +32,10 @@ function Checkout() {
   }
   return (
     <div className="checkout-container">
-      {/* {cartItems.map((item) => (
-        <ul>
-          <li>{item.name}</li>
-          <li>${item.price}</li>
-          <li>
-            <img
-              style={{ width: "50%" }}
-              src={`${apiUrl}${item.image[0].url}`}
-              alt="item pic"
-            ></img>
-          </li>
-        </ul>
-      ))} */}
       <div style={{ fontSize: "3vw", marginTop: "-5em" }}>Checkout</div>
       <div
         style={{
           display: "flex",
-
           flexDirection: "column",
           height: "100vh",
         }}
