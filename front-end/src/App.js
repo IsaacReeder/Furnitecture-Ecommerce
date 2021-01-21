@@ -15,7 +15,6 @@ import ProductTypes from "../src/components/Products/ProductTypes";
 import Products from "./components/Products/Products";
 import Checkout from "./components/Checkout/Checkout";
 import { Component } from "react";
-import Wishlist from "./components/Wishlist/Wishlist";
 
 class App extends Component {
   render() {
@@ -56,7 +55,7 @@ class App extends Component {
               <PrivateRoute path="/checkout" exact>
                 <Checkout />
               </PrivateRoute>
-              <PrivateRoute component={Wishlist} exact path="/wishlist" />
+
               <PrivateRoute component={Products} path="/:brandId" />
             </Switch>
           </CSSTransition>

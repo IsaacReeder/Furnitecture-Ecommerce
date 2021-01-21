@@ -51,12 +51,6 @@ class NavLinks extends Component {
         <>
           <ul className="nav-links">
             <li>
-              <Link to="/wishlist" style={{}}>
-                <i style={{ fontSize: "1.5em" }} className="fas fa-heart"></i>
-              </Link>
-            </li>
-            <li style={{ color: "white" }}>account</li>
-            <li>
               <CartButton
                 className="magicButtonLogin"
                 drawerClickHandler={this.drawerToggleClickHandler}
@@ -86,9 +80,8 @@ class NavLinks extends Component {
                 ""
               )}
             </li>
-
             <SideCart show={this.state.sideDrawerOpen} />
-            <li style={{ marginRight: "50%" }} onClick={() => this.signOut()}>
+            <li style={{ marginRight: "20rem" }} onClick={() => this.signOut()}>
               Signout
             </li>
           </ul>
@@ -100,14 +93,6 @@ class NavLinks extends Component {
         <>
           <AuthDrawer show={this.state.loginDrawerOpen} />
           <ul className="nav-links">
-            {/* <Link to={"/login"}>
-            <li>Login</li>
-          </Link> */}
-            {/* LOGIN BUTTON BELOW */}
-            {/* <ShowAuth
-              className="magicButtonLogin"
-              loginDrawerClickHandler={this.loginDrawerToggleClickHandler}
-            /> */}
             <li>
               <CartButton
                 className="magicButtonLogin"

@@ -13,7 +13,7 @@ const apiUrl = process.env.API_URL || "http://localhost:1337";
 
 class Cart extends Component {
   state = {
-    cartItems: getCart(),
+    cartItems: [],
     onClose: this.props.onClose,
   };
   deleteItemFromCart = (productToDeleteId) => {
@@ -34,6 +34,11 @@ class Cart extends Component {
   //       console.log("ip", ip);
   //     });
   // }
+  componentDidMount() {
+    this.setState({
+      cartItems: getCart(),
+    });
+  }
   render() {
     const { cartItems } = this.state;
     return (
@@ -91,7 +96,9 @@ class Cart extends Component {
               >
                 <div style={{ flex: "1", fontSize: "2vw" }}>{product.name}</div>
 
-                <div style={{ flex: "1", fontSize: "1.2vw" }}>
+                <div
+                  style={{ flex: "1", fontSize: "1.2vw", overflow: "hidden" }}
+                >
                   {product.description}
                 </div>
                 <div style={{ flex: "1", fontSize: "1vw" }}>

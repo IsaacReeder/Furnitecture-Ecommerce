@@ -96,23 +96,6 @@ class Products extends Component {
       this.setState({ cartItems: updatedItems }, () => setCart(updatedItems));
     }
   };
-  addToWishList = (savedItem) => {
-    const alreadyOnList = this.state.listItems.findIndex(
-      (item) => item.id === savedItem.id
-    );
-    if (alreadyOnList === -1) {
-      let updatedItems = this.state.listItems.concat({
-        ...savedItem,
-        quantity: 1,
-      });
-      this.setState({ listItems: updatedItems }, () => setList(updatedItems));
-      console.log(this.state.listItems);
-    } else {
-      console.log("Already on wishlist");
-      // SMALL POP UP SAYING ALREADY ON WISHLIST
-      console.log(this.state.listItems);
-    }
-  };
 
   render() {
     const { items, singleItemId, id } = this.state;
@@ -212,7 +195,10 @@ class Products extends Component {
                     <img
                       src={`${apiUrl}${item.image[0].url}`}
                       alt="item pic"
-                      style={{ minHeight: "70%", width: "90%" }}
+                      style={{
+                        minHeight: "70%",
+                        width: "90%",
+                      }}
                     ></img>
                     <i
                       className="fas fa-plus"

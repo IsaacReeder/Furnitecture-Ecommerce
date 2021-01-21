@@ -6,14 +6,14 @@
   position: "relative";
 }
 
-.grid2x2>div {
+.grid2x2 > div {
   display: flex;
   flex-basis: calc(50% - 40px);
   justify-content: center;
   flex-direction: column;
 }
 
-.grid2x2>div>div {
+.grid2x2 > div > div {
   display: flex;
   justify-content: center;
   flex-direction: row;
