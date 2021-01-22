@@ -1,68 +1,45 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**This project was bootstrapped with Create React App.**
 
-## Available Scripts
+### Furnitecture is an ecommerce application using ReactJS, GraphQL, Strapi, Stripe, Material-UI, React-Transition-Group, React-Toastify, and Gestalt the Pinterest front end library.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+### _installation:_
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#### - cd front-end && npm install
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+#### - cd .. && npx create-strapi-app strapi --quickstart
 
-### `npm test`
+**1. Choose language, and complete the administrator registration process.**
+![Registration](asdf)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**2. Select Marketplace, and download the GraphQL plugin**
+![GraphQL Plugin Download](asdf "GraphQL Plugin Download")
 
-### `npm run build`
+**3. Select Content-Types Builder, and then select Create New Collection Type.**
+![Collection Creation](asdf "Collection Creation")
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**4. Create a collection named brand, containing a text field titled name, a rich text field titled description, and a multimedia field titled image.**
+![Field Creation](asdf "Field Creation")
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+**5. Create a new brands titled painting, illustrations, sculpture, and furniture**
+![All Brands ](asdf "All Brands ")
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**6. Create a collection named item, containing a text field titled name, a rich text field titled description, a multimedia field titled image, and a number titled price.**
+![Item Field Creation](asdf "Item Field Creation")
 
-### `npm run eject`
+**7. Create a new items for the brands painting, illustrations, sculpture, and furniture.**
+![Upload Items Data ](asdf "All Brands ")
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**8. Select Brands, and then select Paintings. On the right side you'll see Items above a drop down box that contains the words "Add an item...". Add the appropriate items to the selected brand.**
+![Selected Items for Brand](asdf "Selected Items for Brand")
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**9. Repeat the above step until all Items are assigned to thier proper Brand.**
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### - Control c
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### - strapi start
 
-## Learn More
+_in a different terminal window:_
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+#### - cd front-end && npm start
