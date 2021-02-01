@@ -2,7 +2,7 @@
 
 # Back-end managed by Strapi CMS; leading open-source headless CMS. It’s 100% Javascript, fully customizable, and developer-first.
 
-### Strapi is used by a wide range of organizations including: IBM, Walmart, and NASA                              
+### Strapi is used by a wide range of organizations including: IBM, Walmart, and NASA.                              
                 
                       |\
               \|/     |
