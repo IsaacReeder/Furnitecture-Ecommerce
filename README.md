@@ -22,19 +22,18 @@
 **4. Create a collection named brand, containing a text field titled name, a rich text field titled description, and a multimedia field titled image.**
 ![Field Creation](asdf "Field Creation")
 
-**5. Create a new brands titled painting, illustrations, sculpture, and furniture**
+**5. Create new brands titled painting, illustrations, sculpture, and furniture**
 ![All Brands ](asdf "All Brands ")
 
-**6. Create a collection named item, containing a text field titled name, a rich text field titled description, a multimedia field titled image, and a number titled price.**
-![Item Field Creation](asdf "Item Field Creation")
+**6. In the same fashion as the brands collection: create a collection named item, containing a text field titled name, a rich text field titled description, a multimedia field titled image, and a number titled price.**
 
-**7. Create a new items for the brands painting, illustrations, sculpture, and furniture.**
+**7. Create new items that coincide with the brands titled painting, illustrations, sculpture, and furniture.**
 ![Upload Items Data ](asdf "All Brands ")
 
-**8. Select Brands, and then select Paintings. On the right side you'll see Items above a drop down box that contains the words "Add an item...". Add the appropriate items to the selected brand.**
+**8. Select Brands, and then select Furniture. On the right side, you'll see Items above a drop-down box that contains the words "Add an item...". Add the appropriate items to the selected brand.**
 ![Selected Items for Brand](asdf "Selected Items for Brand")
 
-**9. Repeat the above step until all Items are assigned to thier proper Brand.**
+**9. Repeat afore mentioned process in step 8 until all Items are assigned to thier proper Brand.**
 
 #### - Control c
 
