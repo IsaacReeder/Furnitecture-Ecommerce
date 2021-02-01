@@ -11,7 +11,7 @@
 #### - cd .. && npx create-strapi-app strapi --quickstart
 
 **1. Choose language, and complete the administrator registration process.**
-![Registration](asdf)
+![Registration](https://user-images.githubusercontent.com/42079817/106491715-70407f80-64b7-11eb-8260-57c84f7c491d.png)
 
 **2. Select Marketplace, and download the GraphQL plugin**
 ![GraphQL Plugin Download](asdf "GraphQL Plugin Download")
