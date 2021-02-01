@@ -11,6 +11,9 @@
 # production
 /build
 
+# strapi
+/strapi
+
 # misc
 .DS_Store
 .env.local
