@@ -1,6 +1,27 @@
-**This project was bootstrapped with Create React App.**
+# Furnitecture is an ecommerce application built with ReactJS, GraphQL, Strapi, Stripe, Material-UI, React-Transition-Group, React-Toastify, and Gestalt the Pinterest front end library.
 
-### Furnitecture is an ecommerce application using ReactJS, GraphQL, Strapi, Stripe, Material-UI, React-Transition-Group, React-Toastify, and Gestalt the Pinterest front end library.
+# Back-end managed by Strapi CMS; leading open-source headless CMS. It’s 100% Javascript, fully customizable, and developer-first.
+
+### Used by a wide range of organizations including: IBM, Walmart, and NASA                              
+                
+                      |\
+              \|/     |
+               |______|
+               /       \
+              / /_\ /_\ \
+              |   : :   |
+             /|   : :   |\               _   ....~~~~~~~
+            : |  /___\  | :            _| |  ....~~~~~~~
+            : |  [   ]  | ;           ( |U|  ....~~~~~~~
+             \|  [   ]  |/             A|S|  ~~~~~~~~~~~
+          +-------|-|-------+          H|A|  ~~~~~~~~~~~
+         /|       |-|       |\         H|_|  |
+        /\|       |-|       |/\        HIp   |
+       /  +-------|-|-------+  \       wII   |
+      /          /|-|\          \       II   |
+     /            |-|            \      II   |
+    `-'           |-|           `-'    cxI   |
+
 
 ---
 
